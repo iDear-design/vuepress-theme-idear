@@ -1,0 +1,64 @@
+{
+  "name": "vuepress-theme-ido",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "main": "index.js",
+  "workspaces": [
+    "vuepress-theme-ido"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vuepress dev example",
+    "build": "vuepress build example"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": [
+      "eslint --fix --ext .js,.vue ./",
+      "git add"
+    ],
+    "package.json": [
+      "sort-package-json",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  },
+  "devDependencies": {
+    "vuepress": "^1.5.0",
+    "@vuepress/plugin-google-analytics": "1.2.0",
+    "@vuepress/plugin-pwa": "1.2.0",
+    "@vuepress/plugin-register-components": "1.2.0",
+    "vuepress-plugin-flowchart": "1.4.3",
+    "vuepress-plugin-sitemap": "2.3.0",
+    "vuepress-theme-ido": "1.0.0",
+    "whatwg-fetch": "3.0.0",
+    "@ido-design/vuepress-plugin-rss": "1.0.0",
+    "@ido-design/vuepress-plugin-screenfull": "1.0.0",
+    "@ido-design/vuepress-plugin-kan-ban-niang": "1.0.0",
+    "@ido-design/vuepress-plugin-extract-code": "1.0.0",
+    "@ido-design/vuepress-plugin-bgm-player": "1.0.0",
+    "@ido-design/vuepress-plugin-back-to-top": "1.0.0",
+    "@ido-design/vuepress-plugin-comments": "1.0.0",
+    "@ido-design/vuepress-plugin-loading-page": "1.0.0",
+    "@ido-design/vuepress-plugin-pagation": "1.0.0",
+    "@vuepress/plugin-blog": "1.9.2",
+    "@vuepress/plugin-medium-zoom": "1.5.0",
+    "docsearch.js": "2.6.3",
+    "md5": "2.2.1",
+    "vue-click-outside": "1.1.0",
+    "vuepress-plugin-smooth-scroll": "^0.0.9"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
