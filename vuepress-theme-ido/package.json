@@ -1,0 +1,33 @@
+{
+  "name": "vuepress-theme-ido",
+  "version": "1.0.0",
+  "description": "A simple and beautiful vuepress Blog & Doc theme.",
+  "keywords": [
+    "vuepress",
+    "vue",
+    "theme"
+  ],
+  "homepage": "https://ido-design.maxiaoqu.com",
+  "bugs": {
+    "url": "https://github.com/ido-design/vuepress-theme-ido/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ido-design/vuepress-theme-ido.git"
+  },
+  "license": "MIT",
+  "author": "maxiaoqu",
+  "main": "index.js",
+  "dependencies": {
+    "@ido-design/vuepress-plugin-back-to-top": "1.0.0",
+    "@ido-design/vuepress-plugin-comments": "1.0.0",
+    "@ido-design/vuepress-plugin-loading-page": "1.0.0",
+    "@ido-design/vuepress-plugin-pagation": "1.0.0",
+    "@vuepress/plugin-blog": "1.9.2",
+    "@vuepress/plugin-medium-zoom": "1.5.0",
+    "docsearch.js": "2.6.3",
+    "md5": "2.2.1",
+    "vue-click-outside": "1.1.0",
+    "vuepress-plugin-smooth-scroll": "^0.0.9"
+  }
+}
