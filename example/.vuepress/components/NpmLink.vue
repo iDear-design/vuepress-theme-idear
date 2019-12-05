@@ -1,6 +1,3 @@
-// based on
-// https://github.com/vuepress/vuepress-community/blob/master/packages/docs/src/.vuepress/components/NpmLink.vue
-
 <template>
   <a
     :href="`https://www.npmjs.com/package/${pkg}`"
