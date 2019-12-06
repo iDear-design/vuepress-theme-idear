@@ -9,12 +9,13 @@ module.exports = {
   // 最后更新时间
   lastUpdated: 'Last Updated', // string | boolean
   // 作者
-  author: 'maxiaoqu',
+  author: '码小趣',
   authorAvatar: '/head.png',
   // 备案号
   // record: '京ICP备17067634号-1',
   // 项目开始时间
-  startYear: '2017',
+  startYear: '2019',
+  record: '京ICP备18043732号-1',
   algolia: {
     apiKey: '97357e58cac743c6de62036cb152f18b',
     indexName: 'vuepress-theme-ido'
