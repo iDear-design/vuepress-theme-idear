@@ -1,6 +1,6 @@
 ---
 title: 'Nice Blog Examples'
-# layout: theme-example
+date: 2019-12-07
 ---
 
 <theme-example></theme-example>
