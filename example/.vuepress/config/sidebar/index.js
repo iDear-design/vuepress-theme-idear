@@ -75,39 +75,6 @@ module.exports = {
           'blog',
           'frontMatter'
         ]
-      },
-      {
-        title: 'Advanced',
-        collapsable: false,
-        children: [
-          'timeline',
-          'valine',
-          'password',
-          'configJs',
-          'home',
-          'notfound',
-          'mode',
-          'local',
-          'codeTheme',
-          'sidebar'
-        ]
-      },
-      {
-        title: 'Default Theme Config',
-        collapsable: false,
-        children: [
-          'abstract',
-          'syntax',
-          'customStyleAndScript'
-        ]
-      },
-      {
-        title: 'Other',
-        collapsable: false,
-        children: [
-          'updatetoone',
-          'recommend'
-        ]
       }
     ],
     '/en/views/plugins/': [

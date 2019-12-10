@@ -5,8 +5,7 @@ module.exports = {
       items: [
         {
           text: '主题', items: [
-            { text: '1.x', link: '/views/1.x/' },
-            { text: '0.x', link: '/views/0.x/' }
+            { text: '1.x', link: '/views/1.x/' }
           ],
         },
         {
