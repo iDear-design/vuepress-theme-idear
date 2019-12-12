@@ -1,6 +1,6 @@
 ---
 title: Front Matter
-date: 2019-12-11
+date: 2019-12-12
 ---
 
 This is a complete `Front Matter`:
@@ -8,7 +8,7 @@ This is a complete `Front Matter`:
 ```yaml
 ---
 title: The Practice of maxaiqou `Front Matter`
-date: 2019-12-11
+date: 2019-12-12
 sidebar: 'auto'
 categories:
  - cooking

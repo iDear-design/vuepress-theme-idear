@@ -1,6 +1,6 @@
 ---
 title: Front Matter
-date: 2019-12-11
+date: 2019-12-12
 ---
 
 一个完整的 `Front Matter` 案例：
@@ -8,7 +8,7 @@ date: 2019-12-11
 ```yaml
 ---
 title: 码小趣`Front Matter`用法
-date: 2019-12-11
+date: 2019-12-12
 sidebar: 'auto'
 categories:
  - 烹饪
