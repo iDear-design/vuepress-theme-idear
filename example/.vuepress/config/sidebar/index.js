@@ -70,9 +70,9 @@ module.exports = {
         collapsable: false,
         children: [
           '',
-          'installUse',
-          'blog',
-          'frontMatter'
+          'base/installUse',
+          'base/blog',
+          'base/frontMatter'
         ]
       }
     ],
