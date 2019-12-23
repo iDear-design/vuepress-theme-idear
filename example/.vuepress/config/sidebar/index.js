@@ -6,9 +6,9 @@ module.exports = {
         collapsable: false,
         children: [
           '',
-          'installUse',
-          'blog',
-          'frontMatter'
+          'base/installUse',
+          'base/blog',
+          'base/frontMatter'
         ]
       },
       {
@@ -40,7 +40,6 @@ module.exports = {
         title: '其他',
         collapsable: false,
         children: [
-          'updatetoone',
           'recommend'
         ]
       }
