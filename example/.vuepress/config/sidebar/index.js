@@ -15,16 +15,16 @@ module.exports = {
         title: '进阶',
         collapsable: false,
         children: [
-          'timeline',
-          'valine',
-          'password',
-          'configJs',
-          'home',
-          'notfound',
-          'mode',
-          'local',
-          'codeTheme',
-          'sidebar'
+          'config/timeline',
+          'config/valine',
+          'config/password',
+          'config/configJs',
+          'config/home',
+          'config/notfound',
+          'config/mode',
+          'config/local',
+          'config/codeTheme',
+          'config/sidebar'
         ]
       },
       {
