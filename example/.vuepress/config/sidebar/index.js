@@ -31,16 +31,16 @@ module.exports = {
         title: '默认主题配置',
         collapsable: false,
         children: [
-          'abstract',
-          'syntax',
-          'customStyleAndScript'
+          'theme/abstract',
+          'theme/syntax',
+          'theme/customStyleAndScript'
         ]
       },
       {
         title: '其他',
         collapsable: false,
         children: [
-          'recommend'
+          'other/recommend'
         ]
       }
     ],
