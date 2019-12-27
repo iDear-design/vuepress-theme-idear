@@ -1,6 +1,6 @@
 const themeConfig = require('./config/theme/')
-const plugins = require('./config/plugins')
-const head = require('./config/head')
+const plugins = require('./config/plugins/index')
+const head = require('./config/head/index')
 
 module.exports = {
   dest: 'public',
