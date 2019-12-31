@@ -38,8 +38,8 @@ module.exports = {
         }
       ]
     },
-    { text: 'FAQ', link: '/en/views/other/question', icon: 'ido-faq' },
-    { text: 'Examples', link: '/en/views/other/theme-example.html', icon: 'ido-category'},
+    { text: 'FAQ', link: '/en/views/home/question', icon: 'ido-faq' },
+    { text: 'Examples', link: '/en/views/home/theme-example.html', icon: 'ido-category'},
     { text: 'GitHub', link: 'https://github.com/ido-design/vuepress-theme-ido', icon: 'ido-github'}
   ]
 }
