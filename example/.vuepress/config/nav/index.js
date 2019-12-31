@@ -11,15 +11,15 @@ module.exports = {
         {
           text: '插件', items: [
             { text: '官方插件', link: '/views/plugins/index.html' },
-            { text: '插件广场', link: '/views/other/recommend.html' }
+            { text: '插件广场', link: '/views/home/recommend.html' }
           ]
         }
       ]
     },
-    { text: '常见问题', link: '/views/other/question', icon: 'ido-faq' },
+    { text: '常见问题', link: '/views/home/question', icon: 'ido-faq' },
     { text: '博客', link: '/categories/blog/', icon: 'ido-blog'},
-    { text: '案例', link: '/views/other/theme-example.html', icon: 'ido-category'},
-    { text: '留言板', link: '/views/other/messageBoard.html', icon: 'ido-suggestion'},
+    { text: '案例', link: '/views/home/theme-example.html', icon: 'ido-category'},
+    { text: '留言板', link: '/views/home/messageBoard.html', icon: 'ido-suggestion'},
     { text: 'GitHub', link: 'https://github.com/ido-design/vuepress-theme-ido', icon: 'ido-github'}
   ],
   'en': [
