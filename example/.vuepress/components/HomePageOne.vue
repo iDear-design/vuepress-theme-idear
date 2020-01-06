@@ -10,14 +10,14 @@
         <!-- <h1>{{ $frontmatter.heroText || $title }}</h1> -->
         <p class="description">{{ $description }}</p>
         <div>
-          <a target="_black" href="https://github.com/vuepress-reco/vuepress-theme-ido">
-            <img alt="GitHub license" src="https://img.shields.io/github/license/vuepress-reco/vuepress-theme-ido?&logo=github">
+          <a target="_black" href="https://github.com/ido-design/vuepress-theme-ido">
+            <img alt="GitHub license" src="https://img.shields.io/github/license/ido-design/vuepress-theme-ido?&logo=github">
           </a>
-          <a target="_black" href="https://github.com/vuepress-reco/vuepress-theme-ido">
-            <img alt="GitHub stars" src="https://img.shields.io/github/stars/vuepress-reco/vuepress-theme-ido?style=flat&logo=github">
+          <a target="_black" href="https://github.com/ido-design/vuepress-theme-ido">
+            <img alt="GitHub stars" src="https://img.shields.io/github/stars/ido-design/vuepress-theme-ido?style=flat&logo=github">
           </a>
-          <a target="_black" href="https://github.com/vuepress-reco/vuepress-theme-ido">
-            <img alt="GitHub forks" src="https://img.shields.io/github/forks/vuepress-reco/vuepress-theme-ido?style=flat&logo=github">
+          <a target="_black" href="https://github.com/ido-design/vuepress-theme-ido">
+            <img alt="GitHub forks" src="https://img.shields.io/github/forks/ido-design/vuepress-theme-ido?style=flat&logo=github">
           </a>
           <a target="_black" href="https://www.npmjs.com/package/vuepress-theme-ido">
             <img alt="Npm downloads" src="https://img.shields.io/npm/dt/vuepress-theme-ido?style=flat&logo=npm">
