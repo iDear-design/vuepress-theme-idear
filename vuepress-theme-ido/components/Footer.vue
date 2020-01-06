@@ -1,15 +1,15 @@
 <template>
   <div class="footer-wrapper">
     <span>
-      <i class="iconfont reco-theme"></i>
+      <i class="iconfont ido-theme"></i>
       <a target="blank" href="https://ido-design.maxiaoqu.com/vuepress-theme-ido">{{`vuepress-theme-ido@${version}`}}</a>
     </span>
     <span v-if="$themeConfig.record">
-      <i class="iconfont reco-beian"></i>
+      <i class="iconfont ido-beian"></i>
       <a :href="$themeConfig.recordLink || '#'">{{ $themeConfig.record }}</a>
     </span>
     <span>
-      <i class="iconfont reco-copyright"></i>
+      <i class="iconfont ido-copyright"></i>
       <a>
         <span v-if="$themeConfig.author || $site.title">{{ $themeConfig.author || $site.title }}</span>
         &nbsp;&nbsp;
@@ -18,7 +18,7 @@
       </a>
     </span>
     <span v-show="showAccessNumber">
-      <i class="iconfont reco-eye"></i>
+      <i class="iconfont ido-eye"></i>
       <AccessNumber idVal="/" />
     </span>
     <p class="cyber-security" v-if="$themeConfig.cyberSecurityRecord">

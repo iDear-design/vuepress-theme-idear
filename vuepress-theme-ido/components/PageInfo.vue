@@ -1,25 +1,25 @@
 <template>
   <div>
     <i
-      class="iconfont reco-account"
+      class="iconfont ido-account"
       v-if="pageInfo.frontmatter.author || $themeConfig.author || $site.title">
       <span>{{ pageInfo.frontmatter.author || $themeConfig.author || $site.title }}</span>
     </i>
     <i
       v-if="pageInfo.frontmatter.date"
-      class="iconfont reco-date">
+      class="iconfont ido-date">
       <span>{{ pageInfo.frontmatter.date | formatDateValue }}</span>
     </i>
     <i
       v-if="showAccessNumber === true"
-      class="iconfont reco-eye">
+      class="iconfont ido-eye">
       <AccessNumber
         :idVal="pageInfo.path"
         :numStyle="numStyle" />
     </i>
     <i
       v-if="pageInfo.frontmatter.tags"
-      class="iconfont reco-tag tags">
+      class="iconfont ido-tag tags">
       <span
         v-for="(subItem, subIndex) in pageInfo.frontmatter.tags"
         :key="subIndex"
