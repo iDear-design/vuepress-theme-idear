@@ -4,7 +4,9 @@ const head = require('./config/head/')
 
 module.exports = {
   dest: 'public',
-  base: '/ido-design/',
+  base: '/vuepress-theme-ido-doc/',
+  dest: './dist',
+  port: 1024,
   head: head,
   theme: require.resolve('../../vuepress-theme-ido'),
   // theme: 'ido',

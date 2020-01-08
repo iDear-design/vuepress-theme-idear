@@ -7,6 +7,7 @@ lib/app/.temp/*
 node_modules/
 unpackage/
 dist/
+public/
 package-lock.json
 yarn.lock
 yarn-error.log
