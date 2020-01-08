@@ -7,6 +7,7 @@ module.exports = {
   base: '/ido-design/',
   head: head,
   theme: require.resolve('../../vuepress-theme-ido'),
+  // theme: 'ido',
   themeConfig,
   locales: {
     '/': {
