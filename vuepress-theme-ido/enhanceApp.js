@@ -11,7 +11,7 @@ export default ({
   Vue.mixin(postMixin)
   Vue.mixin(localMixin)
   if (!isServer) {
-    addLinkToHead('//at.alicdn.com/t/font_1030519_2ciwdtb4x65.css')
+    addLinkToHead('//files.maxiaoqu.com/iconfont/font_vuepress_theme_ido/iconfont.css')
     registerCodeThemeCss(siteData.themeConfig.codeTheme)
   }
 }
