@@ -1,6 +1,6 @@
 module.exports = {
   type: 'HomePageOne',
-  // logo: '/icon_vuepress_ido.png',
+  // logo: '/icon_vuepress_iu.png',
   // 搜索设置
   search: true,
   searchMaxSuggestions: 10,
@@ -18,7 +18,7 @@ module.exports = {
   record: '京ICP备18043732号-1',
   algolia: {
     apiKey: '97357e58cac743c6de62036cb152f18b',
-    indexName: 'vuepress-theme-ido'
+    indexName: 'vuepress-theme-iu'
     // inputSelector: '### REPLACE ME ####',
     // algoliaOptions: { 'facetFilters': ["lang:$LANG"] },
     // debug: false // Set debug to true if you want to inspect the dropdown

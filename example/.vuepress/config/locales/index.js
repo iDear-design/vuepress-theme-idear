@@ -21,11 +21,11 @@ module.exports = {
     algolia: {
       start_urls: [
         {
-          "url": "http://ido-design.maxiaoqu.com/vuepress-theme-ido/"
+          "url": "http://iu-design.maxiaoqu.com/vuepress-theme-iu/"
         }
       ],
       apiKey: '97357e58cac743c6de62036cb152f18b',
-      indexName: 'vuepress-theme-ido'
+      indexName: 'vuepress-theme-iu'
       // inputSelector: '### REPLACE ME ####',
       // algoliaOptions: { 'facetFilters': ["lang:$LANG"] },
       // debug: false // Set debug to true if you want to inspect the dropdown
@@ -46,11 +46,11 @@ module.exports = {
     algolia: {
       start_urls: [
         {
-          "url": "http://ido-design.maxiaoqu.com/vuepress-theme-ido/en/"
+          "url": "http://iu-design.maxiaoqu.com/vuepress-theme-iu/en/"
         }
       ],
       apiKey: '97357e58cac743c6de62036cb152f18b',
-      indexName: 'vuepress-theme-ido'
+      indexName: 'vuepress-theme-iu'
       // inputSelector: '### REPLACE ME ####',
       // algoliaOptions: { 'facetFilters': ["lang:$LANG"] },
       // debug: false // Set debug to true if you want to inspect the dropdown

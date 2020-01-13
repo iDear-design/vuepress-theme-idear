@@ -13,7 +13,7 @@ date: 2019-12.21
 // .vuepress/config.js
 
 module.exports = {
-  theme: 'ido',
+  theme: 'iu',
   themeConfig: {
     /**
      * support for

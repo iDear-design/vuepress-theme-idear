@@ -5,11 +5,11 @@ date: 2019-12.18
 
 ## Introduction
 
-Comments plugin for vuepress-theme-ido or other vuepress theme.
+Comments plugin for vuepress-theme-iu or other vuepress theme.
 
 ### Name
 
-- **As plugin**: `@ido-design/vuepress-plugin-comments`
+- **As plugin**: `@iu-design/vuepress-plugin-comments`
 - **As component**: `Comments` / `AccessNumber (page views by Valine)` (used in theme development)
 
 ## Option API
@@ -22,7 +22,7 @@ The plugin will have an input parameter `commentsSolution`. It's `valine` if usi
 
 ```javascript
 module.exports = {
-  theme: 'ido',
+  theme: 'iu',
   themeConfig: {
     valineConfig: {
       appId: '...',// your appId
@@ -36,8 +36,8 @@ Or:
 
 ```javascript
 module.exports = {
-  theme: 'ido',
-  plugins: [['@ido-design/comments', {
+  theme: 'iu',
+  plugins: [['@iu-design/comments', {
     solution: 'valine',
     options: {
       appId: '...',// your appId
@@ -53,7 +53,7 @@ module.exports = {
 
 ```javascript
 module.exports = {
-  theme: 'ido',
+  theme: 'iu',
   themeConfig: {
     vssueConfig: {
       platform: 'github',
@@ -70,11 +70,11 @@ Or:
 
 ```javascript
 module.exports = {
-  theme: 'ido',
-  plugins: [['@ido-design/comments', {
+  theme: 'iu',
+  plugins: [['@iu-design/comments', {
     solution: 'vssue',
     options: {
-      title: 'vuepress-theme-ido',
+      title: 'vuepress-theme-iu',
       platform: 'github',
       owner: 'OWNER_OF_REPO',
       repo: 'NAME_OF_REPO',

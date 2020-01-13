@@ -1,5 +1,5 @@
 {
-  "name": "vuepress-theme-ido",
+  "name": "vuepress-theme-iu",
   "version": "1.0.1",
   "description": "A simple and beautiful vuepress Blog & Doc theme.",
   "keywords": [
@@ -7,22 +7,22 @@
     "vue",
     "theme"
   ],
-  "homepage": "https://ido-design.maxiaoqu.com",
+  "homepage": "https://iu-design.maxiaoqu.com",
   "bugs": {
-    "url": "https://github.com/ido-design/vuepress-theme-ido/issues"
+    "url": "https://github.com/iu-design/vuepress-theme-iu/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ido-design/vuepress-theme-ido.git"
+    "url": "git+https://github.com/iu-design/vuepress-theme-iu.git"
   },
   "license": "MIT",
   "author": "maxiaoqu",
   "main": "index.js",
   "dependencies": {
-    "@ido-design/vuepress-plugin-back-to-top": "1.0.0",
-    "@ido-design/vuepress-plugin-comments": "1.0.1",
-    "@ido-design/vuepress-plugin-loading-page": "1.0.0",
-    "@ido-design/vuepress-plugin-pagation": "1.0.0",
+    "@iu-design/vuepress-plugin-back-to-top": "1.0.0",
+    "@iu-design/vuepress-plugin-comments": "1.0.1",
+    "@iu-design/vuepress-plugin-loading-page": "1.0.0",
+    "@iu-design/vuepress-plugin-pagation": "1.0.0",
     "@vuepress/plugin-blog": "1.9.2",
     "@vuepress/plugin-medium-zoom": "1.5.0",
     "docsearch.js": "2.6.3",

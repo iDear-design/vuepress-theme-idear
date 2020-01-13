@@ -23,7 +23,7 @@
       class="repo-link"
       target="_blank"
       rel="noopener noreferrer">
-      <i :class="`iconfont ido-${repoLabel.toLowerCase()}`"></i>
+      <i :class="`iconfont iu-${repoLabel.toLowerCase()}`"></i>
       {{ repoLabel }}
       <OutboundLink/>
     </a>
@@ -100,7 +100,7 @@ export default {
           }),
           text: category.text || '分类',
           type: 'links',
-          icon: 'ido-category'
+          icon: 'iu-category'
         })
       }
       if (!isHasTag && Object.hasOwnProperty.call(blogConfig, 'tag')) {
@@ -109,7 +109,7 @@ export default {
           link: '/tag/',
           text: tag.text || '标签',
           type: 'links',
-          icon: 'ido-tag'
+          icon: 'iu-tag'
         })
       }
 

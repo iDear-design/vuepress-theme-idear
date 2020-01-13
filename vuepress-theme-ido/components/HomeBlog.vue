@@ -14,13 +14,13 @@
 
         <ModuleTransition delay="0.04">
           <h1 v-if="recoShowModule && $frontmatter.heroText !== null">
-            {{ $frontmatter.heroText || $title || 'vuepress-theme-ido' }}
+            {{ $frontmatter.heroText || $title || 'vuepress-theme-iu' }}
           </h1>
         </ModuleTransition>
 
         <ModuleTransition delay="0.08">
           <p v-if="recoShowModule && $frontmatter.tagline !== null" class="description">
-            {{ $frontmatter.tagline || $description || 'Welcome to your vuepress-theme-ido site' }}
+            {{ $frontmatter.tagline || $description || 'Welcome to your vuepress-theme-iu site' }}
           </p>
         </ModuleTransition>
       </div>
@@ -42,7 +42,7 @@
         </div>
         <div class="info-wrapper">
           <PersonalInfo/>
-          <h4><i class="iconfont ido-category"></i> {{homeBlogCfg.category}}</h4>
+          <h4><i class="iconfont iu-category"></i> {{homeBlogCfg.category}}</h4>
           <ul class="category-wrapper">
             <li class="category-item" v-for="(item, index) in this.$categories.list" :key="index">
               <router-link :to="item.path">
@@ -52,9 +52,9 @@
             </li>
           </ul>
           <hr>
-          <h4 v-if="$tags.list.length !== 0"><i class="iconfont ido-tag"></i> {{homeBlogCfg.tag}}</h4>
+          <h4 v-if="$tags.list.length !== 0"><i class="iconfont iu-tag"></i> {{homeBlogCfg.tag}}</h4>
           <TagList @getCurrentTag="getPagesByTags" />
-          <h4 v-if="$themeConfig.friendLink && $themeConfig.friendLink.length !== 0"><i class="iconfont ido-friend"></i> {{homeBlogCfg.friendLink}}</h4>
+          <h4 v-if="$themeConfig.friendLink && $themeConfig.friendLink.length !== 0"><i class="iconfont iu-friend"></i> {{homeBlogCfg.friendLink}}</h4>
           <FriendLink />
         </div>
       </div>

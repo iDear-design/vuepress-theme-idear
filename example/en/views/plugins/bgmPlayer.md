@@ -7,11 +7,11 @@ date: 2019-12.18
 
 ![demo.png](./images/bgm.png)
 
-Bgm player plugin for vuepress-theme-ido or other vuepress theme.  
+Bgm player plugin for vuepress-theme-iu or other vuepress theme.  
 
 ### Name
 
-- **As plugin**: `@ido-design/vuepress-plugin-bgm-player`
+- **As plugin**: `@iu-design/vuepress-plugin-bgm-player`
 - **As component**: `BgMusic` (auto appear in the page, no need for extra code)
 
 ## Option API
@@ -100,7 +100,7 @@ Bgm player plugin for vuepress-theme-ido or other vuepress theme.
 ## About
 
 - **Compatibility**：vuepress-plugin-bgm-player uses `audio` in HTML5, so compatibility is associated that of `audio`
-- customize according to `dark` mode in `vuepress-theme-ido`
+- customize according to `dark` mode in `vuepress-theme-iu`
   ![dark.png](./images/darkBgm.png)
 - **Development Plans**
   - auto play

@@ -21,17 +21,17 @@ module.exports = [
     {
       components: [
         {
-          name: 'ido-home-page-one',
+          name: 'iu-home-page-one',
           path: path.resolve(__dirname, '../../components/HomePageOne.vue')
         }
       ],
       componentsDir: path.resolve(__dirname, '../../demo')
     }
   ],
-  '@ido-design/extract-code',
+  '@iu-design/extract-code',
   'flowchart',
   ['sitemap', {
-    hostname: 'https://ido-design.maxiaoqu.com/vuepress-theme-ido'
+    hostname: 'https://iu-design.maxiaoqu.com/vuepress-theme-iu'
   }],
   require('../../plugins/notification/index')
 ]

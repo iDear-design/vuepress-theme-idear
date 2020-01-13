@@ -13,10 +13,10 @@ date: 2019-12-19
 // .vuepress/config.js
 
 module.exports = {
-  theme: 'ido',
+  theme: 'iu',
   themeConfig: {
     nav: [
-      { text: 'TimeLine', link: '/timeline/', icon: 'ido-date' }
+      { text: 'TimeLine', link: '/timeline/', icon: 'iu-date' }
     ]
   }
 }

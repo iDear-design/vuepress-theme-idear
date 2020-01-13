@@ -1,5 +1,5 @@
 ---
-title: vuepress-theme-ido
+title: vuepress-theme-iu
 date: 2019-12-06
 ---
 
@@ -13,11 +13,11 @@ date: 2019-12-06
 
 ### 1.x
 
-As more users asked me why `vuepress-theme-ido@0.x` can't be used on top of `vuepress@1.x`, originally I wanted to fixed some simple bugs but finally decided to develop `vuepress-theme-ido@1.x`. At another 2:30a.m. (quite productive at night), I quietly started.
+As more users asked me why `vuepress-theme-iu@0.x` can't be used on top of `vuepress@1.x`, originally I wanted to fixed some simple bugs but finally decided to develop `vuepress-theme-iu@1.x`. At another 2:30a.m. (quite productive at night), I quietly started.
 
 The core update was the offical plugin `@vuepress/plugin-blog`, which doesn't filter data any more but stored the metadata in `$categories` and `$tags`. The plugin traded simpler realization of categorization and tagging with limitations. In the following 2 or 3 days, I was migrating features and debugging.
 
-During the development of `vuepress-theme-ido@1.x`, I understand deeper the importance of modular programming. If I had not modulazied some features but directly copy and paste, I wouldn't have updated the theme that easily. The more modules a project is divided into, the more flexible in actual usage.
+During the development of `vuepress-theme-iu@1.x`, I understand deeper the importance of modular programming. If I had not modulazied some features but directly copy and paste, I wouldn't have updated the theme that easily. The more modules a project is divided into, the more flexible in actual usage.
 
 ### CLI
 

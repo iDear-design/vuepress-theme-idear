@@ -6,11 +6,11 @@ date: 2019-12-11
 ## Installation
 
 ```bash
-npm install vuepress-theme-ido -dev--save
+npm install vuepress-theme-iu -dev--save
 
 # or
 
-yarn add vuepress-theme-ido
+yarn add vuepress-theme-iu
 ```
 
 ## Usage
@@ -19,6 +19,6 @@ yarn add vuepress-theme-ido
 // .vuepress/config.js
 
 module.exports = {
-  theme: 'ido'
+  theme: 'iu'
 }  
 ```

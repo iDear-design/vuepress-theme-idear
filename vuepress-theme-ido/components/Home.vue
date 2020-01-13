@@ -9,11 +9,11 @@
           alt="hero">
       </ModuleTransition>
       <ModuleTransition delay="0.04">
-        <h1 v-if="recoShowModule && $frontmatter.heroText !== null">{{ $frontmatter.heroText || $title || 'vuepress-theme-ido' }}</h1>
+        <h1 v-if="recoShowModule && $frontmatter.heroText !== null">{{ $frontmatter.heroText || $title || 'vuepress-theme-iu' }}</h1>
       </ModuleTransition>
       <ModuleTransition delay="0.08">
         <p v-if="recoShowModule && $frontmatter.tagline !== null" class="description">
-          {{ $frontmatter.tagline || $description || 'Welcome to your vuepress-theme-ido site' }}
+          {{ $frontmatter.tagline || $description || 'Welcome to your vuepress-theme-iu site' }}
         </p>
       </ModuleTransition>
       <ModuleTransition delay="0.16">

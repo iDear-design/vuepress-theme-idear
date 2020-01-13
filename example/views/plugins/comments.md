@@ -5,11 +5,11 @@ date: 2019-12.18
 
 ## 介绍
 
-Comments plugin for vuepress-theme-ido or other vuepress theme.
+Comments plugin for vuepress-theme-iu or other vuepress theme.
 
 ### 名字
 
-- **As plugin**: `@ido-design/vuepress-plugin-comments`
+- **As plugin**: `@iu-design/vuepress-plugin-comments`
 - **As component**: `Comments (评论)` / `AccessNumber (使用 Valine 时的访问量)`（主题开发时使用）
 
 ## Option API
@@ -22,7 +22,7 @@ Comments plugin for vuepress-theme-ido or other vuepress theme.
 
 ```javascript
 module.exports = {
-  theme: 'ido',
+  theme: 'iu',
   themeConfig: {
     valineConfig: {
       appId: '...',// your appId
@@ -36,8 +36,8 @@ module.exports = {
 
 ```javascript
 module.exports = {
-  theme: 'ido',
-  plugins: [['@ido-design/comments', {
+  theme: 'iu',
+  plugins: [['@iu-design/comments', {
     solution: 'valine',
     options: {
       appId: '...',// your appId
@@ -53,7 +53,7 @@ module.exports = {
 
 ```javascript
 module.exports = {
-  theme: 'ido',
+  theme: 'iu',
   themeConfig: {
     vssueConfig: {
       platform: 'github',
@@ -70,11 +70,11 @@ module.exports = {
 
 ```javascript
 module.exports = {
-  theme: 'ido',
-  plugins: [['@ido-design/comments', {
+  theme: 'iu',
+  plugins: [['@iu-design/comments', {
     solution: 'vssue',
     options: {
-      title: 'vuepress-theme-ido',
+      title: 'vuepress-theme-iu',
       platform: 'github',
       owner: 'OWNER_OF_REPO',
       repo: 'NAME_OF_REPO',

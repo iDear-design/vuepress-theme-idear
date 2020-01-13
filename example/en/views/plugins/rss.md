@@ -4,11 +4,11 @@ date: 2019-12.18
 ---
 
 ## Introduction
-RSS plugin only for vuepress-theme-ido.
+RSS plugin only for vuepress-theme-iu.
 
 ### Name
 
-- **As plugin**: `@ido-design/vuepress-plugin-rss`
+- **As plugin**: `@iu-design/vuepress-plugin-rss`
 
 ## Option API
 
@@ -16,7 +16,7 @@ RSS plugin only for vuepress-theme-ido.
 
 - required: `true`
 - description: 网站地址
-- example: `ido-design.maxiaoqu.com/vuepress-theme-ido`
+- example: `iu-design.maxiaoqu.com/vuepress-theme-iu`
 
 ### copyright
 

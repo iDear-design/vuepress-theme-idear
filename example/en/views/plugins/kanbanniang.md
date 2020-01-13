@@ -7,11 +7,11 @@ date: 2019-12-13
 
 ![demo.png](./images/kanbannaing_1.png)
 
-`kan-ban-niang` plugin for vuepress-theme-ido or other vuepress themes.
+`kan-ban-niang` plugin for vuepress-theme-iu or other vuepress themes.
 
 ### Name
 
-- **As plugin**: `@ido-design/vuepress-plugin-kan-ban-niang`
+- **As plugin**: `@iu-design/vuepress-plugin-kan-ban-niang`
 - **As component**: `KanBanNiang` (auto appear in the page, no need for extra code)
 
 ### Buttons

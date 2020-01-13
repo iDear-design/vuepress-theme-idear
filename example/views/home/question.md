@@ -61,7 +61,7 @@ module.exports = {
 
 ## 6. 侧边栏为什么不显示一级标题？
 
-在 `vuepress-theme-ido` 中，请摒弃一级标题，使用 `front-matter` 生成标题以及其他文章信息，正文从二级标题开始。
+在 `vuepress-theme-iu` 中，请摒弃一级标题，使用 `front-matter` 生成标题以及其他文章信息，正文从二级标题开始。
 
 ## 7. `1.1.0` 版本会在首页出现评论怎么解决？
 

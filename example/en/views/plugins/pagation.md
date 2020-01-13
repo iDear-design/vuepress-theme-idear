@@ -7,11 +7,11 @@ date: 2019-12-13
 
 ![demo.png](./images/pagation.png)
 
-Pagination plugin for vuepress-theme-ido or other vuepress theme.
+Pagination plugin for vuepress-theme-iu or other vuepress theme.
 
 ### Name
 
-- **As plugin**: `@ido-design/vuepress-plugin-pagation`
+- **As plugin**: `@iu-design/vuepress-plugin-pagation`
 - **As component**: `Pagation` (used in theme development)
 
 ## Option API

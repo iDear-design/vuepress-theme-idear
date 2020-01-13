@@ -1,12 +1,12 @@
 ---
-title: vuepress-theme-ido
+title: vuepress-theme-iu
 date: 2019-12-26
 lang: 'zh-CN'
 categories:
  - blog
 ---
 
-不知不觉，`vuepress-theme-ido` 已经一周岁了，静下心来回想这个过程，过程是美好的，结果也是美好的。
+不知不觉，`vuepress-theme-iu` 已经一周岁了，静下心来回想这个过程，过程是美好的，结果也是美好的。
 
 <!-- more -->
 

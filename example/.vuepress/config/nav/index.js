@@ -1,7 +1,7 @@
 module.exports = {
   'zh': [
     { text: '文档',
-      icon: 'ido-api',
+      icon: 'iu-api',
       items: [
         {
           text: '主题', items: [
@@ -16,15 +16,15 @@ module.exports = {
         }
       ]
     },
-    { text: '常见问题', link: '/views/home/question', icon: 'ido-faq' },
-    { text: '博客', link: '/categories/blog/', icon: 'ido-blog'},
-    { text: '案例', link: '/views/home/theme-example.html', icon: 'ido-category'},
-    { text: '留言板', link: '/views/home/messageBoard.html', icon: 'ido-suggestion'},
-    { text: 'GitHub', link: 'https://github.com/ido-design/vuepress-theme-ido', icon: 'ido-github'}
+    { text: '常见问题', link: '/views/home/question', icon: 'iu-faq' },
+    { text: '博客', link: '/categories/blog/', icon: 'iu-blog'},
+    { text: '案例', link: '/views/home/theme-example.html', icon: 'iu-category'},
+    { text: '留言板', link: '/views/home/messageBoard.html', icon: 'iu-suggestion'},
+    { text: 'GitHub', link: 'https://github.com/iu-design/vuepress-theme-iu', icon: 'iu-github'}
   ],
   'en': [
     { text: 'Documents',
-      icon: 'ido-api',
+      icon: 'iu-api',
       items: [
         {
           text: 'Theme', items: [
@@ -38,8 +38,8 @@ module.exports = {
         }
       ]
     },
-    { text: 'FAQ', link: '/en/views/home/question', icon: 'ido-faq' },
-    { text: 'Examples', link: '/en/views/home/theme-example.html', icon: 'ido-category'},
-    { text: 'GitHub', link: 'https://github.com/ido-design/vuepress-theme-ido', icon: 'ido-github'}
+    { text: 'FAQ', link: '/en/views/home/question', icon: 'iu-faq' },
+    { text: 'Examples', link: '/en/views/home/theme-example.html', icon: 'iu-category'},
+    { text: 'GitHub', link: 'https://github.com/iu-design/vuepress-theme-iu', icon: 'iu-github'}
   ]
 }
