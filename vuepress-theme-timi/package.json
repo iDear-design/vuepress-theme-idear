@@ -1,11 +1,12 @@
 {
   "name": "vuepress-theme-timi",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "A simple and beautiful vuepress Blog & Doc theme.",
   "keywords": [
     "vuepress",
     "vue",
-    "theme"
+    "theme",
+    "timi-design"
   ],
   "homepage": "https://timi-design.maxiaoqu.com",
   "bugs": {
