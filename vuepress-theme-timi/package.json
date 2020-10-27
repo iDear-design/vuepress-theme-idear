@@ -1,5 +1,5 @@
 {
-  "name": "vuepress-theme-iu",
+  "name": "vuepress-theme-timi",
   "version": "1.0.1",
   "description": "A simple and beautiful vuepress Blog & Doc theme.",
   "keywords": [
@@ -7,22 +7,22 @@
     "vue",
     "theme"
   ],
-  "homepage": "https://iu-design.maxiaoqu.com",
+  "homepage": "https://timi-design.maxiaoqu.com",
   "bugs": {
-    "url": "https://github.com/iu-design/vuepress-theme-iu/issues"
+    "url": "https://github.com/timi-design/vuepress-theme-timi/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iu-design/vuepress-theme-iu.git"
+    "url": "git+https://github.com/timi-design/vuepress-theme-timi.git"
   },
   "license": "MIT",
   "author": "maxiaoqu",
   "main": "index.js",
   "dependencies": {
-    "@iu-design/vuepress-plugin-back-to-top": "1.0.0",
-    "@iu-design/vuepress-plugin-comments": "1.0.1",
-    "@iu-design/vuepress-plugin-loading-page": "1.0.0",
-    "@iu-design/vuepress-plugin-pagation": "1.0.0",
+    "@timi-design/vuepress-plugin-back-to-top": "1.0.0",
+    "@timi-design/vuepress-plugin-comments": "1.0.1",
+    "@timi-design/vuepress-plugin-loading-page": "1.0.0",
+    "@timi-design/vuepress-plugin-pagation": "1.0.0",
     "@vuepress/plugin-blog": "1.9.2",
     "@vuepress/plugin-medium-zoom": "1.5.0",
     "docsearch.js": "2.6.3",

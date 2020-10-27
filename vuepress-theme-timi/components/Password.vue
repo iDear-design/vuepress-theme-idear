@@ -24,11 +24,11 @@
     <ModuleTransition delay="0.24">
       <div v-show="recoShowModule" class="footer">
         <span>
-          <i class="iconfont iu-theme"></i>
-          <a target="blank" href="https://iu-design.maxiaoqu.com/vuepress-theme-iu">vuepress-theme-iu</a>
+          <i class="iconfont timi-theme"></i>
+          <a target="blank" href="https://timi-design.maxiaoqu.com/vuepress-theme-timi">vuepress-theme-timi</a>
         </span>
         <span>
-          <i class="iconfont iu-copyright"></i>
+          <i class="iconfont timi-copyright"></i>
           <a>
             <span v-if="$themeConfig.author || $site.title">{{ $themeConfig.author || $site.title }}</span>
             &nbsp;&nbsp;

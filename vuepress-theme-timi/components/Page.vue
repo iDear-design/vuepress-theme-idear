@@ -8,7 +8,7 @@
     </ModuleTransition>
 
     <ModuleTransition delay="0.08">
-      <Content v-show="recoShowModule" class="theme-iu-content" />
+      <Content v-show="recoShowModule" class="theme-timi-content" />
     </ModuleTransition>
 
     <ModuleTransition delay="0.16">
