@@ -2,7 +2,7 @@
   <transition name="fade">
     <div v-if="visible" class="notification-wrapper">
       <h4 class="notification-title">
-        <i class="iconfont iu-tongzhi"></i>
+        <i class="iconfont timi-tongzhi"></i>
         <span>公告</span>
         <i class="btn-close" @click="closeNote">
           <svg t="1573745677073" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -14,8 +14,8 @@
         </i>
       </h4>
       <div class="notification-content">
-        <h5>欢迎使用iu-design 🎉🎉🎉</h5>
-        <p>欢迎使用iu-design出品的vuepress-theme-iu</p>
+        <h5>欢迎使用timi-design 🎉🎉🎉</h5>
+        <p>欢迎使用timi-design出品的vuepress-theme-timi</p>
       </div>
     </div>
   </transition>

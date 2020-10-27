@@ -1,6 +1,6 @@
 {
   "packages": [
-    "vuepress-theme-iu/*"
+    "vuepress-theme-timi/*"
   ],
   "version": "1.0.0",
   "npmClient": "yarn",

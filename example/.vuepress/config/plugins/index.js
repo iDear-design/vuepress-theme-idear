@@ -21,17 +21,17 @@ module.exports = [
     {
       components: [
         {
-          name: 'iu-home-page-one',
+          name: 'timi-home-page-one',
           path: path.resolve(__dirname, '../../components/HomePageOne.vue')
         }
       ],
       componentsDir: path.resolve(__dirname, '../../demo')
     }
   ],
-  '@iu-design/extract-code',
+  '@timi-design/extract-code',
   'flowchart',
   ['sitemap', {
-    hostname: 'https://iu-design.maxiaoqu.com/vuepress-theme-iu'
+    hostname: 'https://timi-design.maxiaoqu.com/vuepress-theme-timi'
   }],
   require('../../plugins/notification/index')
 ]

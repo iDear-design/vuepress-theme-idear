@@ -5,5 +5,5 @@ date: 2019-12-30
 ---
 
 ::: tip
-欢迎大家在此留下你的建议和意见，或者在 [GitHub issue](https://github.com/iu-design/vuepress-theme-iu) 提交你的问题。
+欢迎大家在此留下你的建议和意见，或者在 [GitHub issue](https://github.com/timi-design/vuepress-theme-timi) 提交你的问题。
 :::

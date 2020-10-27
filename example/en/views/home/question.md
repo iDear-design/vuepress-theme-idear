@@ -5,7 +5,7 @@ sidebar: 'auto'
 ---
 
 ::: tip
-We have collected some usual questions here. If you don't find the answer you want here, please read `VuePress`' [default theme config](https://v1.vuepress.vuejs.org/theme/default-theme-config.html). As final resort, you could post an [issue on GitHub](https://github.com/iu-design/vuepress-theme-iu/issues).
+We have collected some usual questions here. If you don't find the answer you want here, please read `VuePress`' [default theme config](https://v1.vuepress.vuejs.org/theme/default-theme-config.html). As final resort, you could post an [issue on GitHub](https://github.com/timi-design/vuepress-theme-timi/issues).
 
 Please note that this theme includes almost all features from `VuePress`' default theme. Thus, this FAQ only serves to introduce extra features. If you've found some features this site hasn't mentioned, or you want to know some features in default theme, please go to the [official documentation](https://v1.vuepress.vuejs.org/theme/default-theme-config.html).
 :::
@@ -61,7 +61,7 @@ You could put your blogs anywhere, but have to make sure they are places VuePres
 
 ## 6. How Doesn't the Sidebar Show `h1` Title?
 
-In `vuepress-theme-iu`, Please forgot `h1` and instead use [`frontmatter`](https://vuepress.vuejs.org/guide/frontmatter.html#alternative-frontmatter-formats) for the title and other article metadata. The main body starts from `h2`.
+In `vuepress-theme-timi`, Please forgot `h1` and instead use [`frontmatter`](https://vuepress.vuejs.org/guide/frontmatter.html#alternative-frontmatter-formats) for the title and other article metadata. The main body starts from `h2`.
 
 ## 7. How to Solve the Issue of Showing Comments in Version `1.1.0`?
 

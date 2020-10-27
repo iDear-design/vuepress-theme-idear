@@ -7,11 +7,11 @@ date: 2019-12-13
 
 ![demo.png](./images/backToTop.png)
 
-Back-to-top plugin for vuepress-theme-iu or other vuepress theme.
+Back-to-top plugin for vuepress-theme-timi or other vuepress theme.
 
 ### Name
 
-- **As plugin**: `@iu-design/vuepress-plugin-back-to-top`
+- **As plugin**: `@timi-design/vuepress-plugin-back-to-top`
 - **As component**: `BackToTop` (auto appear in the page, no need for extra code)
 
 ## Option API
@@ -20,7 +20,7 @@ Back-to-top plugin for vuepress-theme-iu or other vuepress theme.
 
 - description: name of icon in the middle of the button
 - type: `String`
-- default: `iu-up`
+- default: `timi-up`
 - accepted values: other built-in icons in the theme
 
 ### visibilityHeight

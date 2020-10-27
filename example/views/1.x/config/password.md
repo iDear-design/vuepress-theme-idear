@@ -13,7 +13,7 @@ date: 2019-12-19
 // .vuepress/config.js
 
 module.exports = {
-  theme: 'iu',
+  theme: 'timi',
   themeConfig: {
     // 密钥
     keyPage: {
@@ -47,7 +47,7 @@ module.exports = {
 
 ```yaml
 ---
-title: vuepress-theme-iu
+title: vuepress-theme-timi
 date: 2019-12-19
 author: reco_luan
 keys:

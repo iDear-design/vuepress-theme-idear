@@ -8,7 +8,7 @@ date: 2019-12.20
 :::
 
 ::: tip <Badge text="1.3.3+" />
-`vuepress-theme-iu` 的多语言配置，是在站点多语言配置和默认主题多语言配置的基础上增加的额外配置，所以请先了解官方的 [多语言配置官方文档](https://v1.vuepress.vuejs.org/zh/guide/i18n.html#%E7%AB%99%E7%82%B9%E5%A4%9A%E8%AF%AD%E8%A8%80%E9%85%8D%E7%BD%AE)。**并且请注意，`vuepress` 的默认语言代码为 `en-US`**。
+`vuepress-theme-timi` 的多语言配置，是在站点多语言配置和默认主题多语言配置的基础上增加的额外配置，所以请先了解官方的 [多语言配置官方文档](https://v1.vuepress.vuejs.org/zh/guide/i18n.html#%E7%AB%99%E7%82%B9%E5%A4%9A%E8%AF%AD%E8%A8%80%E9%85%8D%E7%BD%AE)。**并且请注意，`vuepress` 的默认语言代码为 `en-US`**。
 :::
 
 ## 网站支持的语言

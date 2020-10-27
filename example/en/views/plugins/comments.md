@@ -5,11 +5,11 @@ date: 2019-12.18
 
 ## Introduction
 
-Comments plugin for vuepress-theme-iu or other vuepress theme.
+Comments plugin for vuepress-theme-timi or other vuepress theme.
 
 ### Name
 
-- **As plugin**: `@iu-design/vuepress-plugin-comments`
+- **As plugin**: `@timi-design/vuepress-plugin-comments`
 - **As component**: `Comments` / `AccessNumber (page views by Valine)` (used in theme development)
 
 ## Option API
@@ -22,7 +22,7 @@ The plugin will have an input parameter `commentsSolution`. It's `valine` if usi
 
 ```javascript
 module.exports = {
-  theme: 'iu',
+  theme: 'timi',
   themeConfig: {
     valineConfig: {
       appId: '...',// your appId
@@ -36,8 +36,8 @@ Or:
 
 ```javascript
 module.exports = {
-  theme: 'iu',
-  plugins: [['@iu-design/comments', {
+  theme: 'timi',
+  plugins: [['@timi-design/comments', {
     solution: 'valine',
     options: {
       appId: '...',// your appId
@@ -53,7 +53,7 @@ module.exports = {
 
 ```javascript
 module.exports = {
-  theme: 'iu',
+  theme: 'timi',
   themeConfig: {
     vssueConfig: {
       platform: 'github',
@@ -70,11 +70,11 @@ Or:
 
 ```javascript
 module.exports = {
-  theme: 'iu',
-  plugins: [['@iu-design/comments', {
+  theme: 'timi',
+  plugins: [['@timi-design/comments', {
     solution: 'vssue',
     options: {
-      title: 'vuepress-theme-iu',
+      title: 'vuepress-theme-timi',
       platform: 'github',
       owner: 'OWNER_OF_REPO',
       repo: 'NAME_OF_REPO',

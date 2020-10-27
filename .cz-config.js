@@ -50,7 +50,7 @@ module.exports = {
   ],
 
   scopes: [
-    'vuepress-theme-iu',
+    'vuepress-theme-timi',
     'vuepress-plugin-back-to-top',
     'vuepress-plugin-comments',
     'vuepress-plugin-loading',

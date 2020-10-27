@@ -21,11 +21,11 @@ module.exports = {
     algolia: {
       start_urls: [
         {
-          "url": "http://iu-design.maxiaoqu.com/vuepress-theme-iu/"
+          "url": "http://timi-design.maxiaoqu.com/vuepress-theme-timi/"
         }
       ],
       apiKey: '97357e58cac743c6de62036cb152f18b',
-      indexName: 'vuepress-theme-iu'
+      indexName: 'vuepress-theme-timi'
       // inputSelector: '### REPLACE ME ####',
       // algoliaOptions: { 'facetFilters': ["lang:$LANG"] },
       // debug: false // Set debug to true if you want to inspect the dropdown
@@ -46,11 +46,11 @@ module.exports = {
     algolia: {
       start_urls: [
         {
-          "url": "http://iu-design.maxiaoqu.com/vuepress-theme-iu/en/"
+          "url": "http://timi-design.maxiaoqu.com/vuepress-theme-timi/en/"
         }
       ],
       apiKey: '97357e58cac743c6de62036cb152f18b',
-      indexName: 'vuepress-theme-iu'
+      indexName: 'vuepress-theme-timi'
       // inputSelector: '### REPLACE ME ####',
       // algoliaOptions: { 'facetFilters': ["lang:$LANG"] },
       // debug: false // Set debug to true if you want to inspect the dropdown

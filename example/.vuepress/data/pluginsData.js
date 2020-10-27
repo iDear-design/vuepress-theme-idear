@@ -1,64 +1,64 @@
 export default [
   {
-    name: '@iu-design/back-to-top',
+    name: '@timi-design/back-to-top',
     desc: '回到顶部。',
-    user: 'vuepress-iu',
+    user: 'vuepress-timi',
     repo: 'vuepress-plugin-back-to-top',
     feature: 'feature',
     scenes: 'independent'
   },
   {
-    name: '@iu-design/pagation',
+    name: '@timi-design/pagation',
     desc: '分页。',
-    user: 'vuepress-iu',
+    user: 'vuepress-timi',
     repo: 'vuepress-plugin-pagation',
     feature: 'feature',
     scenes: 'develop'
   },
   {
-    name: '@iu-design/loading-page',
+    name: '@timi-design/loading-page',
     desc: '加载 loading 页。',
-    user: 'vuepress-iu',
+    user: 'vuepress-timi',
     repo: 'vuepress-plugin-loading-page',
     feature: 'style',
     scenes: 'develop'
   },
   {
-    name: '@iu-design/kan-ban-niang',
+    name: '@timi-design/kan-ban-niang',
     desc: '看板娘 live2d 动画。',
-    user: 'vuepress-iu',
+    user: 'vuepress-timi',
     repo: 'vuepress-plugin-kan-ban-niang',
     feature: 'style',
     scenes: 'develop'
   },
   {
-    name: '@iu-design/comments',
+    name: '@timi-design/comments',
     desc: '评论功能，集成 valine 和 vssue。',
-    user: 'vuepress-iu',
+    user: 'vuepress-timi',
     repo: 'vuepress-plugin-comments',
     feature: 'feature',
     scenes: 'develop'
   },
   {
-    name: '@iu-design/extract-code',
+    name: '@timi-design/extract-code',
     desc: '功能代码展示插件，展示多种语言于一窗，增加易读性。',
-    user: 'vuepress-iu',
+    user: 'vuepress-timi',
     repo: 'vuepress-plugin-extract-code',
     feature: 'feature',
     scenes: 'develop'
   },
   {
-    name: '@iu-design/bgm-player',
+    name: '@timi-design/bgm-player',
     desc: '一款简洁的音乐播放器。',
-    user: 'vuepress-iu',
+    user: 'vuepress-timi',
     repo: 'vuepress-plugin-bgm-player',
     feature: 'feature',
     scenes: 'independent'
   },
   {
-    name: '@iu-design/rss',
+    name: '@timi-design/rss',
     desc: '生成 RSS 页面。',
-    user: 'vuepress-iu',
+    user: 'vuepress-timi',
     repo: 'vuepress-plugin-rss',
     feature: 'feature',
     scenes: 'independent'

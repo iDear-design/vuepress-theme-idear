@@ -4,11 +4,11 @@ date: 2019-12.18
 ---
 
 ## Introduction
-RSS plugin only for vuepress-theme-iu.
+RSS plugin only for vuepress-theme-timi.
 
 ### Name
 
-- **As plugin**: `@iu-design/vuepress-plugin-rss`
+- **As plugin**: `@timi-design/vuepress-plugin-rss`
 
 ## Option API
 
@@ -16,7 +16,7 @@ RSS plugin only for vuepress-theme-iu.
 
 - required: `true`
 - description: 网站地址
-- example: `iu-design.maxiaoqu.com/vuepress-theme-iu`
+- example: `timi-design.maxiaoqu.com/vuepress-theme-timi`
 
 ### copyright
 

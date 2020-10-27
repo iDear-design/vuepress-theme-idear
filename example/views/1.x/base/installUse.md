@@ -6,11 +6,11 @@ date: 2019-12-11
 ## 安装
 
 ```bash
-npm install vuepress-theme-iu --save-dev
+npm install vuepress-theme-timi --save-dev
 
 # or
 
-yarn add vuepress-theme-iu
+yarn add vuepress-theme-timi
 ```
 
 ## 引用
@@ -19,6 +19,6 @@ yarn add vuepress-theme-iu
 // .vuepress/config.js
 
 module.exports = {
-  theme: 'iu'
+  theme: 'timi'
 }  
 ```

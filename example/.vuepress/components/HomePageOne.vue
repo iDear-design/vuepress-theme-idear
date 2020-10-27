@@ -10,20 +10,20 @@
         <!-- <h1>{{ $frontmatter.heroText || $title }}</h1> -->
         <p class="description">{{ $description }}</p>
         <div>
-          <a target="_black" href="https://github.com/iu-design/vuepress-theme-iu">
-            <img alt="GitHub license" src="https://img.shields.io/github/license/iu-design/vuepress-theme-iu?&logo=github">
+          <a target="_black" href="https://github.com/timi-design/vuepress-theme-timi">
+            <img alt="GitHub license" src="https://img.shields.io/github/license/timi-design/vuepress-theme-timi?&logo=github">
           </a>
-          <a target="_black" href="https://github.com/iu-design/vuepress-theme-iu">
-            <img alt="GitHub stars" src="https://img.shields.io/github/stars/iu-design/vuepress-theme-iu?style=flat&logo=github">
+          <a target="_black" href="https://github.com/timi-design/vuepress-theme-timi">
+            <img alt="GitHub stars" src="https://img.shields.io/github/stars/timi-design/vuepress-theme-timi?style=flat&logo=github">
           </a>
-          <a target="_black" href="https://github.com/iu-design/vuepress-theme-iu">
-            <img alt="GitHub forks" src="https://img.shields.io/github/forks/iu-design/vuepress-theme-iu?style=flat&logo=github">
+          <a target="_black" href="https://github.com/timi-design/vuepress-theme-timi">
+            <img alt="GitHub forks" src="https://img.shields.io/github/forks/timi-design/vuepress-theme-timi?style=flat&logo=github">
           </a>
-          <a target="_black" href="https://www.npmjs.com/package/vuepress-theme-iu">
-            <img alt="Npm downloads" src="https://img.shields.io/npm/dt/vuepress-theme-iu?style=flat&logo=npm">
+          <a target="_black" href="https://www.npmjs.com/package/vuepress-theme-timi">
+            <img alt="Npm downloads" src="https://img.shields.io/npm/dt/vuepress-theme-timi?style=flat&logo=npm">
           </a>
-          <a target="_black" href="https://www.npmjs.com/package/vuepress-theme-iu">
-            <img alt="Npm version" src="https://img.shields.io/npm/v/vuepress-theme-iu.svg?style=flat&logo=npm&label=version"/>
+          <a target="_black" href="https://www.npmjs.com/package/vuepress-theme-timi">
+            <img alt="Npm version" src="https://img.shields.io/npm/v/vuepress-theme-timi.svg?style=flat&logo=npm&label=version"/>
           </a>
         </div>
         <router-link class="btn-about" :to="$frontmatter.actionLink">{{ $frontmatter.actionText }}</router-link>
@@ -94,7 +94,7 @@ export default {
     // const year = date.getFullYear()
     // const mounth = date.getMonth() + 1
     // const day = date.getDate()
-    // this.npmPackageDownloads('vuepress-theme-iu', `2018-09-12:${year}-${mounth}-${day}`).then(res => {
+    // this.npmPackageDownloads('vuepress-theme-timi', `2018-09-12:${year}-${mounth}-${day}`).then(res => {
     //   this.downloads = this.toThousandslsFilter(res)
     // })
   },

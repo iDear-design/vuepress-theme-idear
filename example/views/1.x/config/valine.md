@@ -5,7 +5,7 @@ date: 2019-12-19
 
 ## 介绍
 
-主题内置评论插件 [@iu-design/vuepress-plugin-comments](/views/plugins/)，可以根据自己的喜好选择 `Valine` 或者 `Vssue`；
+主题内置评论插件 [@timi-design/vuepress-plugin-comments](/views/plugins/)，可以根据自己的喜好选择 `Valine` 或者 `Vssue`；
 
 如果你想默认不加载评论，而只在某些页面显示评论功能，可以在 `valineConfig` 或 `vssueConfig` 中设置 `showComment: false`，并在需要展示评论的页面 设置 `isShowComments: true`。
 
@@ -22,7 +22,7 @@ date: 2019-12-19
 
 ```javascript
 module.exports = {
-  theme: 'iu',
+  theme: 'timi',
   themeConfig: {
     valineConfig: {
       appId: '...',// your appId
@@ -40,7 +40,7 @@ module.exports = {
 
 ```javascript
 module.exports = {
-  theme: 'iu',
+  theme: 'timi',
   themeConfig: {
     vssueConfig: {
       platform: 'github',

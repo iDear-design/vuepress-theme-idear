@@ -7,11 +7,11 @@ date: 2019-12-13
 
 ![demo.png](./images/pagation.png)
 
-Pagation plugin for vuepress-theme-iu or other vuepress theme.
+Pagation plugin for vuepress-theme-timi or other vuepress theme.
 
 ### 名字
 
-- **As plugin**: `@iu-design/vuepress-plugin-pagation`
+- **As plugin**: `@timi-design/vuepress-plugin-pagation`
 - **As component**: `Pagation`（主题开发时使用）
 
 ## Option API

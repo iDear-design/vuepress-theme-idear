@@ -5,7 +5,7 @@ date: 2019-12.18
 
 ## Introduction
 
-Features and code presentation plugin for vuepress-theme-iu or other vuepress themes.
+Features and code presentation plugin for vuepress-theme-timi or other vuepress themes.
 
 <RecoDemo :collapse="true">
   <template slot="code-template">
@@ -22,7 +22,7 @@ Features and code presentation plugin for vuepress-theme-iu or other vuepress th
 
 ### Name
 
-- **As plugin**: `@iu-design/vuepress-plugin-extract-code`
+- **As plugin**: `@timi-design/vuepress-plugin-extract-code`
 
 ## Usage
 
@@ -31,7 +31,7 @@ Features and code presentation plugin for vuepress-theme-iu or other vuepress th
 ```js
 module.exports = {
   plugins: [
-    '@iu-design/extract-code'
+    '@timi-design/extract-code'
   ]
 }
 ```
