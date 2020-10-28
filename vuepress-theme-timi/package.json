@@ -21,7 +21,7 @@
   "main": "index.js",
   "dependencies": {
     "@timi-design/vuepress-plugin-back-to-top": "1.0.0",
-    "@timi-design/vuepress-plugin-comments": "1.0.1",
+    "@timi-design/vuepress-plugin-comments": "1.0.0",
     "@timi-design/vuepress-plugin-loading-page": "1.0.0",
     "@timi-design/vuepress-plugin-pagation": "1.0.0",
     "@vuepress/plugin-blog": "1.9.2",
