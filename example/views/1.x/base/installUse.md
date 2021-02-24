@@ -6,11 +6,11 @@ date: 2019-12-11
 ## 安装
 
 ```bash
-npm install vuepress-theme-timi --save-dev
+npm install vuepress-theme-idear --save-dev
 
 # or
 
-yarn add vuepress-theme-timi
+yarn add vuepress-theme-idear
 ```
 
 ## 引用

@@ -94,10 +94,10 @@ module.exports = {
     type: 'blog',
     friendLink: [
       {
-        title: 'vuepress-theme-timi',
+        title: 'vuepress-theme-idear',
         desc: 'A simple and beautiful vuepress Blog & Doc theme.',
         logo: "files.maxiaoqu.com/logo/icon_vuepress_timi.png",,
-        link: 'timi-design.maxiaoqu.com/vuepress-theme-timi'
+        link: 'timi-design.maxiaoqu.com/vuepress-theme-idear'
       },
       {
         title: '码小趣',

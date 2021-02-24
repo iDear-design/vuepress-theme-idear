@@ -47,7 +47,7 @@ module.exports = {
 
 ```yaml
 ---
-title: vuepress-theme-timi
+title: vuepress-theme-idear
 date: 2019-12-19
 author: reco_luan
 keys:

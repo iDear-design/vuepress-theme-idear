@@ -74,7 +74,7 @@ module.exports = {
   plugins: [['@timi-design/comments', {
     solution: 'vssue',
     options: {
-      title: 'vuepress-theme-timi',
+      title: 'vuepress-theme-idear',
       platform: 'github',
       owner: 'OWNER_OF_REPO',
       repo: 'NAME_OF_REPO',
