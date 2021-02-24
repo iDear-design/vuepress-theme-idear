@@ -2,7 +2,7 @@ module.exports = [
   ['link', {rel: 'icon', href: '/favicon.ico'}],
   ['meta', {name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no'}],
   ['meta', {name: 'author', content: 'maxiaoqu'}],
-  ['meta', {name: 'keywords', content: 'vuepress,timi,maxiaoqu,vuepress-timi,vuepress-theme-timi,theme,blog,主题'}],
+  ['meta', {name: 'keywords', content: 'vuepress,timi,maxiaoqu,vuepress-timi,vuepress-theme-idear,theme,blog,主题'}],
   ['link', {rel: 'manifest', href: '/manifest.json'}],
   ['meta', {name: 'theme-color', content: '#42b983'}],
   ['meta', {name: 'apple-mobile-web-app-capable', content: 'yes'}],

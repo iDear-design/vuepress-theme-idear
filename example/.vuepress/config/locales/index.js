@@ -25,7 +25,7 @@ module.exports = {
         }
       ],
       apiKey: '97357e58cac743c6de62036cb152f18b',
-      indexName: 'vuepress-theme-timi'
+      indexName: 'vuepress-theme-idear'
       // inputSelector: '### REPLACE ME ####',
       // algoliaOptions: { 'facetFilters': ["lang:$LANG"] },
       // debug: false // Set debug to true if you want to inspect the dropdown
@@ -50,7 +50,7 @@ module.exports = {
         }
       ],
       apiKey: '97357e58cac743c6de62036cb152f18b',
-      indexName: 'vuepress-theme-timi'
+      indexName: 'vuepress-theme-idear'
       // inputSelector: '### REPLACE ME ####',
       // algoliaOptions: { 'facetFilters': ["lang:$LANG"] },
       // debug: false // Set debug to true if you want to inspect the dropdown

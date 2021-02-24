@@ -94,7 +94,7 @@ export default {
     // const year = date.getFullYear()
     // const mounth = date.getMonth() + 1
     // const day = date.getDate()
-    // this.npmPackageDownloads('vuepress-theme-timi', `2018-09-12:${year}-${mounth}-${day}`).then(res => {
+    // this.npmPackageDownloads('vuepress-theme-idear', `2018-09-12:${year}-${mounth}-${day}`).then(res => {
     //   this.downloads = this.toThousandslsFilter(res)
     // })
   },
