@@ -59,7 +59,7 @@ export default [
     name: '@idear-vuepress/rss',
     desc: '生成 RSS 页面。',
     user: 'vuepress-idear',
-    repo: 'vuepress-plugin-rss',
+    repo: 'rssProduce',
     feature: 'feature',
     scenes: 'independent'
   },

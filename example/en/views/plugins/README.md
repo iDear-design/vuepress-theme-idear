@@ -109,7 +109,7 @@ The plugins we developed are under `npm`'s organization `idear-design`, so the d
       <a href="rss.html">rss</a>
     </td>
     <td>
-      <NpmLink pkg="@idear-vuepress/vuepress-plugin-rss"/>
+      <NpmLink pkg="@idear-vuepress/rssProduce"/>
     </td>
     <td>✖</td>
     <td>✔</td>
