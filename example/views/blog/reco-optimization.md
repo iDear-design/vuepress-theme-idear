@@ -692,7 +692,7 @@ module.exports = [
       "@vuepress-yard/vuepress-plugin-window"
     ], */
     /* 音乐插件   
-    ["@idear-design/vuepress-plugin-bgm-player",
+    ["@idear-vuepress/vuepress-plugin-bgm-player",
           {
             audios: [
               // 网络文件示例

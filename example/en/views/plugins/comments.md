@@ -9,7 +9,7 @@ Comments plugin for vuepress-theme-idear or other vuepress theme.
 
 ### Name
 
-- **As plugin**: `@idear-design/vuepress-plugin-comments`
+- **As plugin**: `@idear-vuepress/vuepress-plugin-comments`
 - **As component**: `Comments` / `AccessNumber (page views by Valine)` (used in theme development)
 
 ## Option API
@@ -37,7 +37,7 @@ Or:
 ```javascript
 module.exports = {
   theme: 'idear',
-  plugins: [['@idear-design/comments', {
+  plugins: [['@idear-vuepress/comments', {
     solution: 'valine',
     options: {
       appId: '...',// your appId
@@ -71,7 +71,7 @@ Or:
 ```javascript
 module.exports = {
   theme: 'idear',
-  plugins: [['@idear-design/comments', {
+  plugins: [['@idear-vuepress/comments', {
     solution: 'vssue',
     options: {
       title: 'vuepress-theme-idear',

@@ -11,7 +11,7 @@ date: 2019-12-30
 
 ```json
 {
-  name: '@idear-design/rss', // 使用名称
+  name: '@idear-vuepress/rss', // 使用名称
   desc: '生成 RSS 页面',       // 描述
   user: 'vuepress-idear',      // Github 用户名称
   repo: 'vuepress-theme-rss', // Github 项目名称

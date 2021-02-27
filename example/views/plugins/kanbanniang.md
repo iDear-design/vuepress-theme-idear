@@ -11,7 +11,7 @@ kan-ban-niang plugin for vuepress-theme-idear or other vuepress theme.
 
 ### 名字
 
-- **As plugin**: `@idear-design/vuepress-plugin-kan-ban-niang`
+- **As plugin**: `@idear-vuepress/vuepress-plugin-kan-ban-niang`
 - **As component**: `KanBanNiang`（自动出现在页面中，无需添加额外代码）
 
 ### 按钮

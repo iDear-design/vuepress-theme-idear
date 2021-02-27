@@ -11,7 +11,7 @@ Back-to-top plugin for vuepress-theme-idear or other vuepress theme.
 
 ### Name
 
-- **As plugin**: `@idear-design/vuepress-plugin-back-to-top`
+- **As plugin**: `@idear-vuepress/vuepress-plugin-back-to-top`
 - **As component**: `BackToTop` (auto appear in the page, no need for extra code)
 
 ## Option API

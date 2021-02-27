@@ -11,7 +11,7 @@ date: 2019-12-13
 
 ### Name
 
-- **As plugin**: `@idear-design/vuepress-plugin-kan-ban-niang`
+- **As plugin**: `@idear-vuepress/vuepress-plugin-kan-ban-niang`
 - **As component**: `KanBanNiang` (auto appear in the page, no need for extra code)
 
 ### Buttons

@@ -16,7 +16,7 @@ Our theme `vuepress-theme-idear` has also become a plugin since version `1.1.0`.
 We developed some plugins to help enrich your website. You could choose to use them if you wish.
 
 ::: tip
-The plugins we developed are under `npm`'s organization `idear-design`, so the default full name of a following plugin is `@idear-design/vuepress-plugin-<name>` (such as the full name for `back-to-top` is `@idear-design/vuepress-plugin-back-to-top`). We will just list the short names below.
+The plugins we developed are under `npm`'s organization `idear-design`, so the default full name of a following plugin is `@idear-vuepress/vuepress-plugin-<name>` (such as the full name for `back-to-top` is `@idear-vuepress/vuepress-plugin-back-to-top`). We will just list the short names below.
 :::
 
 <table>
@@ -32,7 +32,7 @@ The plugins we developed are under `npm`'s organization `idear-design`, so the d
       <a href="backToTop.html">back-to-top</a>
     </td>
     <td>
-      <NpmLink pkg="@idear-design/vuepress-plugin-back-to-top"/>
+      <NpmLink pkg="@idear-vuepress/vuepress-plugin-back-to-top"/>
     </td>
     <td>✔</td>
     <td>✖</td>
@@ -43,7 +43,7 @@ The plugins we developed are under `npm`'s organization `idear-design`, so the d
       <a href="pagation.html">pagation</a>
     </td>
     <td>
-      <NpmLink pkg="@idear-design/vuepress-plugin-pagation"/>
+      <NpmLink pkg="@idear-vuepress/vuepress-plugin-pagation"/>
     </td>
     <td>✔</td>
     <td>✖</td>
@@ -54,7 +54,7 @@ The plugins we developed are under `npm`'s organization `idear-design`, so the d
       <a href="screenfull.html">screenfull</a>
     </td>
     <td>
-      <NpmLink pkg="@idear-design/vuepress-plugin-screenfull"/>
+      <NpmLink pkg="@idear-vuepress/vuepress-plugin-screenfull"/>
     </td>
     <td>✔</td>
     <td>✖</td>
@@ -65,7 +65,7 @@ The plugins we developed are under `npm`'s organization `idear-design`, so the d
       <a href="loadingPage.html">loading-page</a>
     </td>
     <td>
-      <NpmLink pkg="@idear-design/vuepress-plugin-loading-page"/>
+      <NpmLink pkg="@idear-vuepress/vuepress-plugin-loading-page"/>
     </td>
     <td>✔</td>
     <td>✖</td>
@@ -76,7 +76,7 @@ The plugins we developed are under `npm`'s organization `idear-design`, so the d
       <a href="kanbanniang.html">kan-ban-niang</a>
     </td>
     <td>
-      <NpmLink pkg="@idear-design/vuepress-plugin-kan-ban-niang"/>
+      <NpmLink pkg="@idear-vuepress/vuepress-plugin-kan-ban-niang"/>
     </td>
     <td>✖</td>
     <td>✖</td>
@@ -87,7 +87,7 @@ The plugins we developed are under `npm`'s organization `idear-design`, so the d
       <a href="comments.html">comments</a>
     </td>
     <td>
-      <NpmLink pkg="@idear-design/vuepress-plugin-comments"/>
+      <NpmLink pkg="@idear-vuepress/vuepress-plugin-comments"/>
     </td>
     <td>✔</td>
     <td>✖</td>
@@ -98,7 +98,7 @@ The plugins we developed are under `npm`'s organization `idear-design`, so the d
       <a href="extractCode.html">extract-code</a>
     </td>
     <td>
-      <NpmLink pkg="@idear-design/vuepress-plugin-extract-code"/>
+      <NpmLink pkg="@idear-vuepress/vuepress-plugin-extract-code"/>
     </td>
     <td>✔</td>
     <td>✖</td>
@@ -109,7 +109,7 @@ The plugins we developed are under `npm`'s organization `idear-design`, so the d
       <a href="rss.html">rss</a>
     </td>
     <td>
-      <NpmLink pkg="@idear-design/vuepress-plugin-rss"/>
+      <NpmLink pkg="@idear-vuepress/vuepress-plugin-rss"/>
     </td>
     <td>✖</td>
     <td>✔</td>
@@ -120,7 +120,7 @@ The plugins we developed are under `npm`'s organization `idear-design`, so the d
       <a href="bgmPlayer.html">bgm-player</a>
     </td>
     <td>
-      <NpmLink pkg="@idear-design/vuepress-plugin-bgm-player"/>
+      <NpmLink pkg="@idear-vuepress/vuepress-plugin-bgm-player"/>
     </td>
     <td>✖</td>
     <td>✖</td>
@@ -223,7 +223,7 @@ such as:
 module.exports = {
   plugins: [
     [
-      "@idear-design/vuepress-plugin-kan-ban-niang",
+      "@idear-vuepress/vuepress-plugin-kan-ban-niang",
       {
         theme: ["miku"],
         clean: true,
@@ -258,7 +258,7 @@ You could use this way to customize built-in plugins in our theme, or disable on
 ```javascript
 module.exports = {
   plugins: [
-    ["@idear-design/back-to-top", false] // disabled.
+    ["@idear-vuepress/back-to-top", false] // disabled.
   ]
 };
 ```

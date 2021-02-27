@@ -11,7 +11,7 @@ Bgm player plugin for vuepress-theme-idear or other vuepress theme.
 
 ### 名字
 
-- **As plugin**: `@idear-design/vuepress-plugin-bgm-player`
+- **As plugin**: `@idear-vuepress/vuepress-plugin-bgm-player`
 - **As component**: `BgMusic`（自动出现在页面中，无需添加额外代码）
 
 ## Option API
