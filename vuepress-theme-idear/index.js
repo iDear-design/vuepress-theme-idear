@@ -19,10 +19,10 @@ module.exports = (options, ctx) => ({
   },
 
   plugins: [
-    '@idear-design/back-to-top',
-    '@idear-design/loading-page',
-    '@idear-design/pagation',
-    '@idear-design/comments',
+    '@idear-vuepress/back-to-top',
+    '@idear-vuepress/loading-page',
+    '@idear-vuepress/pagation',
+    '@idear-vuepress/comments',
     '@vuepress/active-header-links',
     ['@vuepress/medium-zoom', {
       selector: '.theme-reco-content :not(a) > img'
