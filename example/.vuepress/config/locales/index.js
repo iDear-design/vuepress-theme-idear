@@ -21,7 +21,7 @@ module.exports = {
     algolia: {
       start_urls: [
         {
-          "url": "http://timi-design.maxiaoqu.com/vuepress-theme-timi/"
+          "url": "http://idear-design.maxiaoqu.com/vuepress-theme-idear/"
         }
       ],
       apiKey: '97357e58cac743c6de62036cb152f18b',
@@ -46,7 +46,7 @@ module.exports = {
     algolia: {
       start_urls: [
         {
-          "url": "http://timi-design.maxiaoqu.com/vuepress-theme-timi/en/"
+          "url": "http://idear-design.maxiaoqu.com/vuepress-theme-idear/en/"
         }
       ],
       apiKey: '97357e58cac743c6de62036cb152f18b',

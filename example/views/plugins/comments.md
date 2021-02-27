@@ -5,11 +5,11 @@ date: 2019-12.18
 
 ## 介绍
 
-Comments plugin for vuepress-theme-timi or other vuepress theme.
+Comments plugin for vuepress-theme-idear or other vuepress theme.
 
 ### 名字
 
-- **As plugin**: `@timi-design/vuepress-plugin-comments`
+- **As plugin**: `@idear-design/vuepress-plugin-comments`
 - **As component**: `Comments (评论)` / `AccessNumber (使用 Valine 时的访问量)`（主题开发时使用）
 
 ## Option API
@@ -22,7 +22,7 @@ Comments plugin for vuepress-theme-timi or other vuepress theme.
 
 ```javascript
 module.exports = {
-  theme: 'timi',
+  theme: 'idear',
   themeConfig: {
     valineConfig: {
       appId: '...',// your appId
@@ -36,8 +36,8 @@ module.exports = {
 
 ```javascript
 module.exports = {
-  theme: 'timi',
-  plugins: [['@timi-design/comments', {
+  theme: 'idear',
+  plugins: [['@idear-design/comments', {
     solution: 'valine',
     options: {
       appId: '...',// your appId
@@ -53,7 +53,7 @@ module.exports = {
 
 ```javascript
 module.exports = {
-  theme: 'timi',
+  theme: 'idear',
   themeConfig: {
     vssueConfig: {
       platform: 'github',
@@ -70,8 +70,8 @@ module.exports = {
 
 ```javascript
 module.exports = {
-  theme: 'timi',
-  plugins: [['@timi-design/comments', {
+  theme: 'idear',
+  plugins: [['@idear-design/comments', {
     solution: 'vssue',
     options: {
       title: 'vuepress-theme-idear',

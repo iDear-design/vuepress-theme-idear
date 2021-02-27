@@ -21,7 +21,7 @@ module.exports = {
 您可以在导航菜单中使用主题的内置图标，如下所示：
 
 ```javascript
-{ text: 'Tags', link: '/tags/', icon: 'timi-tag' }
+{ text: 'Tags', link: '/tags/', icon: 'idear-tag' }
 ```
 
 本主题有以下内置图标供您选择
@@ -108,7 +108,7 @@ module.exports = {
 // .vuepress/config.js
 
 module.exports = {
-  theme: 'timi',
+  theme: 'idear',
   themeConfig: {
     authorAvatar: '/avatar.png'
   }  

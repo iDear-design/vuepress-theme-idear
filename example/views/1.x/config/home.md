@@ -6,7 +6,7 @@ date: 2019-12.20
 ## 介绍
 
 :::tip
-主题的主页的默认风格偏文档，并不像一个博客，所以从 `vuepress-theme-timi@1.0.0-alpha.25` 开始，增加博客风格首页布局。
+主题的主页的默认风格偏文档，并不像一个博客，所以从 `vuepress-theme-idear@1.0.0-alpha.25` 开始，增加博客风格首页布局。
 :::
 
 ## Option API
@@ -47,7 +47,7 @@ heroImageStyle: {
 // .vuepress/config.js
 
 module.exports = {
-  theme: 'timi',
+  theme: 'idear',
   themeConfig: {
     type: 'blog'
   }
@@ -78,7 +78,7 @@ bgImageStyle: {
 // .vuepress/config.js
 
 module.exports = {
-  theme: 'timi',
+  theme: 'idear',
   themeConfig: {
     authorAvatar: '/avatar.png'
   }
@@ -89,15 +89,15 @@ module.exports = {
 
 ```js
 module.exports = {
-  theme: 'timi',
+  theme: 'idear',
   themeConfig: {
     type: 'blog',
     friendLink: [
       {
         title: 'vuepress-theme-idear',
         desc: 'A simple and beautiful vuepress Blog & Doc theme.',
-        logo: "files.maxiaoqu.com/logo/icon_vuepress_timi.png",,
-        link: 'timi-design.maxiaoqu.com/vuepress-theme-idear'
+        logo: "files.maxiaoqu.com/logo/icon_vuepress_idear.png",,
+        link: 'idear-design.maxiaoqu.com/vuepress-theme-idear'
       },
       {
         title: '码小趣',
@@ -128,7 +128,7 @@ module.exports = {
 // .vuepress/config.js
 
 module.exports = {
-  theme: 'timi',
+  theme: 'idear',
   themeConfig: {
     type: 'your vue component name'
   }

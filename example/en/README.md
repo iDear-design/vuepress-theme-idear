@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /icon_vuepress_timi.png
+heroImage: /icon_vuepress_idear.png
 heroImageStyle: {
   maxWidth: '200px',
   width: '100%',

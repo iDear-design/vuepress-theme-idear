@@ -13,7 +13,7 @@ date: 2019-12-19
 // .vuepress/config.js
 
 module.exports = {
-  theme: 'timi',
+  theme: 'idear',
   themeConfig: {
     // 密钥
     keyPage: {

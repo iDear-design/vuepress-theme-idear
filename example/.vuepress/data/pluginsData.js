@@ -1,64 +1,64 @@
 export default [
   {
-    name: '@timi-design/back-to-top',
+    name: '@idear-design/back-to-top',
     desc: '回到顶部。',
-    user: 'vuepress-timi',
+    user: 'vuepress-idear',
     repo: 'vuepress-plugin-back-to-top',
     feature: 'feature',
     scenes: 'independent'
   },
   {
-    name: '@timi-design/pagation',
+    name: '@idear-design/pagation',
     desc: '分页。',
-    user: 'vuepress-timi',
+    user: 'vuepress-idear',
     repo: 'vuepress-plugin-pagation',
     feature: 'feature',
     scenes: 'develop'
   },
   {
-    name: '@timi-design/loading-page',
+    name: '@idear-design/loading-page',
     desc: '加载 loading 页。',
-    user: 'vuepress-timi',
+    user: 'vuepress-idear',
     repo: 'vuepress-plugin-loading-page',
     feature: 'style',
     scenes: 'develop'
   },
   {
-    name: '@timi-design/kan-ban-niang',
+    name: '@idear-design/kan-ban-niang',
     desc: '看板娘 live2d 动画。',
-    user: 'vuepress-timi',
+    user: 'vuepress-idear',
     repo: 'vuepress-plugin-kan-ban-niang',
     feature: 'style',
     scenes: 'develop'
   },
   {
-    name: '@timi-design/comments',
+    name: '@idear-design/comments',
     desc: '评论功能，集成 valine 和 vssue。',
-    user: 'vuepress-timi',
+    user: 'vuepress-idear',
     repo: 'vuepress-plugin-comments',
     feature: 'feature',
     scenes: 'develop'
   },
   {
-    name: '@timi-design/extract-code',
+    name: '@idear-design/extract-code',
     desc: '功能代码展示插件，展示多种语言于一窗，增加易读性。',
-    user: 'vuepress-timi',
+    user: 'vuepress-idear',
     repo: 'vuepress-plugin-extract-code',
     feature: 'feature',
     scenes: 'develop'
   },
   {
-    name: '@timi-design/bgm-player',
+    name: '@idear-design/bgm-player',
     desc: '一款简洁的音乐播放器。',
-    user: 'vuepress-timi',
+    user: 'vuepress-idear',
     repo: 'vuepress-plugin-bgm-player',
     feature: 'feature',
     scenes: 'independent'
   },
   {
-    name: '@timi-design/rss',
+    name: '@idear-design/rss',
     desc: '生成 RSS 页面。',
-    user: 'vuepress-timi',
+    user: 'vuepress-idear',
     repo: 'vuepress-plugin-rss',
     feature: 'feature',
     scenes: 'independent'

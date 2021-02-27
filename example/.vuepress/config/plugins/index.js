@@ -21,17 +21,17 @@ module.exports = [
     {
       components: [
         {
-          name: 'timi-home-page-one',
+          name: 'idear-home-page-one',
           path: path.resolve(__dirname, '../../components/HomePageOne.vue')
         }
       ],
       componentsDir: path.resolve(__dirname, '../../demo')
     }
   ],
-  '@timi-design/extract-code',
+  '@idear-design/extract-code',
   'flowchart',
   ['sitemap', {
-    hostname: 'https://timi-design.maxiaoqu.com/vuepress-theme-timi'
+    hostname: 'https://idear-design.maxiaoqu.com/vuepress-theme-idear'
   }],
   require('../../plugins/notification/index')
 ]

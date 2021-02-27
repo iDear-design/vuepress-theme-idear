@@ -19,6 +19,6 @@ yarn add vuepress-theme-idear
 // .vuepress/config.js
 
 module.exports = {
-  theme: 'timi'
+  theme: 'idear'
 }  
 ```

@@ -1,6 +1,6 @@
 module.exports = {
   type: 'HomePageOne',
-  // logo: '/icon_vuepress_timi.png',
+  // logo: '/icon_vuepress_idear.png',
   // 搜索设置
   search: true,
   searchMaxSuggestions: 10,

@@ -10,20 +10,20 @@
         <!-- <h1>{{ $frontmatter.heroText || $title }}</h1> -->
         <p class="description">{{ $description }}</p>
         <div>
-          <a target="_black" href="https://github.com/timi-design/vuepress-theme-timi">
-            <img alt="GitHub license" src="https://img.shields.io/github/license/timi-design/vuepress-theme-timi?&logo=github">
+          <a target="_black" href="https://github.com/idear-design/vuepress-theme-idear">
+            <img alt="GitHub license" src="https://img.shields.io/github/license/idear-design/vuepress-theme-idear?&logo=github">
           </a>
-          <a target="_black" href="https://github.com/timi-design/vuepress-theme-timi">
-            <img alt="GitHub stars" src="https://img.shields.io/github/stars/timi-design/vuepress-theme-timi?style=flat&logo=github">
+          <a target="_black" href="https://github.com/idear-design/vuepress-theme-idear">
+            <img alt="GitHub stars" src="https://img.shields.io/github/stars/idear-design/vuepress-theme-idear?style=flat&logo=github">
           </a>
-          <a target="_black" href="https://github.com/timi-design/vuepress-theme-timi">
-            <img alt="GitHub forks" src="https://img.shields.io/github/forks/timi-design/vuepress-theme-timi?style=flat&logo=github">
+          <a target="_black" href="https://github.com/idear-design/vuepress-theme-idear">
+            <img alt="GitHub forks" src="https://img.shields.io/github/forks/idear-design/vuepress-theme-idear?style=flat&logo=github">
           </a>
-          <a target="_black" href="https://www.npmjs.com/package/vuepress-theme-timi">
-            <img alt="Npm downloads" src="https://img.shields.io/npm/dt/vuepress-theme-timi?style=flat&logo=npm">
+          <a target="_black" href="https://www.npmjs.com/package/vuepress-theme-idear">
+            <img alt="Npm downloads" src="https://img.shields.io/npm/dt/vuepress-theme-idear?style=flat&logo=npm">
           </a>
-          <a target="_black" href="https://www.npmjs.com/package/vuepress-theme-timi">
-            <img alt="Npm version" src="https://img.shields.io/npm/v/vuepress-theme-timi.svg?style=flat&logo=npm&label=version"/>
+          <a target="_black" href="https://www.npmjs.com/package/vuepress-theme-idear">
+            <img alt="Npm version" src="https://img.shields.io/npm/v/vuepress-theme-idear.svg?style=flat&logo=npm&label=version"/>
           </a>
         </div>
         <router-link class="btn-about" :to="$frontmatter.actionLink">{{ $frontmatter.actionText }}</router-link>

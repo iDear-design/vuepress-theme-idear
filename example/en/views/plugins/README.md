@@ -7,16 +7,16 @@ date: 2019-12-13
 
 Since version `1.0` VuePress supported plugins, which not only enable us to use our favorite theme but also choose some plugins to enrich your blog or domentation and build your own static website.
 
-Our theme `vuepress-theme-timi` has also become a plugin since version `1.1.0`. We packed independent features or components into plugins, which make our core code simpler and easier to maintain and extend.
+Our theme `vuepress-theme-idear` has also become a plugin since version `1.1.0`. We packed independent features or components into plugins, which make our core code simpler and easier to maintain and extend.
 
 ## Source of Plugins
 
-### Plugins under timi-design
+### Plugins under idear-design
 
 We developed some plugins to help enrich your website. You could choose to use them if you wish.
 
 ::: tip
-The plugins we developed are under `npm`'s organization `timi-design`, so the default full name of a following plugin is `@timi-design/vuepress-plugin-<name>` (such as the full name for `back-to-top` is `@timi-design/vuepress-plugin-back-to-top`). We will just list the short names below.
+The plugins we developed are under `npm`'s organization `idear-design`, so the default full name of a following plugin is `@idear-design/vuepress-plugin-<name>` (such as the full name for `back-to-top` is `@idear-design/vuepress-plugin-back-to-top`). We will just list the short names below.
 :::
 
 <table>
@@ -32,7 +32,7 @@ The plugins we developed are under `npm`'s organization `timi-design`, so the de
       <a href="backToTop.html">back-to-top</a>
     </td>
     <td>
-      <NpmLink pkg="@timi-design/vuepress-plugin-back-to-top"/>
+      <NpmLink pkg="@idear-design/vuepress-plugin-back-to-top"/>
     </td>
     <td>✔</td>
     <td>✖</td>
@@ -43,7 +43,7 @@ The plugins we developed are under `npm`'s organization `timi-design`, so the de
       <a href="pagation.html">pagation</a>
     </td>
     <td>
-      <NpmLink pkg="@timi-design/vuepress-plugin-pagation"/>
+      <NpmLink pkg="@idear-design/vuepress-plugin-pagation"/>
     </td>
     <td>✔</td>
     <td>✖</td>
@@ -54,7 +54,7 @@ The plugins we developed are under `npm`'s organization `timi-design`, so the de
       <a href="screenfull.html">screenfull</a>
     </td>
     <td>
-      <NpmLink pkg="@timi-design/vuepress-plugin-screenfull"/>
+      <NpmLink pkg="@idear-design/vuepress-plugin-screenfull"/>
     </td>
     <td>✔</td>
     <td>✖</td>
@@ -65,7 +65,7 @@ The plugins we developed are under `npm`'s organization `timi-design`, so the de
       <a href="loadingPage.html">loading-page</a>
     </td>
     <td>
-      <NpmLink pkg="@timi-design/vuepress-plugin-loading-page"/>
+      <NpmLink pkg="@idear-design/vuepress-plugin-loading-page"/>
     </td>
     <td>✔</td>
     <td>✖</td>
@@ -76,7 +76,7 @@ The plugins we developed are under `npm`'s organization `timi-design`, so the de
       <a href="kanbanniang.html">kan-ban-niang</a>
     </td>
     <td>
-      <NpmLink pkg="@timi-design/vuepress-plugin-kan-ban-niang"/>
+      <NpmLink pkg="@idear-design/vuepress-plugin-kan-ban-niang"/>
     </td>
     <td>✖</td>
     <td>✖</td>
@@ -87,7 +87,7 @@ The plugins we developed are under `npm`'s organization `timi-design`, so the de
       <a href="comments.html">comments</a>
     </td>
     <td>
-      <NpmLink pkg="@timi-design/vuepress-plugin-comments"/>
+      <NpmLink pkg="@idear-design/vuepress-plugin-comments"/>
     </td>
     <td>✔</td>
     <td>✖</td>
@@ -98,7 +98,7 @@ The plugins we developed are under `npm`'s organization `timi-design`, so the de
       <a href="extractCode.html">extract-code</a>
     </td>
     <td>
-      <NpmLink pkg="@timi-design/vuepress-plugin-extract-code"/>
+      <NpmLink pkg="@idear-design/vuepress-plugin-extract-code"/>
     </td>
     <td>✔</td>
     <td>✖</td>
@@ -109,7 +109,7 @@ The plugins we developed are under `npm`'s organization `timi-design`, so the de
       <a href="rss.html">rss</a>
     </td>
     <td>
-      <NpmLink pkg="@timi-design/vuepress-plugin-rss"/>
+      <NpmLink pkg="@idear-design/vuepress-plugin-rss"/>
     </td>
     <td>✖</td>
     <td>✔</td>
@@ -120,7 +120,7 @@ The plugins we developed are under `npm`'s organization `timi-design`, so the de
       <a href="bgmPlayer.html">bgm-player</a>
     </td>
     <td>
-      <NpmLink pkg="@timi-design/vuepress-plugin-bgm-player"/>
+      <NpmLink pkg="@idear-design/vuepress-plugin-bgm-player"/>
     </td>
     <td>✖</td>
     <td>✖</td>
@@ -152,7 +152,7 @@ These built-in plugins have already been customized according to the style of ou
 |                                              [screenfull](./screenfull.md)                                               |    ✔     |                              No customization needed                              | ...                              |
 |                                                      [extractCode](./extractCode.md)                                                       |    ✖     |                  -                   | ...                              |
 | [@vuepress/plugin-active-header-links](https://v1.vuepress.vuejs.org/plugin/official/plugin-active-header-links.html) |    ✖     |                                      -                                       | Automatically activates sidebar links when page scrolls |
-|         [@vuepress/plugin-medium-zoom](https://v1.vuepress.vuejs.org/plugin/official/plugin-medium-zoom.html)         |    ✖     |              `{selector: '.theme-timi-content :not(a) > img'}`               | [medium-zoom](https://github.com/francoischalifour/medium-zoom) plugin |
+|         [@vuepress/plugin-medium-zoom](https://v1.vuepress.vuejs.org/plugin/official/plugin-medium-zoom.html)         |    ✖     |              `{selector: '.theme-idear-content :not(a) > img'}`               | [medium-zoom](https://github.com/francoischalifour/medium-zoom) plugin |
 |           [@vuepress/plugin-nprogress](https://v1.vuepress.vuejs.org/plugin/official/plugin-nprogress.html)           |    ✖     |                                      -                                       | A progress bar plugin based on [nprogress](https://github.com/rstacruz/nprogress) |
 |              [@vuepress/plugin-search](https://v1.vuepress.vuejs.org/plugin/official/plugin-search.html)              |    ✔     |                                      -                                       | A search plugin based on [Headers](https://v1.vuepress.vuejs.org/miscellaneous/glossary.html#headers) |
 |                             [@vuepress/plugin-blog](https://vuepress-plugin-blog.ulivz.com/)                             |    ✖     | This is a basic plugin for blogging. Please don't disable or change config | A plugin for blogging |
@@ -223,7 +223,7 @@ such as:
 module.exports = {
   plugins: [
     [
-      "@timi-design/vuepress-plugin-kan-ban-niang",
+      "@idear-design/vuepress-plugin-kan-ban-niang",
       {
         theme: ["miku"],
         clean: true,
@@ -258,7 +258,7 @@ You could use this way to customize built-in plugins in our theme, or disable on
 ```javascript
 module.exports = {
   plugins: [
-    ["@timi-design/back-to-top", false] // disabled.
+    ["@idear-design/back-to-top", false] // disabled.
   ]
 };
 ```

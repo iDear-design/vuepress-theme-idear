@@ -7,11 +7,11 @@ date: 2019-12-13
 
 ![demo.png](./images/pagation.png)
 
-Pagination plugin for vuepress-theme-timi or other vuepress theme.
+Pagination plugin for vuepress-theme-idear or other vuepress theme.
 
 ### Name
 
-- **As plugin**: `@timi-design/vuepress-plugin-pagation`
+- **As plugin**: `@idear-design/vuepress-plugin-pagation`
 - **As component**: `Pagation` (used in theme development)
 
 ## Option API

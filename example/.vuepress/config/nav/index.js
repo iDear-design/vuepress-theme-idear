@@ -1,7 +1,7 @@
 module.exports = {
   'zh': [
     { text: '文档',
-      icon: 'timi-api',
+      icon: 'idear-api',
       items: [
         {
           text: '主题', items: [
@@ -16,15 +16,15 @@ module.exports = {
         }
       ]
     },
-    { text: '常见问题', link: '/views/home/question', icon: 'timi-faq' },
-    { text: '博客', link: '/categories/blog/', icon: 'timi-blog'},
-    { text: '案例', link: '/views/home/theme-example.html', icon: 'timi-category'},
-    { text: '留言板', link: '/views/home/messageBoard.html', icon: 'timi-suggestion'},
-    { text: 'GitHub', link: 'https://github.com/timi-design/vuepress-theme-timi', icon: 'timi-github'}
+    { text: '常见问题', link: '/views/home/question', icon: 'idear-faq' },
+    { text: '博客', link: '/categories/blog/', icon: 'idear-blog'},
+    { text: '案例', link: '/views/home/theme-example.html', icon: 'idear-category'},
+    { text: '留言板', link: '/views/home/messageBoard.html', icon: 'idear-suggestion'},
+    { text: 'GitHub', link: 'https://github.com/idear-design/vuepress-theme-idear', icon: 'idear-github'}
   ],
   'en': [
     { text: 'Documents',
-      icon: 'timi-api',
+      icon: 'idear-api',
       items: [
         {
           text: 'Theme', items: [
@@ -38,8 +38,8 @@ module.exports = {
         }
       ]
     },
-    { text: 'FAQ', link: '/en/views/home/question', icon: 'timi-faq' },
-    { text: 'Examples', link: '/en/views/home/theme-example.html', icon: 'timi-category'},
-    { text: 'GitHub', link: 'https://github.com/timi-design/vuepress-theme-timi', icon: 'timi-github'}
+    { text: 'FAQ', link: '/en/views/home/question', icon: 'idear-faq' },
+    { text: 'Examples', link: '/en/views/home/theme-example.html', icon: 'idear-category'},
+    { text: 'GitHub', link: 'https://github.com/idear-design/vuepress-theme-idear', icon: 'idear-github'}
   ]
 }

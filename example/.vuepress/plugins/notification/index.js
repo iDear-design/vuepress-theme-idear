@@ -1,7 +1,7 @@
 const { path } = require('@vuepress/shared-utils')
 
 module.exports = (options, context) => ({
-  name: '@timi-design/vuepress-plugin-notification',
+  name: '@idear-design/vuepress-plugin-notification',
   enhanceAppFiles: [
     path.resolve(__dirname, './bin/enhanceAppFile.js')
   ],

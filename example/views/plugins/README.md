@@ -7,17 +7,17 @@ date: 2019-12-13
 
 VuePress 自 `1.0` 版本开始对插件进行了支持，这使得我们不仅可以应用一个喜欢的主题，而且可以自己去选择一些插件来丰富你的博客或者文档内容，搭建一个属于你自己的静态网站。
 
-主题也自 `vuepress-theme-timi@1.1.0` 版本开始进行插件化，将能够独立的功能或组件封装成插件，精简核心代码，方便维护和扩展。
+主题也自 `vuepress-theme-idear@1.1.0` 版本开始进行插件化，将能够独立的功能或组件封装成插件，精简核心代码，方便维护和扩展。
 
 ## 插件的来源有哪些
 
-### timi-design 组织下的插件
+### idear-design 组织下的插件
 
 我们开发了一些能够帮助你丰富网站内容的小插件，你可以根据自己的喜好去启用它们。
 
 ::: tip
 
-我们的插件均发布在 `npm` 的组织 `timi-design` 下，所以以下插件默认全称为 `@timi-design/vuepress-plugin-<name>` （比如 `back-to-top` 的完整名称为 `@timi-design/vuepress-plugin-back-to-top`） ，下面将简写组织内插件名称。
+我们的插件均发布在 `npm` 的组织 `idear-design` 下，所以以下插件默认全称为 `@idear-design/vuepress-plugin-<name>` （比如 `back-to-top` 的完整名称为 `@idear-design/vuepress-plugin-back-to-top`） ，下面将简写组织内插件名称。
 
 :::
 
@@ -34,7 +34,7 @@ VuePress 自 `1.0` 版本开始对插件进行了支持，这使得我们不仅�
       <a href="backToTop.html">back-to-top</a>
     </td>
     <td>
-      <NpmLink pkg="@timi-design/vuepress-plugin-back-to-top"/>
+      <NpmLink pkg="@idear-design/vuepress-plugin-back-to-top"/>
     </td>
     <td>✔</td>
     <td>✖</td>
@@ -45,7 +45,7 @@ VuePress 自 `1.0` 版本开始对插件进行了支持，这使得我们不仅�
       <a href="pagation.html">pagation</a>
     </td>
     <td>
-      <NpmLink pkg="@timi-design/vuepress-plugin-pagation"/>
+      <NpmLink pkg="@idear-design/vuepress-plugin-pagation"/>
     </td>
     <td>✔</td>
     <td>✖</td>
@@ -56,7 +56,7 @@ VuePress 自 `1.0` 版本开始对插件进行了支持，这使得我们不仅�
       <a href="screenfull.html">screenfull</a>
     </td>
     <td>
-      <NpmLink pkg="@timi-design/vuepress-plugin-screenfull"/>
+      <NpmLink pkg="@idear-design/vuepress-plugin-screenfull"/>
     </td>
     <td>✖</td>
     <td>✖</td>
@@ -67,7 +67,7 @@ VuePress 自 `1.0` 版本开始对插件进行了支持，这使得我们不仅�
       <a href="loadingPage.html">loading-page</a>
     </td>
     <td>
-      <NpmLink pkg="@timi-design/vuepress-plugin-loading-page"/>
+      <NpmLink pkg="@idear-design/vuepress-plugin-loading-page"/>
     </td>
     <td>✔</td>
     <td>✖</td>
@@ -78,7 +78,7 @@ VuePress 自 `1.0` 版本开始对插件进行了支持，这使得我们不仅�
       <a href="kanbanniang.html">kan-ban-niang</a>
     </td>
     <td>
-      <NpmLink pkg="@timi-design/vuepress-plugin-kan-ban-niang"/>
+      <NpmLink pkg="@idear-design/vuepress-plugin-kan-ban-niang"/>
     </td>
     <td>✖</td>
     <td>✖</td>
@@ -89,7 +89,7 @@ VuePress 自 `1.0` 版本开始对插件进行了支持，这使得我们不仅�
       <a href="comments.html">comments</a>
     </td>
     <td>
-      <NpmLink pkg="@timi-design/vuepress-plugin-comments"/>
+      <NpmLink pkg="@idear-design/vuepress-plugin-comments"/>
     </td>
     <td>✔</td>
     <td>✖</td>
@@ -100,7 +100,7 @@ VuePress 自 `1.0` 版本开始对插件进行了支持，这使得我们不仅�
       <a href="extractCode.html">extract-code</a>
     </td>
     <td>
-      <NpmLink pkg="@timi-design/vuepress-plugin-extract-code"/>
+      <NpmLink pkg="@idear-design/vuepress-plugin-extract-code"/>
     </td>
     <td>✖</td>
     <td>✖</td>
@@ -111,7 +111,7 @@ VuePress 自 `1.0` 版本开始对插件进行了支持，这使得我们不仅�
       <a href="rss.html">rss</a>
     </td>
     <td>
-      <NpmLink pkg="@timi-design/vuepress-plugin-rss"/>
+      <NpmLink pkg="@idear-design/vuepress-plugin-rss"/>
     </td>
     <td>✖</td>
     <td>✔</td>
@@ -122,7 +122,7 @@ VuePress 自 `1.0` 版本开始对插件进行了支持，这使得我们不仅�
       <a href="bgmPlayer.html">bgm-player</a>
     </td>
     <td>
-      <NpmLink pkg="@timi-design/vuepress-plugin-bgm-player"/>
+      <NpmLink pkg="@idear-design/vuepress-plugin-bgm-player"/>
     </td>
     <td>✖</td>
     <td>✖</td>
@@ -156,7 +156,7 @@ VuePress 自 `1.0` 版本开始对插件进行了支持，这使得我们不仅�
 |                                              [screenfull](./screenfull.md)                                               |    ✖     |                              作为组件，无需配置                              | ...                              |
 |                                                      [extractCode](./extractCode.md)                                                       |    ✖     |                  -                   | ...                              |
 | [@vuepress/plugin-active-header-links](https://v1.vuepress.vuejs.org/zh/plugin/official/plugin-active-header-links.html) |    ✖     |                                      -                                       | 页面滚动时自动激活侧边栏链接插件 |
-|         [@vuepress/plugin-medium-zoom](https://v1.vuepress.vuejs.org/zh/plugin/official/plugin-medium-zoom.html)         |    ✖     |              `{selector: '.theme-timi-content :not(a) > img'}`               | 图片缩放插件                     |
+|         [@vuepress/plugin-medium-zoom](https://v1.vuepress.vuejs.org/zh/plugin/official/plugin-medium-zoom.html)         |    ✖     |              `{selector: '.theme-idear-content :not(a) > img'}`               | 图片缩放插件                     |
 |           [@vuepress/plugin-nprogress](https://v1.vuepress.vuejs.org/zh/plugin/official/plugin-nprogress.html)           |    ✖     |                                      -                                       | 一个基于 nprogress 的进度条插件  |
 |              [@vuepress/plugin-search](https://v1.vuepress.vuejs.org/zh/plugin/official/plugin-search.html)              |    ✔     |                                      -                                       | 基于 Headers 的搜索插件          |
 |                             [@vuepress/plugin-blog](https://vuepress-plugin-blog.ulivz.com/)                             |    ✖     |                本插件是博客系统的基础，请不要禁用或者覆盖配置                | 博客插件                         |
@@ -231,7 +231,7 @@ module.exports = {
 module.exports = {
   plugins: [
     [
-      "@timi-design/vuepress-plugin-kan-ban-niang",
+      "@idear-design/vuepress-plugin-kan-ban-niang",
       {
         theme: ["miku"],
         clean: true,
@@ -271,7 +271,7 @@ module.exports = {
 ```javascript
 module.exports = {
   plugins: [
-    ["@timi-design/back-to-top", false] // disabled.
+    ["@idear-design/back-to-top", false] // disabled.
   ]
 };
 ```

@@ -9,7 +9,7 @@ module.exports = {
   port: 1024,
   head: head,
   theme: require.resolve('../../vuepress-theme-idear'),
-  // theme: 'timi',
+  // theme: 'idear',
   themeConfig,
   locales: {
     '/': {

@@ -4,11 +4,11 @@ date: 2019-12.18
 ---
 
 ## Introduction
-RSS plugin only for vuepress-theme-timi.
+RSS plugin only for vuepress-theme-idear.
 
 ### Name
 
-- **As plugin**: `@timi-design/vuepress-plugin-rss`
+- **As plugin**: `@idear-design/vuepress-plugin-rss`
 
 ## Option API
 
@@ -16,7 +16,7 @@ RSS plugin only for vuepress-theme-timi.
 
 - required: `true`
 - description: 网站地址
-- example: `timi-design.maxiaoqu.com/vuepress-theme-timi`
+- example: `idear-design.maxiaoqu.com/vuepress-theme-idear`
 
 ### copyright
 

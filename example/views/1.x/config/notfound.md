@@ -13,7 +13,7 @@ date: 2019-12.20
 
 ```js
 module.exports = {
-  theme: 'timi',
+  theme: 'idear',
   themeConfig: {
     noFoundPageByTencent: false
   }  

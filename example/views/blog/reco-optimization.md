@@ -1,5 +1,5 @@
 ---
-title: vuepress-theme-timi个人向优化
+title: vuepress-theme-idear个人向优化
 date: 2019-12-26
 categories:
  - blog
@@ -16,7 +16,7 @@ categories:
 
 ## 更换主题为本地
 
-- 与hexo不一样，正常的主题文件会被安装到`node_modules`文件夹中。如果之前`vuepress-theme-timi`安装正确的话，可以在`node_modules`文件夹中找到改文件。所以如果不把主题文件放到本地，我们每次执行**npm install**的时候，新的文件就会把我们魔改过的文件覆盖掉。
+- 与hexo不一样，正常的主题文件会被安装到`node_modules`文件夹中。如果之前`vuepress-theme-idear`安装正确的话，可以在`node_modules`文件夹中找到改文件。所以如果不把主题文件放到本地，我们每次执行**npm install**的时候，新的文件就会把我们魔改过的文件覆盖掉。
 - 接着不得不谈一下主题的启动流程：如果config没指定，系统会默认会检查`.vuepress/theme`，如果还没有就，直接用默认主题。
 - 所以只要把下载(或者直接从`node_modules`中复制)下来的文件夹更名为**theme**，粘贴至 .vuepress文件夹下即可，如果在执行编译过程中，看到`tip Apply local theme at xxx\Desktop\blog\.vuepress\theme...`相关提示，就说明从theme文件夹启动成功
 - 整个目录结构如下
@@ -692,7 +692,7 @@ module.exports = [
       "@vuepress-yard/vuepress-plugin-window"
     ], */
     /* 音乐插件   
-    ["@timi-design/vuepress-plugin-bgm-player",
+    ["@idear-design/vuepress-plugin-bgm-player",
           {
             audios: [
               // 网络文件示例
@@ -718,7 +718,7 @@ module.exports = [
 
 目前音乐插件有两种：
 
-1. [bgm-player](https://github.com/timi-design/vuepress-plugin-bgm-player)，一款简洁易用的音乐插件，优势是好看，其他一无是处了:slightly_smiling_face:
+1. [bgm-player](https://github.com/idear-design/vuepress-plugin-bgm-player)，一款简洁易用的音乐插件，优势是好看，其他一无是处了:slightly_smiling_face:
 2. [music-bar](https://www.npmjs.com/package/vuepress-plugin-music-bar)，一个程序猿自己开发的插件，除本地，网络音频之外还支持从平台歌单获取链接(目前仅支持网易云音乐)，缺点是丑了点，支持一下这位老哥:dancers:
 3. [meting](https://github.com/moefyit/vuepress-plugin-meting)，​在hexo上就一直用的插件，功能强大，配置丰富，目前应该最大强大的音乐插件了，我用的就是这个，强推:+1:，还支持在markdown中直接插入，操作如下
 
@@ -922,7 +922,7 @@ https://www.npmjs.com/package/@vuepress-yard/vuepress-plugin-window
 
 ![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1ZGFsaWp1bnlpL3BpY3R1cmUtYmVkL2ltZy8yMDIwMDcxMTE3NDAxOC5wbmc?x-oss-process=image/format,png)
 
-通过全局搜索，终于找到在源码文件`\xxx\blog\node_modules\vuepress-theme-timi\components\SidebarGroup.vue`中发现问题，罪魁祸首就是这个`opacity 0.5`，致此，将其改成1即可，虽然简单，但是对于有页面强迫症的我，确实是极大的舒适。
+通过全局搜索，终于找到在源码文件`\xxx\blog\node_modules\vuepress-theme-idear\components\SidebarGroup.vue`中发现问题，罪魁祸首就是这个`opacity 0.5`，致此，将其改成1即可，虽然简单，但是对于有页面强迫症的我，确实是极大的舒适。
 
 ```stylus
 .sidebar-group
@@ -952,7 +952,7 @@ https://www.npmjs.com/package/@vuepress-yard/vuepress-plugin-window
 ## 参考资料
 
 znote：https://zpj80231.gitee.io/znote/views/front-end/vuepress-plugin-boxx.html
-vuepress-theme-timi：timi-design.maxiaoqu.com/vuepress-theme-timi/
+vuepress-theme-idear：idear-design.maxiaoqu.com/vuepress-theme-idear/
 
 
 

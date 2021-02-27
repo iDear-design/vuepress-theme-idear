@@ -5,9 +5,9 @@ date: 2019-12-13
 
 ## Introduction
 
-Screenfull plugin for vuepress-theme-timi or other vuepress themes.
+Screenfull plugin for vuepress-theme-idear or other vuepress themes.
 
 ### Name
 
-- **As plugin**: `@timi-design/vuepress-plugin-screenfull`
+- **As plugin**: `@idear-design/vuepress-plugin-screenfull`
 - **As component**: `Screenfull（主题开发时使用）`

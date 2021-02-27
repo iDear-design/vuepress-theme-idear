@@ -9,7 +9,7 @@ date: 2019-12-11
 // .vuepress/config.js
 
 module.exports = {
-  theme: 'timi',
+  theme: 'idear',
   themeConfig: {
      // 博客配置
     blogConfig: {
