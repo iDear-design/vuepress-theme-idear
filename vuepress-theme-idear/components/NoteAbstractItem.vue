@@ -2,9 +2,9 @@
   <div
     class="abstract-item"
     @click="$router.push(item.path)">
-    <i v-if="item.frontmatter.sticky" class="iconfont timi-sticky"></i>
+    <i v-if="item.frontmatter.sticky" class="iconfont idear-sticky"></i>
     <div class="title">
-      <i v-if="item.frontmatter.keys" class="iconfont timi-lock"></i>
+      <i v-if="item.frontmatter.keys" class="iconfont idear-lock"></i>
       <router-link :to="item.path">{{item.title}}</router-link>
     </div>
     <div class="abstract" v-html="item.excerpt"></div>
@@ -40,7 +40,7 @@ export default {
   > * {
     pointer-events: auto;
   }
-  .timi-sticky
+  .idear-sticky
     position absolute
     top 0
     left 0
@@ -56,7 +56,7 @@ export default {
     display: inline-block;
     a
       color: var(--text-color);
-    .timi-lock
+    .idear-lock
       font-size 1.28rem
       color $accentColor
     &:after

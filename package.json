@@ -1,11 +1,11 @@
 {
-  "name": "vuepress-theme-timi-example",
+  "name": "vuepress-theme-idear-example",
   "version": "1.0.0",
   "private": true,
   "license": "MIT",
   "main": "index.js",
   "workspaces": [
-    "vuepress-theme-timi"
+    "vuepress-theme-idear"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -41,15 +41,15 @@
     "vuepress-plugin-flowchart": "1.4.3",
     "vuepress-plugin-sitemap": "2.3.0",
     "whatwg-fetch": "3.0.0",
-    "@timi-design/vuepress-plugin-rss": "1.0.0",
-    "@timi-design/vuepress-plugin-screenfull": "1.0.0",
-    "@timi-design/vuepress-plugin-kan-ban-niang": "1.0.0",
-    "@timi-design/vuepress-plugin-extract-code": "1.0.0",
-    "@timi-design/vuepress-plugin-bgm-player": "1.0.0",
-    "@timi-design/vuepress-plugin-back-to-top": "1.0.0",
-    "@timi-design/vuepress-plugin-comments": "1.0.0",
-    "@timi-design/vuepress-plugin-loading-page": "1.0.0",
-    "@timi-design/vuepress-plugin-pagation": "1.0.0",
+    "@idear-design/vuepress-plugin-rss": "1.0.0",
+    "@idear-design/vuepress-plugin-screenfull": "1.0.0",
+    "@idear-design/vuepress-plugin-kan-ban-niang": "1.0.0",
+    "@idear-design/vuepress-plugin-extract-code": "1.0.0",
+    "@idear-design/vuepress-plugin-bgm-player": "1.0.0",
+    "@idear-design/vuepress-plugin-back-to-top": "1.0.0",
+    "@idear-design/vuepress-plugin-comments": "1.0.0",
+    "@idear-design/vuepress-plugin-loading-page": "1.0.0",
+    "@idear-design/vuepress-plugin-pagation": "1.0.0",
     "@vuepress/plugin-blog": "1.9.2",
     "@vuepress/plugin-medium-zoom": "1.5.0",
     "docsearch.js": "2.6.3",

@@ -1,15 +1,15 @@
 <template>
   <div class="footer-wrapper">
     <span>
-      <i class="iconfont timi-theme"></i>
-      <a target="blank" href="https://timi-design.maxiaoqu.com/vuepress-theme-timi">{{`vuepress-theme-timi@${version}`}}</a>
+      <i class="iconfont idear-theme"></i>
+      <a target="blank" href="https://idear-design.maxiaoqu.com/vuepress-theme-idear">{{`vuepress-theme-idear@${version}`}}</a>
     </span>
     <span v-if="$themeConfig.record">
-      <i class="iconfont timi-beian"></i>
+      <i class="iconfont idear-beian"></i>
       <a :href="$themeConfig.recordLink || '#'">{{ $themeConfig.record }}</a>
     </span>
     <span>
-      <i class="iconfont timi-copyright"></i>
+      <i class="iconfont idear-copyright"></i>
       <a>
         <span v-if="$themeConfig.author || $site.title">{{ $themeConfig.author || $site.title }}</span>
         &nbsp;&nbsp;
@@ -18,7 +18,7 @@
       </a>
     </span>
     <span v-show="showAccessNumber">
-      <i class="iconfont timi-eye"></i>
+      <i class="iconfont idear-eye"></i>
       <AccessNumber idVal="/" />
     </span>
     <p class="cyber-security" v-if="$themeConfig.cyberSecurityRecord">

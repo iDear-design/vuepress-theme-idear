@@ -1,25 +1,25 @@
 <template>
   <div>
     <i
-      class="iconfont timi-account"
+      class="iconfont idear-account"
       v-if="pageInfo.frontmatter.author || $themeConfig.author || $site.title">
       <span>{{ pageInfo.frontmatter.author || $themeConfig.author || $site.title }}</span>
     </i>
     <i
       v-if="pageInfo.frontmatter.date"
-      class="iconfont timi-date">
+      class="iconfont idear-date">
       <span>{{ pageInfo.frontmatter.date | formatDateValue }}</span>
     </i>
     <i
       v-if="showAccessNumber === true"
-      class="iconfont timi-eye">
+      class="iconfont idear-eye">
       <AccessNumber
         :idVal="pageInfo.path"
         :numStyle="numStyle" />
     </i>
     <i
       v-if="pageInfo.frontmatter.tags"
-      class="iconfont timi-tag tags">
+      class="iconfont idear-tag tags">
       <span
         v-for="(subItem, subIndex) in pageInfo.frontmatter.tags"
         :key="subIndex"

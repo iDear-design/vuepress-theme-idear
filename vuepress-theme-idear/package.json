@@ -1,29 +1,29 @@
 {
-  "name": "vuepress-theme-timi",
+  "name": "vuepress-theme-idear",
   "version": "1.0.0",
   "description": "A simple and beautiful vuepress Blog & Doc theme.",
   "keywords": [
     "vuepress",
     "vue",
     "theme",
-    "timi-design"
+    "idear-design"
   ],
-  "homepage": "https://timi-design.maxiaoqu.com",
+  "homepage": "https://idear-design.maxiaoqu.com",
   "bugs": {
-    "url": "https://github.com/timi-design/vuepress-theme-timi/issues"
+    "url": "https://github.com/idear-design/vuepress-theme-idear/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/timi-design/vuepress-theme-timi.git"
+    "url": "git+https://github.com/idear-design/vuepress-theme-idear.git"
   },
   "license": "MIT",
   "author": "maxiaoqu",
   "main": "index.js",
   "dependencies": {
-    "@timi-design/vuepress-plugin-back-to-top": "1.0.0",
-    "@timi-design/vuepress-plugin-comments": "1.0.0",
-    "@timi-design/vuepress-plugin-loading-page": "1.0.0",
-    "@timi-design/vuepress-plugin-pagation": "1.0.0",
+    "@idear-design/vuepress-plugin-back-to-top": "1.0.0",
+    "@idear-design/vuepress-plugin-comments": "1.0.0",
+    "@idear-design/vuepress-plugin-loading-page": "1.0.0",
+    "@idear-design/vuepress-plugin-pagation": "1.0.0",
     "@vuepress/plugin-blog": "1.9.2",
     "@vuepress/plugin-medium-zoom": "1.5.0",
     "docsearch.js": "2.6.3",

@@ -23,7 +23,7 @@
       class="repo-link"
       target="_blank"
       rel="noopener noreferrer">
-      <i :class="`iconfont timi-${repoLabel.toLowerCase()}`"></i>
+      <i :class="`iconfont idear-${repoLabel.toLowerCase()}`"></i>
       {{ repoLabel }}
       <OutboundLink/>
     </a>
@@ -100,7 +100,7 @@ export default {
           }),
           text: category.text || '分类',
           type: 'links',
-          icon: 'timi-category'
+          icon: 'idear-category'
         })
       }
       if (!isHasTag && Object.hasOwnProperty.call(blogConfig, 'tag')) {
@@ -109,7 +109,7 @@ export default {
           link: '/tag/',
           text: tag.text || '标签',
           type: 'links',
-          icon: 'timi-tag'
+          icon: 'idear-tag'
         })
       }
 

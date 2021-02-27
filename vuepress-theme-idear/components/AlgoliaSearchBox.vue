@@ -4,7 +4,7 @@
     class="algolia-search-wrapper search-box"
     role="search"
   >
-    <i class="iconfont timi-search"></i>
+    <i class="iconfont idear-search"></i>
     <input
       id="algolia-search-input"
       class="search-query"
