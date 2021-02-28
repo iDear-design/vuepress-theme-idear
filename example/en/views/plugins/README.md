@@ -76,7 +76,7 @@ The plugins we developed are under `npm`'s organization `idear-design`, so the d
       <a href="kanbanniang.html">kan-ban-niang</a>
     </td>
     <td>
-      <NpmLink pkg="@idear-vuepress/vuepress-plugin-kan-ban-niang"/>
+      <NpmLink pkg="@idear-vuepress/visibleRecord"/>
     </td>
     <td>✖</td>
     <td>✖</td>
@@ -223,7 +223,7 @@ such as:
 module.exports = {
   plugins: [
     [
-      "@idear-vuepress/vuepress-plugin-kan-ban-niang",
+      "@idear-vuepress/visibleRecord",
       {
         theme: ["miku"],
         clean: true,

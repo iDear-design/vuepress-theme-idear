@@ -43,7 +43,7 @@
     "whatwg-fetch": "3.0.0",
     "@idear-vuepress/rssProduce": "1.0.0",
     "@idear-vuepress/screenfull": "1.0.0",
-    "@idear-vuepress/vuepress-plugin-kan-ban-niang": "1.0.0",
+    "@idear-vuepress/visibleRecord": "1.0.0",
     "@idear-vuepress/vuepress-plugin-extract-code": "1.0.0",
     "@idear-vuepress/vuepress-plugin-bgm-player": "1.0.0",
     "@idear-vuepress/vuepress-plugin-back-to-top": "1.0.0",

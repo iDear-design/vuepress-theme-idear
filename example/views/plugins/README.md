@@ -78,7 +78,7 @@ VuePress 自 `1.0` 版本开始对插件进行了支持，这使得我们不仅�
       <a href="kanbanniang.html">kan-ban-niang</a>
     </td>
     <td>
-      <NpmLink pkg="@idear-vuepress/vuepress-plugin-kan-ban-niang"/>
+      <NpmLink pkg="@idear-vuepress/visibleRecord"/>
     </td>
     <td>✖</td>
     <td>✖</td>
@@ -231,7 +231,7 @@ module.exports = {
 module.exports = {
   plugins: [
     [
-      "@idear-vuepress/vuepress-plugin-kan-ban-niang",
+      "@idear-vuepress/visibleRecord",
       {
         theme: ["miku"],
         clean: true,

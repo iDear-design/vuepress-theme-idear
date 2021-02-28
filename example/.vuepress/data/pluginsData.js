@@ -27,7 +27,7 @@ export default [
     name: '@idear-vuepress/kan-ban-niang',
     desc: '看板娘 live2d 动画。',
     user: 'vuepress-idear',
-    repo: 'vuepress-plugin-kan-ban-niang',
+    repo: 'visibleRecord',
     feature: 'style',
     scenes: 'develop'
   },
