@@ -11,7 +11,7 @@ Bgm player plugin for vuepress-theme-idear or other vuepress theme.
 
 ### Name
 
-- **As plugin**: `@idear-vuepress/vuepress-plugin-bgm-player`
+- **As plugin**: `@idear-vuepress/bgmPlayer`
 - **As component**: `BgMusic` (auto appear in the page, no need for extra code)
 
 ## Option API
@@ -99,7 +99,7 @@ Bgm player plugin for vuepress-theme-idear or other vuepress theme.
 
 ## About
 
-- **Compatibility**：vuepress-plugin-bgm-player uses `audio` in HTML5, so compatibility is associated that of `audio`
+- **Compatibility**：bgmPlayer uses `audio` in HTML5, so compatibility is associated that of `audio`
 - customize according to `dark` mode in `vuepress-theme-idear`
   ![dark.png](./images/darkBgm.png)
 - **Development Plans**

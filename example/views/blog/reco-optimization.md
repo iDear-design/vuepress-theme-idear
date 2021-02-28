@@ -692,7 +692,7 @@ module.exports = [
       "@vuepress-yard/vuepress-plugin-window"
     ], */
     /* 音乐插件   
-    ["@idear-vuepress/vuepress-plugin-bgm-player",
+    ["@idear-vuepress/bgmPlayer",
           {
             audios: [
               // 网络文件示例
@@ -718,7 +718,7 @@ module.exports = [
 
 目前音乐插件有两种：
 
-1. [bgm-player](https://github.com/idear-design/vuepress-plugin-bgm-player)，一款简洁易用的音乐插件，优势是好看，其他一无是处了:slightly_smiling_face:
+1. [bgm-player](https://github.com/idear-design/bgmPlayer)，一款简洁易用的音乐插件，优势是好看，其他一无是处了:slightly_smiling_face:
 2. [music-bar](https://www.npmjs.com/package/vuepress-plugin-music-bar)，一个程序猿自己开发的插件，除本地，网络音频之外还支持从平台歌单获取链接(目前仅支持网易云音乐)，缺点是丑了点，支持一下这位老哥:dancers:
 3. [meting](https://github.com/moefyit/vuepress-plugin-meting)，​在hexo上就一直用的插件，功能强大，配置丰富，目前应该最大强大的音乐插件了，我用的就是这个，强推:+1:，还支持在markdown中直接插入，操作如下
 

@@ -51,7 +51,7 @@ export default [
     name: '@idear-vuepress/bgm-player',
     desc: '一款简洁的音乐播放器。',
     user: 'vuepress-idear',
-    repo: 'vuepress-plugin-bgm-player',
+    repo: 'bgmPlayer',
     feature: 'feature',
     scenes: 'independent'
   },

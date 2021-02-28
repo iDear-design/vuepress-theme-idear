@@ -120,7 +120,7 @@ The plugins we developed are under `npm`'s organization `idear-design`, so the d
       <a href="bgmPlayer.html">bgm-player</a>
     </td>
     <td>
-      <NpmLink pkg="@idear-vuepress/vuepress-plugin-bgm-player"/>
+      <NpmLink pkg="@idear-vuepress/bgmPlayer"/>
     </td>
     <td>✖</td>
     <td>✖</td>
