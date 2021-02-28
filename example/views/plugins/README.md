@@ -17,7 +17,7 @@ VuePress 自 `1.0` 版本开始对插件进行了支持，这使得我们不仅�
 
 ::: tip
 
-我们的插件均发布在 `npm` 的组织 `idear-design` 下，所以以下插件默认全称为 `@idear-vuepress/vuepress-plugin-<name>` （比如 `back-to-top` 的完整名称为 `@idear-vuepress/vuepress-plugin-back-to-top`） ，下面将简写组织内插件名称。
+我们的插件均发布在 `npm` 的组织 `idear-design` 下，所以以下插件默认全称为 `@idear-vuepress/vuepress-plugin-<name>` （比如 `back-to-top` 的完整名称为 `@idear-vuepress/vbackToTop`） ，下面将简写组织内插件名称。
 
 :::
 
@@ -34,7 +34,7 @@ VuePress 自 `1.0` 版本开始对插件进行了支持，这使得我们不仅�
       <a href="backToTop.html">back-to-top</a>
     </td>
     <td>
-      <NpmLink pkg="@idear-vuepress/vuepress-plugin-back-to-top"/>
+      <NpmLink pkg="@idear-vuepress/vbackToTop"/>
     </td>
     <td>✔</td>
     <td>✖</td>

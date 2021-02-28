@@ -20,7 +20,7 @@
   "author": "maxiaoqu",
   "main": "index.js",
   "dependencies": {
-    "@idear-vuepress/vuepress-plugin-back-to-top": "1.0.0",
+    "@idear-vuepress/vbackToTop": "1.0.0",
     "@idear-vuepress/vuepress-plugin-comments": "1.0.0",
     "@idear-vuepress/vuepress-plugin-loading-page": "1.0.0",
     "@idear-vuepress/vuepress-plugin-pagation": "1.0.0",

@@ -16,7 +16,7 @@ Our theme `vuepress-theme-idear` has also become a plugin since version `1.1.0`.
 We developed some plugins to help enrich your website. You could choose to use them if you wish.
 
 ::: tip
-The plugins we developed are under `npm`'s organization `idear-design`, so the default full name of a following plugin is `@idear-vuepress/vuepress-plugin-<name>` (such as the full name for `back-to-top` is `@idear-vuepress/vuepress-plugin-back-to-top`). We will just list the short names below.
+The plugins we developed are under `npm`'s organization `idear-design`, so the default full name of a following plugin is `@idear-vuepress/vuepress-plugin-<name>` (such as the full name for `back-to-top` is `@idear-vuepress/vbackToTop`). We will just list the short names below.
 :::
 
 <table>
@@ -32,7 +32,7 @@ The plugins we developed are under `npm`'s organization `idear-design`, so the d
       <a href="backToTop.html">back-to-top</a>
     </td>
     <td>
-      <NpmLink pkg="@idear-vuepress/vuepress-plugin-back-to-top"/>
+      <NpmLink pkg="@idear-vuepress/vbackToTop"/>
     </td>
     <td>✔</td>
     <td>✖</td>

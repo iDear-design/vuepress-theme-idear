@@ -3,7 +3,7 @@ export default [
     name: '@idear-vuepress/back-to-top',
     desc: '回到顶部。',
     user: 'vuepress-idear',
-    repo: 'vuepress-plugin-back-to-top',
+    repo: 'vbackToTop',
     feature: 'feature',
     scenes: 'independent'
   },
