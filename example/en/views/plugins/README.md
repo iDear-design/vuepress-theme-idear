@@ -54,7 +54,7 @@ The plugins we developed are under `npm`'s organization `idear-design`, so the d
       <a href="screenfull.html">screenfull</a>
     </td>
     <td>
-      <NpmLink pkg="@idear-vuepress/vuepress-plugin-screenfull"/>
+      <NpmLink pkg="@idear-vuepress/screenfull"/>
     </td>
     <td>✔</td>
     <td>✖</td>

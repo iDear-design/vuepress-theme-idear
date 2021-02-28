@@ -56,7 +56,7 @@ VuePress 自 `1.0` 版本开始对插件进行了支持，这使得我们不仅�
       <a href="screenfull.html">screenfull</a>
     </td>
     <td>
-      <NpmLink pkg="@idear-vuepress/vuepress-plugin-screenfull"/>
+      <NpmLink pkg="@idear-vuepress/screenfull"/>
     </td>
     <td>✖</td>
     <td>✖</td>
