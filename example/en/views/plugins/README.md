@@ -87,7 +87,7 @@ The plugins we developed are under `npm`'s organization `idear-design`, so the d
       <a href="comments.html">comments</a>
     </td>
     <td>
-      <NpmLink pkg="@idear-vuepress/vuepress-plugin-comments"/>
+      <NpmLink pkg="@idear-vuepress/comments"/>
     </td>
     <td>✔</td>
     <td>✖</td>

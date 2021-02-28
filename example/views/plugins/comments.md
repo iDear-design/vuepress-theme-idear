@@ -9,7 +9,7 @@ Comments plugin for vuepress-theme-idear or other vuepress theme.
 
 ### 名字
 
-- **As plugin**: `@idear-vuepress/vuepress-plugin-comments`
+- **As plugin**: `@idear-vuepress/comments`
 - **As component**: `Comments (评论)` / `AccessNumber (使用 Valine 时的访问量)`（主题开发时使用）
 
 ## Option API

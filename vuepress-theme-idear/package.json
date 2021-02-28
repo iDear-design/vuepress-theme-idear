@@ -21,7 +21,7 @@
   "main": "index.js",
   "dependencies": {
     "@idear-vuepress/vbackToTop": "1.0.0",
-    "@idear-vuepress/vuepress-plugin-comments": "1.0.0",
+    "@idear-vuepress/comments": "1.0.0",
     "@idear-vuepress/vuepress-plugin-loading-page": "1.0.0",
     "@idear-vuepress/vuepress-plugin-pagation": "1.0.0",
     "@vuepress/plugin-blog": "1.9.2",

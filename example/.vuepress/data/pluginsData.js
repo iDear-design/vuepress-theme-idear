@@ -35,7 +35,7 @@ export default [
     name: '@idear-vuepress/comments',
     desc: '评论功能，集成 valine 和 vssue。',
     user: 'vuepress-idear',
-    repo: 'vuepress-plugin-comments',
+    repo: 'comments',
     feature: 'feature',
     scenes: 'develop'
   },

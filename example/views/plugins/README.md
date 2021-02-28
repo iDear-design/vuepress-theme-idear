@@ -89,7 +89,7 @@ VuePress 自 `1.0` 版本开始对插件进行了支持，这使得我们不仅�
       <a href="comments.html">comments</a>
     </td>
     <td>
-      <NpmLink pkg="@idear-vuepress/vuepress-plugin-comments"/>
+      <NpmLink pkg="@idear-vuepress/comments"/>
     </td>
     <td>✔</td>
     <td>✖</td>
