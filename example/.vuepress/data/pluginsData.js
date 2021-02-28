@@ -43,7 +43,7 @@ export default [
     name: '@idear-vuepress/extract-code',
     desc: '功能代码展示插件，展示多种语言于一窗，增加易读性。',
     user: 'vuepress-idear',
-    repo: 'vuepress-plugin-extract-code',
+    repo: 'extractCode',
     feature: 'feature',
     scenes: 'develop'
   },

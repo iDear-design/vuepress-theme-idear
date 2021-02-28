@@ -98,7 +98,7 @@ The plugins we developed are under `npm`'s organization `idear-design`, so the d
       <a href="extractCode.html">extract-code</a>
     </td>
     <td>
-      <NpmLink pkg="@idear-vuepress/vuepress-plugin-extract-code"/>
+      <NpmLink pkg="@idear-vuepress/extractCode"/>
     </td>
     <td>✔</td>
     <td>✖</td>

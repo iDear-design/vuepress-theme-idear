@@ -22,7 +22,7 @@ Features and code presentation plugin for vuepress-theme-idear or other vuepress
 
 ### Name
 
-- **As plugin**: `@idear-vuepress/vuepress-plugin-extract-code`
+- **As plugin**: `@idear-vuepress/extractCode`
 
 ## Usage
 
