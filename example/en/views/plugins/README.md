@@ -43,7 +43,7 @@ The plugins we developed are under `npm`'s organization `idear-design`, so the d
       <a href="pagation.html">pagation</a>
     </td>
     <td>
-      <NpmLink pkg="@idear-vuepress/vuepress-plugin-pagation"/>
+      <NpmLink pkg="@idear-vuepress/pagation"/>
     </td>
     <td>✔</td>
     <td>✖</td>

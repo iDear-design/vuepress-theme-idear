@@ -54,7 +54,7 @@ module.exports = {
     'vbackToTop',
     'comments',
     'vuepress-plugin-loading',
-    'vuepress-plugin-pagation'
+    'pagation'
   ],
   allowCustomScopes: true,
   allowBreakingChanges: ["feat", "fix"]

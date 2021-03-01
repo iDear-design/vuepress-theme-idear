@@ -11,7 +11,7 @@ export default [
     name: '@idear-vuepress/pagation',
     desc: '分页。',
     user: 'vuepress-idear',
-    repo: 'vuepress-plugin-pagation',
+    repo: 'pagation',
     feature: 'feature',
     scenes: 'develop'
   },
