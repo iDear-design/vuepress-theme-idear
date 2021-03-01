@@ -19,7 +19,7 @@ export default [
     name: '@idear-vuepress/loading-page',
     desc: '加载 loading 页。',
     user: 'vuepress-idear',
-    repo: 'vuepress-plugin-loading-page',
+    repo: 'loadingPage',
     feature: 'style',
     scenes: 'develop'
   },

@@ -65,7 +65,7 @@ The plugins we developed are under `npm`'s organization `idear-design`, so the d
       <a href="loadingPage.html">loading-page</a>
     </td>
     <td>
-      <NpmLink pkg="@idear-vuepress/vuepress-plugin-loading-page"/>
+      <NpmLink pkg="@idear-vuepress/loadingPage"/>
     </td>
     <td>✔</td>
     <td>✖</td>
