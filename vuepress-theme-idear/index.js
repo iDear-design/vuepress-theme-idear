@@ -19,8 +19,8 @@ module.exports = (options, ctx) => ({
   },
 
   plugins: [
-    '@idear-vuepress/back-to-top',
-    '@idear-vuepress/loading-page',
+    '@idear-vuepress/backToTop',
+    '@idear-vuepress/loadingPage',
     '@idear-vuepress/pagation',
     '@idear-vuepress/comments',
     '@vuepress/active-header-links',
