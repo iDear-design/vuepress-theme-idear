@@ -51,7 +51,7 @@ module.exports = {
 
   scopes: [
     'vuepress-theme-idear',
-    'vbackToTop',
+    'backToTop',
     'comments',
     'vuepress-plugin-loading',
     'pagation'
