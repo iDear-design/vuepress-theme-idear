@@ -16,7 +16,7 @@ export default [
     scenes: 'develop'
   },
   {
-    name: '@idear-vuepress/loading-page',
+    name: '@idear-vuepress/loadingPage',
     desc: '加载 loading 页。',
     user: 'vuepress-idear',
     repo: 'loadingPage',

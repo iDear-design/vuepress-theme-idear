@@ -62,7 +62,7 @@ The plugins we developed are under `npm`'s organization `idear-design`, so the d
   </tr>
   <tr>
     <td>
-      <a href="loadingPage.html">loading-page</a>
+      <a href="loadingPage.html">loadingPage</a>
     </td>
     <td>
       <NpmLink pkg="@idear-vuepress/loadingPage"/>
@@ -147,7 +147,7 @@ These built-in plugins have already been customized according to the style of ou
 | :----------------------------------------------------------------------------------------------------------------------: | :------: | :--------------------------------------------------------------------------: | :------------------------------- |
 |                                              [back-to-top](./backToTop.md)                                               |    ✖     |                                      -                                       | ...                              |
 |                                                [comments](./comments.md)                                                 |    ✔     | Need to add `$themeConfig.vssueConfig` or `$themeConfig.valineConfig` | ...                              |
-|                                             [loading-page](./loadingPage.md)                                             |    ✔     |                              No customization needed                              | ...                              |
+|                                             [loadingPage](./loadingPage.md)                                             |    ✔     |                              No customization needed                              | ...                              |
 |                                                [pagation](./pagation.md)                                                 |    ✔     |                              No customization needed                              | ...                              |
 |                                              [screenfull](./screenfull.md)                                               |    ✔     |                              No customization needed                              | ...                              |
 |                                                      [extractCode](./extractCode.md)                                                       |    ✖     |                  -                   | ...                              |

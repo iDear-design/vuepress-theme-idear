@@ -1,5 +1,5 @@
 ---
-title: loading-page
+title: loadingPage
 date: 2019-12-13
 ---
 

@@ -64,7 +64,7 @@ VuePress 自 `1.0` 版本开始对插件进行了支持，这使得我们不仅�
   </tr>
   <tr>
     <td>
-      <a href="loadingPage.html">loading-page</a>
+      <a href="loadingPage.html">loadingPage</a>
     </td>
     <td>
       <NpmLink pkg="@idear-vuepress/loadingPage"/>
@@ -151,7 +151,7 @@ VuePress 自 `1.0` 版本开始对插件进行了支持，这使得我们不仅�
 | :----------------------------------------------------------------------------------------------------------------------: | :------: | :--------------------------------------------------------------------------: | :------------------------------- |
 |                                              [back-to-top](./backToTop.md)                                               |    ✖     |                                      -                                       | ...                              |
 |                                                [comments](./comments.md)                                                 |    ✔     | 需主题配置内配置 `$themeConfig.vssueConfig` 或者 `$themeConfig.valineConfig` | ...                              |
-|                                             [loading-page](./loadingPage.md)                                             |    ✔     |                              作为组件，无需配置                              | ...                              |
+|                                             [loadingPage](./loadingPage.md)                                             |    ✔     |                              作为组件，无需配置                              | ...                              |
 |                                                [pagation](./pagation.md)                                                 |    ✔     |                              作为组件，无需配置                              | ...                              |
 |                                              [screenfull](./screenfull.md)                                               |    ✖     |                              作为组件，无需配置                              | ...                              |
 |                                                      [extractCode](./extractCode.md)                                                       |    ✖     |                  -                   | ...                              |
