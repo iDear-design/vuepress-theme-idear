@@ -7,7 +7,7 @@ date: 2019-12.18
 
 ![demo.png](./images/bgm.png)
 
-Bgm player plugin for vuepress-theme-idear or other vuepress theme.  
+backToTop plugin for vuepress-theme-idear or other vuepress theme.  
 
 ### Name
 

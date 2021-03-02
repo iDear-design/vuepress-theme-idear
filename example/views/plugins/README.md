@@ -119,7 +119,7 @@ VuePress 自 `1.0` 版本开始对插件进行了支持，这使得我们不仅�
   </tr>
   <tr>
     <td>
-      <a href="bgmPlayer.html">bgm-player</a>
+      <a href="bgmPlayer.html">backToTop</a>
     </td>
     <td>
       <NpmLink pkg="@idear-vuepress/bgmPlayer"/>

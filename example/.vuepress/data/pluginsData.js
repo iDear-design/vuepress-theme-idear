@@ -48,7 +48,7 @@ export default [
     scenes: 'develop'
   },
   {
-    name: '@idear-vuepress/bgm-player',
+    name: '@idear-vuepress/backToTop',
     desc: '一款简洁的音乐播放器。',
     user: 'vuepress-idear',
     repo: 'bgmPlayer',
