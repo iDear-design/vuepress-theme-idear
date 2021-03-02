@@ -7,7 +7,7 @@ date: 2019-12-13
 
 ![demo.png](./images/backToTop.png)
 
-Back-to-top plugin for vuepress-theme-idear or other vuepress theme.
+backToTop plugin for vuepress-theme-idear or other vuepress theme.
 
 ### Name
 

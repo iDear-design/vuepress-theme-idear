@@ -1,6 +1,6 @@
 export default [
   {
-    name: '@idear-vuepress/back-to-top',
+    name: '@idear-vuepress/backToTop',
     desc: '回到顶部。',
     user: 'vuepress-idear',
     repo: 'backToTop',

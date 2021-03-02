@@ -17,7 +17,7 @@ VuePress 自 `1.0` 版本开始对插件进行了支持，这使得我们不仅�
 
 ::: tip
 
-我们的插件均发布在 `npm` 的组织 `idear-design` 下，所以以下插件默认全称为 `@idear-vuepress/vuepress-plugin-<name>` （比如 `back-to-top` 的完整名称为 `@idear-vuepress/backToTop`） ，下面将简写组织内插件名称。
+我们的插件均发布在 `npm` 的组织 `idear-design` 下，所以以下插件默认全称为 `@idear-vuepress/vuepress-plugin-<name>` （比如 `backToTop` 的完整名称为 `@idear-vuepress/backToTop`） ，下面将简写组织内插件名称。
 
 :::
 
@@ -31,7 +31,7 @@ VuePress 自 `1.0` 版本开始对插件进行了支持，这使得我们不仅�
   </tr>
   <tr>
     <td>
-      <a href="backToTop.html">back-to-top</a>
+      <a href="backToTop.html">backToTop</a>
     </td>
     <td>
       <NpmLink pkg="@idear-vuepress/backToTop"/>
@@ -149,7 +149,7 @@ VuePress 自 `1.0` 版本开始对插件进行了支持，这使得我们不仅�
 
 |                                                           名称                                                           | 是否必需 |                                   默认配置                                   | 描述                             |
 | :----------------------------------------------------------------------------------------------------------------------: | :------: | :--------------------------------------------------------------------------: | :------------------------------- |
-|                                              [back-to-top](./backToTop.md)                                               |    ✖     |                                      -                                       | ...                              |
+|                                              [backToTop](./backToTop.md)                                               |    ✖     |                                      -                                       | ...                              |
 |                                                [comments](./comments.md)                                                 |    ✔     | 需主题配置内配置 `$themeConfig.vssueConfig` 或者 `$themeConfig.valineConfig` | ...                              |
 |                                             [loadingPage](./loadingPage.md)                                             |    ✔     |                              作为组件，无需配置                              | ...                              |
 |                                                [pagation](./pagation.md)                                                 |    ✔     |                              作为组件，无需配置                              | ...                              |
@@ -271,7 +271,7 @@ module.exports = {
 ```javascript
 module.exports = {
   plugins: [
-    ["@idear-vuepress/back-to-top", false] // disabled.
+    ["@idear-vuepress/backToTop", false] // disabled.
   ]
 };
 ```

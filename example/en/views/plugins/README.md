@@ -16,7 +16,7 @@ Our theme `vuepress-theme-idear` has also become a plugin since version `1.1.0`.
 We developed some plugins to help enrich your website. You could choose to use them if you wish.
 
 ::: tip
-The plugins we developed are under `npm`'s organization `idear-design`, so the default full name of a following plugin is `@idear-vuepress/vuepress-plugin-<name>` (such as the full name for `back-to-top` is `@idear-vuepress/backToTop`). We will just list the short names below.
+The plugins we developed are under `npm`'s organization `idear-design`, so the default full name of a following plugin is `@idear-vuepress/vuepress-plugin-<name>` (such as the full name for `backToTop` is `@idear-vuepress/backToTop`). We will just list the short names below.
 :::
 
 <table>
@@ -29,7 +29,7 @@ The plugins we developed are under `npm`'s organization `idear-design`, so the d
   </tr>
   <tr>
     <td>
-      <a href="backToTop.html">back-to-top</a>
+      <a href="backToTop.html">backToTop</a>
     </td>
     <td>
       <NpmLink pkg="@idear-vuepress/backToTop"/>
@@ -145,7 +145,7 @@ These built-in plugins have already been customized according to the style of ou
 
 |                                                           Name                                                           | Must-have? |                                   Default Settings                                   | 描述                             |
 | :----------------------------------------------------------------------------------------------------------------------: | :------: | :--------------------------------------------------------------------------: | :------------------------------- |
-|                                              [back-to-top](./backToTop.md)                                               |    ✖     |                                      -                                       | ...                              |
+|                                              [backToTop](./backToTop.md)                                               |    ✖     |                                      -                                       | ...                              |
 |                                                [comments](./comments.md)                                                 |    ✔     | Need to add `$themeConfig.vssueConfig` or `$themeConfig.valineConfig` | ...                              |
 |                                             [loadingPage](./loadingPage.md)                                             |    ✔     |                              No customization needed                              | ...                              |
 |                                                [pagation](./pagation.md)                                                 |    ✔     |                              No customization needed                              | ...                              |
@@ -258,7 +258,7 @@ You could use this way to customize built-in plugins in our theme, or disable on
 ```javascript
 module.exports = {
   plugins: [
-    ["@idear-vuepress/back-to-top", false] // disabled.
+    ["@idear-vuepress/backToTop", false] // disabled.
   ]
 };
 ```
