@@ -2,8 +2,8 @@ const path = require('path')
 
 // Theme API.
 module.exports = (options, ctx) => ({
-  alias () {
-    const { themeConfig, siteConfig } = ctx
+  alias() {
+    const {themeConfig, siteConfig} = ctx
     // resolve algolia
     const isAlgoliaSearch = (
       themeConfig.algolia ||
@@ -19,10 +19,10 @@ module.exports = (options, ctx) => ({
   },
 
   plugins: [
-    '@idear-vuepress/backToTop',
-    '@idear-vuepress/loadingPage',
-    '@idear-vuepress/pagation',
-    '@idear-vuepress/comments',
+    '@idear-vuepress/vuepress-plugin-backToTop',
+    '@idear-vuepress/vuepress-plugin-loadingPage',
+    '@idear-vuepress/vuepress-plugin-pagation',
+    '@idear-vuepress/vuepress-plugin-comments',
     '@vuepress/active-header-links',
     ['@vuepress/medium-zoom', {
       selector: '.theme-reco-content :not(a) > img'
