@@ -48,7 +48,6 @@ module.exports = {
       name: '⚪  chore:    琐事，不属于以上任何类型'
     }
   ],
-
   scopes: [
     'vuepress-theme-idear',
     'backToTop',
