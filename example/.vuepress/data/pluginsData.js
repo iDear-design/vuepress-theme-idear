@@ -1,6 +1,6 @@
 export default [
   {
-    name: '@idear-vuepress/backToTop',
+    name: '@idear-vuepress/vuepress-plugin-backToTop',
     desc: '回到顶部。',
     user: 'vuepress-idear',
     repo: 'backToTop',
@@ -8,7 +8,7 @@ export default [
     scenes: 'independent'
   },
   {
-    name: '@idear-vuepress/pagation',
+    name: '@idear-vuepress/vuepress-plugin-pagation',
     desc: '分页。',
     user: 'vuepress-idear',
     repo: 'pagation',
@@ -16,7 +16,7 @@ export default [
     scenes: 'develop'
   },
   {
-    name: '@idear-vuepress/loadingPage',
+    name: '@idear-vuepress/vuepress-plugin-loadingPage',
     desc: '加载 loading 页。',
     user: 'vuepress-idear',
     repo: 'loadingPage',
@@ -24,7 +24,7 @@ export default [
     scenes: 'develop'
   },
   {
-    name: '@idear-vuepress/kan-ban-niang',
+    name: '@idear-vuepress/vuepress-plugin-visibleRecord',
     desc: '看板娘 live2d 动画。',
     user: 'vuepress-idear',
     repo: 'visibleRecord',
@@ -32,7 +32,7 @@ export default [
     scenes: 'develop'
   },
   {
-    name: '@idear-vuepress/comments',
+    name: '@idear-vuepress/vuepress-plugin-comments',
     desc: '评论功能，集成 valine 和 vssue。',
     user: 'vuepress-idear',
     repo: 'comments',
@@ -40,7 +40,7 @@ export default [
     scenes: 'develop'
   },
   {
-    name: '@idear-vuepress/extract-code',
+    name: '@idear-vuepress/vuepress-plugin-extractCode',
     desc: '功能代码展示插件，展示多种语言于一窗，增加易读性。',
     user: 'vuepress-idear',
     repo: 'extractCode',
@@ -48,7 +48,7 @@ export default [
     scenes: 'develop'
   },
   {
-    name: '@idear-vuepress/backToTop',
+    name: '@idear-vuepress/vuepress-plugin-backToTop',
     desc: '一款简洁的音乐播放器。',
     user: 'vuepress-idear',
     repo: 'bgmPlayer',
@@ -56,7 +56,7 @@ export default [
     scenes: 'independent'
   },
   {
-    name: '@idear-vuepress/rss',
+    name: '@idear-vuepress/vuepress-plugin-rssProduce',
     desc: '生成 RSS 页面。',
     user: 'vuepress-idear',
     repo: 'rssProduce',
