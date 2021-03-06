@@ -28,7 +28,7 @@ module.exports = [
       componentsDir: path.resolve(__dirname, '../../demo')
     }
   ],
-  '@idear-vuepress/extract-code',
+  '@idear-vuepress/vuepress-plugin-extractCode',
   'flowchart',
   ['sitemap', {
     hostname: 'https://idear-design.maxiaoqu.com/vuepress-theme-idear'
