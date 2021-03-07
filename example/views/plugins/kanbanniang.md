@@ -1,18 +1,18 @@
 ---
-title: kanbanniang
+title: visibleRecord
 date: 2019-12-13
 ---
 
 ## 介绍
 
-![demo.png](./images/kanbannaing_1.png)
+![demo.png](./images/visibleRecord_1.png)
 
-kan-ban-niang plugin for vuepress-theme-idear or other vuepress theme.
+visibleRecord plugin for vuepress-theme-idear or other vuepress theme.
 
 ### 名字
 
-- **As plugin**: `@idear-vuepress/visibleRecord`
-- **As component**: `KanBanNiang`（自动出现在页面中，无需添加额外代码）
+- **As plugin**: `@idear-vuepress/vuepress-plugin-visibleRecord`
+- **As component**: `visibleRecord`（自动出现在页面中，无需添加额外代码）
 
 ### 按钮
 
@@ -113,7 +113,7 @@ kan-ban-niang plugin for vuepress-theme-idear or other vuepress theme.
 
 ## 可选主题
 
-![themes.png](./images/kanbanniang_2.png)
+![themes.png](./images/visibleRecord_2.png)
 
 ## 更多
 

@@ -22,7 +22,7 @@ Features and code presentation plugin for vuepress-theme-idear or other vuepress
 
 ### 名字
 
-- **As plugin**: `@idear-vuepress/extractCode`
+- **As plugin**: `@idear-vuepress/vuepress-plugin-extractCode`
 
 ## 应用
 
@@ -31,7 +31,7 @@ Features and code presentation plugin for vuepress-theme-idear or other vuepress
 ```js
 module.exports = {
   plugins: [
-    '@idear-vuepress/extract-code'
+    '@idear-vuepress/vuepress-plugin-extractCode'
   ]
 }
 ```

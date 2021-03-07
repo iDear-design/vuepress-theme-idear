@@ -11,7 +11,7 @@ Pagation plugin for vuepress-theme-idear or other vuepress theme.
 
 ### 名字
 
-- **As plugin**: `@idear-vuepress/pagation`
+- **As plugin**: `@idear-vuepress/vuepress-plugin-pagation`
 - **As component**: `Pagation`（主题开发时使用）
 
 ## Option API

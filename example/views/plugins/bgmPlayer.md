@@ -11,7 +11,7 @@ backToTop plugin for vuepress-theme-idear or other vuepress theme.
 
 ### 名字
 
-- **As plugin**: `@idear-vuepress/bgmPlayer`
+- **As plugin**: `@idear-vuepress/vuepress-plugin-bgmPlayer`
 - **As component**: `BgMusic`（自动出现在页面中，无需添加额外代码）
 
 ## Option API

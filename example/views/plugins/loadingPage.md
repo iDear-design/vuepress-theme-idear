@@ -9,5 +9,5 @@ Loading page plugin for vuepress-theme-idear or other vuepress theme.
 
 ### 名字
 
-- **As plugin**: `@idear-vuepress/loadingPage`
+- **As plugin**: `@idear-vuepress/vuepress-plugin-loadingPage`
 - **As component**: `LoadingPage（主题开发时使用）`
