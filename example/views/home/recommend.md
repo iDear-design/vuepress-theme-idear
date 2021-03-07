@@ -11,10 +11,10 @@ date: 2019-12-30
 
 ```json
 {
-  name: '@idear-vuepress/rss', // 使用名称
+  name: '@idear-vuepress/vuepress-plugin-rssProduce', // 使用名称
   desc: '生成 RSS 页面',       // 描述
   user: 'vuepress-idear',      // Github 用户名称
-  repo: 'vuepress-theme-rss', // Github 项目名称
+  repo: 'vuepress-theme-rssProduce', // Github 项目名称
   feature: 'feature',         // 类型：style（优化主题效果），feature（扩展主题功能）
   scenes: 'independent'       // 使用场景：develop（为主题开发提供组件或方法），independent（单纯扩展主题功能）
 }
