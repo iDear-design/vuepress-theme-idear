@@ -61,6 +61,5 @@
     "access": "public"
   },
   "dependencies": {
-    "@vuepress-reco/vuepress-plugin-loading-page": "^1.6.0"
   }
 }
