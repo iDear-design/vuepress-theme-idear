@@ -57,7 +57,7 @@ module.exports = {
           'visibleRecord',
           'comments',
           'extractCode',
-          'rss',
+          'rssProduce',
           'bgmPlayer'
         ]
       }
@@ -89,7 +89,7 @@ module.exports = {
           'visibleRecord',
           'comments',
           'extractCode',
-          'rss',
+          'rssProduce',
           'bgmPlayer'
         ]
       }
