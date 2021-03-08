@@ -1,5 +1,5 @@
 ---
-title: visibleRecord
+title: visibleRecord 
 date: 2019-12-13
 ---
 
@@ -16,13 +16,8 @@ visibleRecord plugin for vuepress-theme-idear or other vuepress theme.
 
 ### 按钮
 
-|按钮|作用|默认提示语|
-|-|-|-|
-|home|回到博客主页|心里的花，我想要带你回家。|
-|message|显示主人寄语|'欢迎来到 ' + 您的站点名称（$site.title）|
-|theme|更换模型主题|好吧，希望你能喜欢我的其他小伙伴。|
-|close|关闭看板娘|你知道我喜欢吃什么吗？痴痴地望着你。|
-|info|跳转插件github|想知道关于我的更多信息吗？|
+|按钮|作用|默认提示语| |-|-|-| |home|回到博客主页|心里的花，我想要带你回家。| |message|显示主人寄语|'欢迎来到 ' + 您的站点名称（$site.title）|
+|theme|更换模型主题|好吧，希望你能喜欢我的其他小伙伴。| |close|关闭看板娘|你知道我喜欢吃什么吗？痴痴地望着你。| |info|跳转插件github|想知道关于我的更多信息吗？|
 
 ## Option API
 
@@ -42,6 +37,7 @@ visibleRecord plugin for vuepress-theme-idear or other vuepress theme.
   - [可选主题](#可选主题)见最后
 
 ### clean
+
 - description: 是否开启clean模式(隐藏所有按钮)
 - type: `Boolean`
 - default: `false`
@@ -95,7 +91,7 @@ visibleRecord plugin for vuepress-theme-idear or other vuepress theme.
     ```json
     {
       right: '90px',
-      bottom: '40px',
+      bottom: '40px'
     }
     ```
 
