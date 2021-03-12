@@ -1,13 +1,13 @@
 export default {
-  data () {
+  data() {
     return {
       recoShowModule: false
     }
   },
-  mounted () {
+  mounted() {
     this.recoShowModule = true
   },
-  destroyed () {
+  destroyed() {
     this.recoShowModule = false
   }
 }

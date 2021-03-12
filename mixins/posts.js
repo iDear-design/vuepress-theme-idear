@@ -1,10 +1,10 @@
-import { filterPosts, sortPostsByStickyAndDate, sortPostsByDate } from '../helpers/postData'
+import {filterPosts, sortPostsByStickyAndDate, sortPostsByDate} from '../helpers/postData'
 
 export default {
   computed: {
-    $recoPosts () {
+    $recoPosts() {
       const {
-        $categories: { list: articles }
+        $categories: {list: articles}
       } = this
 
       let posts = articles.reduce((allData, currentData) => {
@@ -16,7 +16,7 @@ export default {
 
       return posts
     },
-    $recoPostsForTimeline () {
+    $recoPostsForTimeline() {
       let pages = this.$recoPosts
       const formatPages = {}
       const formatPagesArr = []
@@ -42,10 +42,10 @@ export default {
 
       return formatPagesArr
     },
-    $showSubSideBar () {
+    $showSubSideBar() {
       const {
-        $themeConfig: { subSidebar: themeSidebar },
-        $frontmatter: { subSidebar: pageSidebar }
+        $themeConfig: {subSidebar: themeSidebar},
+        $frontmatter: {subSidebar: pageSidebar}
       } = this
       const headers = this.$page.headers || []
 
@@ -57,11 +57,12 @@ export default {
   }
 }
 
-function renderTime (date) {
+function renderTime(date) {
   var dateee = new Date(date).toJSON()
   return new Date(+new Date(dateee) + 8 * 3600 * 1000).toISOString().replace(/T/g, ' ').replace(/\.[\d]{3}Z/, '').replace(/-/g, '/')
 }
-function dateFormat (date, type) {
+
+function dateFormat(date, type) {
   date = renderTime(date)
   const dateObj = new Date(date)
   const year = dateObj.getFullYear()
