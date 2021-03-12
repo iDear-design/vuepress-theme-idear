@@ -5,7 +5,7 @@ module.exports = {
     "es6": true
   },
   "extends": [
-    "eslint:recommended",
+    "eslint:idearmmended",
     "plugin:vue/essential"
   ],
   "globals": {
