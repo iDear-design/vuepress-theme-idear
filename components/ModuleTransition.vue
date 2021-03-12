@@ -4,7 +4,7 @@
     @enter="setStyle"
     @after-enter="unsetStyle"
     @before-leave="setStyle">
-    <slot />
+    <slot/>
   </transition>
 </template>
 
@@ -24,12 +24,12 @@ export default {
   },
 
   methods: {
-    setStyle (items) {
+    setStyle(items) {
       items.style.transition = `all ${this.duration}s ease-in-out ${this.delay}s`
       items.style.transform = 'translateY(-20px)'
       items.style.opacity = 0
     },
-    unsetStyle (items) {
+    unsetStyle(items) {
       items.style.transform = 'translateY(0)'
       items.style.opacity = 1
     }
@@ -40,6 +40,6 @@ export default {
 <style lang="stylus">
 .module-enter, .module-leave-to {
   opacity: 0;
-  transform:translateY(-20px);
+  transform: translateY(-20px);
 }
 </style>

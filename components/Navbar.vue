@@ -22,7 +22,7 @@
         'max-width': linksWrapMaxWidth + 'px'
       } : {}">
 
-      <Mode />
+      <Mode/>
       <AlgoliaSearchBox
         v-if="isAlgoliaSearch"
         :options="algolia"/>
@@ -40,15 +40,15 @@ import NavLinks from '@theme/components/NavLinks'
 import Mode from '@theme/components/Mode'
 
 export default {
-  components: { SidebarButton, NavLinks, SearchBox, AlgoliaSearchBox, Mode },
+  components: {SidebarButton, NavLinks, SearchBox, AlgoliaSearchBox, Mode},
 
-  data () {
+  data() {
     return {
       linksWrapMaxWidth: null
     }
   },
 
-  mounted () {
+  mounted() {
     const MOBILE_DESKTOP_BREAKPOINT = 719 // refer to config.styl
     const NAVBAR_VERTICAL_PADDING = parseInt(css(this.$el, 'paddingLeft')) + parseInt(css(this.$el, 'paddingRight'))
     const handleLinksWrapWidth = () => {
@@ -64,17 +64,17 @@ export default {
   },
 
   computed: {
-    algolia () {
+    algolia() {
       return this.$themeLocaleConfig.algolia || this.$themeConfig.algolia || {}
     },
 
-    isAlgoliaSearch () {
+    isAlgoliaSearch() {
       return this.algolia && this.algolia.apiKey && this.algolia.indexName
     }
   },
 
   methods: {
-    throttle (func, delay) {
+    throttle(func, delay) {
       let timer = null
       let startTime = Date.now()
 
@@ -96,7 +96,7 @@ export default {
   }
 }
 
-function css (el, property) {
+function css(el, property) {
   // NOTE: Known bug, will return 'auto' if style value is 'auto'
   const win = el.ownerDocument.defaultView
   // null means not to return pseudo styles
@@ -115,19 +115,23 @@ $navbar-horizontal-padding = 1.5rem
   line-height $navbarHeight - 1.4rem
   box-shadow var(--box-shadow)
   background var(--background-color)
+
   a, span, img
     display inline-block
+
   .logo
     height $navbarHeight - 1.4rem
     min-width $navbarHeight - 1.4rem
     margin-right 0.8rem
     vertical-align top
     border-radius 50%
+
   .site-name
     font-size 1.2rem
     font-weight 600
     color var(--text-color)
     position relative
+
   .links
     padding-left 1.5rem
     box-sizing border-box
@@ -138,6 +142,7 @@ $navbar-horizontal-padding = 1.5rem
     top $navbar-vertical-padding
     display flex
     background-color var(--background-color)
+
     .search-box
       flex: 0 0 auto
       vertical-align top
@@ -145,8 +150,10 @@ $navbar-horizontal-padding = 1.5rem
 @media (max-width: $MQMobile)
   .navbar
     padding-left 4rem
+
     .can-hide
       display none
+
     .links
       padding-left .2rem
 </style>

@@ -5,12 +5,12 @@
       :key="index"
       :class="{'active': item.name == currentTag}"
       :style="{ 'backgroundColor': getOneColor() }"
-      @click="tagClick(item)">{{item.name}}</span>
+      @click="tagClick(item)">{{ item.name }}</span>
   </div>
 </template>
 
 <script>
-import { getOneColor } from '@theme/helpers/other'
+import {getOneColor} from '@theme/helpers/other'
 
 export default {
   props: {
@@ -20,12 +20,12 @@ export default {
     }
   },
   computed: {
-    tags () {
-      return [{ name: this.$recoLocales.tag.all, path: '/tag/' }, ...this.$tags.list]
+    tags() {
+      return [{name: this.$recoLocales.tag.all, path: '/tag/'}, ...this.$tags.list]
     }
   },
   methods: {
-    tagClick (tag) {
+    tagClick(tag) {
       this.$emit('getCurrentTag', tag)
     },
     getOneColor
@@ -38,6 +38,7 @@ export default {
 
 .tags
   margin 30px 0
+
   span
     vertical-align: middle;
     margin: 4px 4px 10px;
@@ -51,8 +52,10 @@ export default {
     font-size: 13px;
     box-shadow var(--box-shadow)
     transition: all .5s
+
     &:hover
       transform scale(1.04)
+
     &.active
       transform scale(1.2)
 </style>

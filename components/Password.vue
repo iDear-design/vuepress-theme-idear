@@ -1,11 +1,12 @@
 <template>
   <div class="password-shadow">
     <ModuleTransition>
-      <h3 v-show="recoShowModule" class="title">{{isPage ? $frontmatter.title : $site.title || $localeConfig.title}}</h3>
+      <h3 v-show="recoShowModule" class="title">
+        {{ isPage ? $frontmatter.title : $site.title || $localeConfig.title }}</h3>
     </ModuleTransition>
 
     <ModuleTransition delay="0.08">
-      <p class="description" v-if="recoShowModule && !isPage">{{$site.description || $localeConfig.description}}</p>
+      <p class="description" v-if="recoShowModule && !isPage">{{ $site.description || $localeConfig.description }}</p>
     </ModuleTransition>
 
     <ModuleTransition delay="0.16">
@@ -16,7 +17,7 @@
           @keyup.enter="inter"
           @focus="inputFocus"
           @blur="inputBlur">
-        <span>{{warningText}}</span>
+        <span>{{ warningText }}</span>
         <button ref="passwordBtn" @click="inter">OK</button>
       </label>
     </ModuleTransition>
@@ -48,7 +49,7 @@ import moduleTransitonMixin from '@theme/mixins/moduleTransiton'
 
 export default {
   mixins: [moduleTransitonMixin],
-  components: { ModuleTransition },
+  components: {ModuleTransition},
   props: {
     isPage: {
       type: Boolean,
@@ -56,25 +57,25 @@ export default {
     }
   },
   name: 'Password',
-  data () {
+  data() {
     return {
       warningText: 'Konck! Knock!',
       key: ''
     }
   },
   computed: {
-    year () {
+    year() {
       return new Date().getFullYear()
     }
   },
   methods: {
-    inter () {
+    inter() {
       const {
         key,
         isPage,
         isHasPageKey,
         isHasKey,
-        $refs: { passwordBtn }
+        $refs: {passwordBtn}
       } = this
       const keyVal = md5(key.trim())
       const pageKey = `pageKey${window.location.pathname}`
@@ -96,18 +97,18 @@ export default {
         window.location.reload()
       }, 800)
     },
-    inputFocus () {
+    inputFocus() {
       this.warningText = 'Input Your Key'
     },
-    inputBlur () {
+    inputBlur() {
       this.warningText = 'Konck! Knock!'
     },
-    isHasKey () {
-      let { keys } = this.$themeConfig.keyPage
+    isHasKey() {
+      let {keys} = this.$themeConfig.keyPage
       keys = keys.map(item => item.toLowerCase())
       return keys.indexOf(sessionStorage.getItem('key')) > -1
     },
-    isHasPageKey () {
+    isHasPageKey() {
       const pageKeys = this.$frontmatter.keys.map(item => item.toLowerCase())
       const pageKey = `pageKey${window.location.pathname}`
 
@@ -126,6 +127,7 @@ export default {
   background #fff
   background var(--background-color)
   box-sizing border-box
+
   .title {
     margin 8rem auto 2rem
     width 100%
@@ -136,6 +138,7 @@ export default {
     color $textColor
     color var(--text-color)
   }
+
   .description {
     margin 0 auto 6rem
     text-align center
@@ -146,83 +149,91 @@ export default {
     padding: 0 10px;
     text-shadow $textShadow
   }
-  .inputBox{
+
+  .inputBox {
     position absolute
     top 40%
     left 0
     right 0
     margin auto
     display block
-    max-width:700px;
+    max-width: 700px;
     height: 100px;
     background: $accentColor;
     border-radius: $borderRadius
     padding-left 20px
     box-sizing border-box
     opacity 0.9
-    input{
-      width:600px;
-      height:100%;
-      border:none;
-      padding:0;
-      padding-left:5px;
+
+    input {
+      width: 600px;
+      height: 100%;
+      border: none;
+      padding: 0;
+      padding-left: 5px;
       color: #fff;
       background: none;
       outline: none;
       position: absolute;
-      bottom:0;
+      bottom: 0;
       left 20px
       opacity 0
       font-size 50px
+
       &:focus {
         opacity 1
       }
-      &:focus~span{
+
+      &:focus ~ span {
         transform: translateY(-80px);
         color $accentColor
         font-size 30px
-        opacity:0.8;
+        opacity: 0.8;
       }
-      &:focus~button{
-        opacity:1;
-        width:100px;
+
+      &:focus ~ button {
+        opacity: 1;
+        width: 100px;
       }
     }
-    span{
-      width:200px;
+
+    span {
+      width: 200px;
       height: 100%;
       display: block;
       position: absolute;
-      line-height:100px;
-      top:0;
-      left:20px;
+      line-height: 100px;
+      top: 0;
+      left: 20px;
       color: #fff;
       cursor: text;
       transition: 0.5s;
       transform-origin: left top;
       font-size 30px
     }
-    button{
+
+    button {
       overflow hidden
-      width:0px;
-      height:98px;
+      width: 0px;
+      height: 98px;
       border-radius: $borderRadius
       position: absolute;
       border 1px solid $accentColor
       background var(--background-color)
-      right:1px;
+      right: 1px;
       top 1px
-      border:0;
-      padding:0;
+      border: 0;
+      padding: 0;
       color: $accentColor;
-      font-size:18px;
-      outline:none;
+      font-size: 18px;
+      outline: none;
       cursor: pointer;
-      opacity:0;
+      opacity: 0;
       transition: 0.5s;
       z-index: 1;
     }
   }
+
   .footer {
     position: absolute;
     left 0
@@ -231,16 +242,18 @@ export default {
     padding: 2.5rem;
     text-align: center;
     color: lighten($textColor, 25%);
+
     > span {
       margin-left 1rem
+
       > i {
         margin-right .5rem
       }
     }
   }
   @media (max-width: $MQMobile) {
-    .inputBox{
-      max-width:700px;
+    .inputBox {
+      max-width: 700px;
       height: 60px;
       background: $accentColor;
       border-radius: $borderRadius
@@ -252,67 +265,74 @@ export default {
       padding-left 0
       box-sizing border-box
       opacity 0.9
-      input{
+
+      input {
         width: 60%;
-        height:100%;
-        border:none;
-        padding:0;
-        padding-left:5px;
+        height: 100%;
+        border: none;
+        padding: 0;
+        padding-left: 5px;
         color: #fff;
         background: none;
         outline: none;
         position: absolute;
-        bottom:0;
+        bottom: 0;
         opacity 0
         font-size 30px
+
         &:focus {
           opacity 1
         }
-        &:focus~span{
+
+        &:focus ~ span {
           transform: translateY(-60px);
           color $accentColor
           font-size 20px
-          opacity:0.8;
+          opacity: 0.8;
         }
-        &:focus~button{
-          opacity:1;
-          width:60px;
+
+        &:focus ~ button {
+          opacity: 1;
+          width: 60px;
         }
       }
-      span{
-        width:200px;
+
+      span {
+        width: 200px;
         height: 100%;
         display: block;
         position: absolute;
-        line-height:60px;
-        top:0;
-        left:20px;
+        line-height: 60px;
+        top: 0;
+        left: 20px;
         color: #fff;
         cursor: text;
         transition: 0.5s;
         transform-origin: left top;
         font-size 20px
       }
-      button{
-        width:0px;
-        height:58px;
+
+      button {
+        width: 0px;
+        height: 58px;
         border-radius: $borderRadius
         position: absolute;
         border 1px solid $accentColor
-        right:1px;
+        right: 1px;
         top 1px
-        border:0;
-        padding:0;
+        border: 0;
+        padding: 0;
         background: #fff;
         color: $accentColor;
-        font-size:18px;
-        outline:none;
+        font-size: 18px;
+        outline: none;
         cursor: pointer;
-        opacity:0;
+        opacity: 0;
         transition: 0.5s;
         z-index: 1;
       }
     }
+
     .footer {
       margin-left 0
 

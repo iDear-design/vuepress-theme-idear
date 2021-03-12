@@ -33,18 +33,18 @@
 <script>
 import NavLink from '@theme/components/NavLink'
 import DropdownLink from '@theme/components/DropdownLink'
-import { resolveNavLinkItem } from '@theme/helpers/utils'
+import {resolveNavLinkItem} from '@theme/helpers/utils'
 
 export default {
-  components: { NavLink, DropdownLink },
+  components: {NavLink, DropdownLink},
 
   computed: {
-    userNav () {
+    userNav() {
       return this.$themeLocaleConfig.nav || this.$themeConfig.nav || []
     },
 
-    nav () {
-      const { $site: { locales }, userNav } = this
+    nav() {
+      const {$site: {locales}, userNav} = this
       if (locales && Object.keys(locales).length > 1) {
         const currentLink = this.$page.path
         const routes = this.$router.options.routes
@@ -66,7 +66,7 @@ export default {
                 link = path
               }
             }
-            return { text, link }
+            return {text, link}
           })
         }
         return [...userNav, languageDropdown]
@@ -116,7 +116,7 @@ export default {
       return userNav
     },
 
-    userLinks () {
+    userLinks() {
       return (this.nav || []).map(link => {
         return Object.assign(resolveNavLinkItem(link), {
           items: (link.items || []).map(resolveNavLinkItem)
@@ -124,8 +124,8 @@ export default {
       })
     },
 
-    repoLink () {
-      const { repo } = this.$themeConfig
+    repoLink() {
+      const {repo} = this.$themeConfig
       if (repo) {
         return /^https?:/.test(repo)
           ? repo
@@ -134,7 +134,7 @@ export default {
       return ''
     },
 
-    repoLabel () {
+    repoLabel() {
       if (!this.repoLink) return
       if (this.$themeConfig.repoLabel) {
         return this.$themeConfig.repoLabel
@@ -158,20 +158,26 @@ export default {
 <style lang="stylus">
 .nav-links
   display inline-block
+
   a
     line-height 1.4rem
     color var(--text-color)
+
     &:hover, &.router-link-active
       color $accentColor
+
       .iconfont
         color $accentColor
+
   .nav-item
     position relative
     display inline-block
     margin-left 1.5rem
     line-height 2rem
+
     &:first-child
       margin-left 0
+
   .repo-link
     margin-left 1.5rem
 

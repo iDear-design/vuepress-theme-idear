@@ -6,15 +6,15 @@
     @touchend="onTouchEnd">
     <div v-if="!absoluteEncryption">
       <transition name="fade">
-        <LoadingPage v-show="firstLoad" class="loading-wrapper" />
+        <LoadingPage v-show="firstLoad" class="loading-wrapper"/>
       </transition>
       <transition name="fade">
-        <Password v-show="!isHasKey" class="password-wrapper-out" key="out" />
+        <Password v-show="!isHasKey" class="password-wrapper-out" key="out"/>
       </transition>
       <div :class="{ 'hide': firstLoad || !isHasKey }">
         <Navbar
-        v-if="shouldShowNavbar"
-        @toggle-sidebar="toggleSidebar"/>
+          v-if="shouldShowNavbar"
+          @toggle-sidebar="toggleSidebar"/>
 
         <div
           class="sidebar-mask"
@@ -24,7 +24,7 @@
           :items="sidebarItems"
           @toggle-sidebar="toggleSidebar">
           <template slot="top">
-            <PersonalInfo />
+            <PersonalInfo/>
           </template>
           <slot
             name="sidebar-bottom"
@@ -39,12 +39,12 @@
     </div>
     <div v-else>
       <transition name="fade">
-        <LoadingPage v-if="firstLoad" />
-        <Password v-else-if="!isHasKey" />
+        <LoadingPage v-if="firstLoad"/>
+        <Password v-else-if="!isHasKey"/>
         <div v-else>
           <Navbar
-          v-if="shouldShowNavbar"
-          @toggle-sidebar="toggleSidebar"/>
+            v-if="shouldShowNavbar"
+            @toggle-sidebar="toggleSidebar"/>
 
           <div
             class="sidebar-mask"
@@ -54,7 +54,7 @@
             :items="sidebarItems"
             @toggle-sidebar="toggleSidebar">
             <template slot="top">
-              <PersonalInfo />
+              <PersonalInfo/>
             </template>
             <slot
               name="sidebar-bottom"
@@ -76,13 +76,13 @@ import Navbar from '@theme/components/Navbar'
 import Sidebar from '@theme/components/Sidebar'
 import PersonalInfo from '@theme/components/PersonalInfo'
 import Password from '@theme/components/Password'
-import { setTimeout } from 'timers'
+import {setTimeout} from 'timers'
 import moduleTransitonMixin from '@theme/mixins/moduleTransiton'
 
 export default {
   mixins: [moduleTransitonMixin],
 
-  components: { Sidebar, Navbar, Password, PersonalInfo },
+  components: {Sidebar, Navbar, Password, PersonalInfo},
 
   props: {
     sidebar: {
@@ -95,7 +95,7 @@ export default {
     }
   },
 
-  data () {
+  data() {
     return {
       isSidebarOpen: false,
       isHasKey: true,
@@ -105,13 +105,13 @@ export default {
   },
 
   computed: {
-    absoluteEncryption () {
+    absoluteEncryption() {
       return this.$themeConfig.keyPage && this.$themeConfig.keyPage.absoluteEncryption === true
     },
 
-    shouldShowNavbar () {
-      const { themeConfig } = this.$site
-      const { frontmatter } = this.$page
+    shouldShowNavbar() {
+      const {themeConfig} = this.$site
+      const {frontmatter} = this.$page
 
       if (
         frontmatter.navbar === false ||
@@ -127,7 +127,7 @@ export default {
       )
     },
 
-    shouldShowSidebar () {
+    shouldShowSidebar() {
       // const { frontmatter } = this.$page
       // return (
       //   this.sidebar !== false &&
@@ -138,7 +138,7 @@ export default {
       return this.sidebarItems.length > 0
     },
 
-    pageClasses () {
+    pageClasses() {
       const userPageClass = this.$frontmatter.pageClass
       return [
         {
@@ -151,7 +151,7 @@ export default {
     }
   },
 
-  mounted () {
+  mounted() {
     this.$router.afterEach(() => {
       this.isSidebarOpen = false
     })
@@ -162,18 +162,18 @@ export default {
   },
 
   methods: {
-    hasKey () {
+    hasKey() {
       const keyPage = this.$themeConfig.keyPage
       if (!keyPage || !keyPage.keys || keyPage.keys.length === 0) {
         this.isHasKey = true
         return
       }
 
-      let { keys } = keyPage
+      let {keys} = keyPage
       keys = keys.map(item => item.toLowerCase())
       this.isHasKey = keys && keys.indexOf(sessionStorage.getItem('key')) > -1
     },
-    hasPageKey () {
+    hasPageKey() {
       let pageKeys = this.$frontmatter.keys
       if (!pageKeys || pageKeys.length === 0) {
         this.isHasPageKey = true
@@ -184,19 +184,19 @@ export default {
 
       this.isHasPageKey = pageKeys.indexOf(sessionStorage.getItem(`pageKey${window.location.pathname}`)) > -1
     },
-    toggleSidebar (to) {
+    toggleSidebar(to) {
       this.isSidebarOpen = typeof to === 'boolean' ? to : !this.isSidebarOpen
     },
 
     // side swipe
-    onTouchStart (e) {
+    onTouchStart(e) {
       this.touchStart = {
         x: e.changedTouches[0].clientX,
         y: e.changedTouches[0].clientY
       }
     },
 
-    onTouchEnd (e) {
+    onTouchEnd(e) {
       const dx = e.changedTouches[0].clientX - this.touchStart.x
       const dy = e.changedTouches[0].clientY - this.touchStart.y
       if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
@@ -208,7 +208,7 @@ export default {
       }
     },
 
-    handleLoading () {
+    handleLoading() {
       const time = this.$frontmatter.home && sessionStorage.getItem('firstLoad') == undefined ? 1000 : 0
       setTimeout(() => {
         this.firstLoad = false
@@ -218,7 +218,7 @@ export default {
   },
 
   watch: {
-    $frontmatter (newVal, oldVal) {
+    $frontmatter(newVal, oldVal) {
       this.hasKey()
       this.hasPageKey()
     }
@@ -236,6 +236,7 @@ export default {
     left 0
     right 0
     margin auto
+
   .password-wrapper-out
     position absolute
     z-index 21
@@ -244,6 +245,7 @@ export default {
     left 0
     right 0
     margin auto
+
   .password-wrapper-in
     position absolute
     z-index 8
@@ -251,6 +253,7 @@ export default {
     bottom 0
     left 0
     right 0
+
   .hide
     height 100vh
     overflow hidden
@@ -258,7 +261,9 @@ export default {
 .fade-enter-active, .fade-leave-active {
   transition: opacity .5s;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
+{
   opacity: 0;
 }
 </style>

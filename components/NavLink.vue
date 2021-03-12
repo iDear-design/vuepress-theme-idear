@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import { isExternal, isMailto, isTel, ensureExt } from '@theme/helpers/utils'
+import {isExternal, isMailto, isTel, ensureExt} from '@theme/helpers/utils'
 
 export default {
   props: {
@@ -31,11 +31,11 @@ export default {
   },
 
   computed: {
-    link () {
+    link() {
       return ensureExt(this.item.link)
     },
 
-    exact () {
+    exact() {
       if (this.$site.locales) {
         return Object.keys(this.$site.locales).some(rootLink => rootLink === this.link)
       }

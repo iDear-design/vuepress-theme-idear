@@ -24,12 +24,12 @@
 <script>
 import SidebarGroup from '@theme/components/SidebarGroup'
 import SidebarLink from '@theme/components/SidebarLink'
-import { isActive } from '@theme/helpers/utils'
+import {isActive} from '@theme/helpers/utils'
 
 export default {
   name: 'SidebarLinks',
 
-  components: { SidebarGroup, SidebarLink },
+  components: {SidebarGroup, SidebarLink},
 
   props: [
     'items',
@@ -37,23 +37,23 @@ export default {
     'sidebarDepth' // depth of headers to be extracted
   ],
 
-  data () {
+  data() {
     return {
       openGroupIndex: 0
     }
   },
 
-  created () {
+  created() {
     this.refreshIndex()
   },
 
   watch: {
-    '$route' () {
+    '$route'() {
       this.refreshIndex()
     }
   },
 
-  mounted () {
+  mounted() {
     // this.activationLink()
     // this.isInViewPortOfOne()
   },
@@ -63,7 +63,7 @@ export default {
   },
 
   methods: {
-    activationLink () {
+    activationLink() {
       const subtitleName = decodeURIComponent(this.$route.fullPath)
       if (!subtitleName || subtitleName == '') return
       // eslint-disable-next-line no-undef
@@ -77,7 +77,7 @@ export default {
       }
     },
 
-    activationAnchor () {
+    activationAnchor() {
       // eslint-disable-next-line no-undef
       const anchors = [].slice.call(document.querySelectorAll(AHL_HEADER_ANCHOR_SELECTOR))
         .filter(anchor => decodeURIComponent(this.$route.fullPath).indexOf(decodeURIComponent(anchor.hash)) != -1)
@@ -87,7 +87,7 @@ export default {
       }, 100)
     },
 
-    isInViewPortOfOne () {
+    isInViewPortOfOne() {
       const sidebarScroll = document.getElementsByClassName('sidebar')[0]
       let el = document.getElementsByClassName('active sidebar-link')[1]
       if (el == null || el == undefined || el.offsetTop == undefined) {
@@ -109,7 +109,7 @@ export default {
       }
     },
 
-    refreshIndex () {
+    refreshIndex() {
       const index = resolveOpenGroupIndex(
         this.$route,
         this.items
@@ -119,17 +119,17 @@ export default {
       }
     },
 
-    toggleGroup (index) {
+    toggleGroup(index) {
       this.openGroupIndex = index === this.openGroupIndex ? -1 : index
     },
 
-    isActive (page) {
+    isActive(page) {
       return isActive(this.$route, page.regularPath)
     }
   }
 }
 
-function resolveOpenGroupIndex (route, items) {
+function resolveOpenGroupIndex(route, items) {
   for (let i = 0; i < items.length; i++) {
     const item = items[i]
     if (item.type === 'group' && item.children.some(c => c.type === 'page' && isActive(route, c.path))) {

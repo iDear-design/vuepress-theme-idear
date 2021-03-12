@@ -41,7 +41,7 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       query: '',
       focused: false,
@@ -49,21 +49,21 @@ export default {
       placeholder: undefined
     }
   },
-  mounted () {
+  mounted() {
     this.placeholder = this.$site.themeConfig.searchPlaceholder || ''
   },
   computed: {
-    showSuggestions () {
+    showSuggestions() {
       return (
         this.focused && this.suggestions && this.suggestions.length
       )
     },
-    suggestions () {
+    suggestions() {
       const query = this.query.trim().toLowerCase()
       if (!query) {
         return
       }
-      const { pages } = this.$site
+      const {pages} = this.$site
       const max = this.$site.themeConfig.searchMaxSuggestions
       const localePath = this.$localePath
       const matches = item => (
@@ -95,14 +95,14 @@ export default {
       return res
     },
     // make suggestions align right when there are not enough items
-    alignRight () {
+    alignRight() {
       const navCount = (this.$site.themeConfig.nav || []).length
       const repo = this.$site.repo ? 1 : 0
       return navCount + repo <= 2
     }
   },
   methods: {
-    getPageLocalePath (page) {
+    getPageLocalePath(page) {
       for (const localePath in this.$site.locales || {}) {
         if (localePath !== '/' && page.path.indexOf(localePath) === 0) {
           return localePath
@@ -110,7 +110,7 @@ export default {
       }
       return '/'
     },
-    onUp () {
+    onUp() {
       if (this.showSuggestions) {
         if (this.focusIndex > 0) {
           this.focusIndex--
@@ -119,7 +119,7 @@ export default {
         }
       }
     },
-    onDown () {
+    onDown() {
       if (this.showSuggestions) {
         if (this.focusIndex < this.suggestions.length - 1) {
           this.focusIndex++
@@ -128,7 +128,7 @@ export default {
         }
       }
     },
-    go (i) {
+    go(i) {
       if (!this.showSuggestions) {
         return
       }
@@ -136,10 +136,10 @@ export default {
       this.query = ''
       this.focusIndex = 0
     },
-    focus (i) {
+    focus(i) {
       this.focusIndex = i
     },
-    unfocus () {
+    unfocus() {
       this.focusIndex = -1
     }
   }
@@ -151,6 +151,7 @@ export default {
   display inline-block
   position relative
   margin-right 1rem
+
   .iconfont
     position absolute
     top 0
@@ -158,6 +159,7 @@ export default {
     z-index 0
     left .6rem
     margin auto
+
   input
     cursor text
     width 10rem
@@ -173,9 +175,11 @@ export default {
     transition all .2s ease
     background transparent
     background-size 1rem
+
     &:focus
       cursor auto
       border-color $accentColor
+
   .suggestions
     background var(--background-color)
     width 20rem
@@ -185,25 +189,33 @@ export default {
     border-radius 6px
     padding 0.4rem
     list-style-type none
+
     &.align-right
       right 0
+
   .suggestion
     line-height 1.4
     padding 0.4rem 0.6rem
     border-radius 4px
     cursor pointer
+
     a
       white-space normal
       color var(--text-color)
+
       .page-title
         font-weight 600
+
       .header
         font-size 0.9em
         margin-left 0.25em
+
     &.focused
       background-color var(--border-color)
+
       a
         color $accentColor
+
 @media (max-width: $MQNarrow)
   .search-box
     input
@@ -211,28 +223,36 @@ export default {
       width 0
       border-color transparent
       position relative
+
       &:focus
         cursor text
         left 0
         width 10rem
+
 // Match IE11
 @media all and (-ms-high-contrast: none)
   .search-box input
     height 2rem
+
 @media (max-width: $MQNarrow) and (min-width: $MQMobile)
   .search-box
     margin-right 0
+
     .suggestions
       left 0
+
 @media (max-width: $MQMobile)
   .search-box
     margin-right 0
+
     .suggestions
       right 0
+
 @media (max-width: $MQMobileNarrow)
   .search-box
     .suggestions
       width calc(100vw - 4rem)
+
     input:focus
       width 8rem
 </style>

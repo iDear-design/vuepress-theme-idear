@@ -5,7 +5,7 @@
       :key="item.path"
       :item="item"
       :currentPage="currentPage"
-      :currentTag="currentTag" />
+      :currentTag="currentTag"/>
   </div>
 </template>
 
@@ -13,10 +13,10 @@
 import NoteAbstractItem from './NoteAbstractItem'
 
 export default {
-  components: { NoteAbstractItem },
+  components: {NoteAbstractItem},
   props: ['data', 'currentPage', 'currentTag'],
   computed: {
-    currentPageData () {
+    currentPageData() {
       const start = this.currentPage * 10 - 10
       const end = this.currentPage * 10
       return this.data.slice(start, end)

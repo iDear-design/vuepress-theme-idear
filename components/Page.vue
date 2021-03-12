@@ -2,13 +2,13 @@
   <main class="page" :style="pageStyle">
     <ModuleTransition>
       <div v-show="recoShowModule && $page.title" class="page-title">
-        <h1 class="title">{{$page.title}}</h1>
+        <h1 class="title">{{ $page.title }}</h1>
         <PageInfo :pageInfo="$page" :showAccessNumber="showAccessNumber"></PageInfo>
       </div>
     </ModuleTransition>
 
     <ModuleTransition delay="0.08">
-      <Content v-show="recoShowModule" class="theme-idear-content" />
+      <Content v-show="recoShowModule" class="theme-idear-content"/>
     </ModuleTransition>
 
     <ModuleTransition delay="0.16">
@@ -73,7 +73,7 @@
     </ModuleTransition>
 
     <ModuleTransition delay="0.08">
-      <SubSidebar v-if="recoShowModule" class="side-bar" />
+      <SubSidebar v-if="recoShowModule" class="side-bar"/>
     </ModuleTransition>
   </main>
 </template>
@@ -82,16 +82,16 @@
 import PageInfo from '@theme/components/PageInfo'
 import SubSidebar from '@theme/components/SubSidebar'
 import ModuleTransition from '@theme/components/ModuleTransition'
-import { resolvePage, outboundRE, endingSlashRE } from '@theme/helpers/utils'
+import {resolvePage, outboundRE, endingSlashRE} from '@theme/helpers/utils'
 import moduleTransitonMixin from '@theme/mixins/moduleTransiton'
 
 export default {
   mixins: [moduleTransitonMixin],
-  components: { PageInfo, ModuleTransition, SubSidebar },
+  components: {PageInfo, ModuleTransition, SubSidebar},
 
   props: ['sidebarItems'],
 
-  data () {
+  data() {
     return {
       isHasKey: true
     }
@@ -99,15 +99,15 @@ export default {
 
   computed: {
     // 是否显示评论
-    shouldShowComments () {
-      const { isShowComments } = this.$frontmatter
-      const { showComment } = this.$themeConfig.valineConfig || { showComment: true }
+    shouldShowComments() {
+      const {isShowComments} = this.$frontmatter
+      const {showComment} = this.$themeConfig.valineConfig || {showComment: true}
       return (showComment !== false && isShowComments !== false) || (showComment === false && isShowComments === true)
     },
-    showAccessNumber () {
+    showAccessNumber() {
       const {
-        $themeConfig: { valineConfig },
-        $themeLocaleConfig: { valineConfig: valineLocalConfig }
+        $themeConfig: {valineConfig},
+        $themeLocaleConfig: {valineConfig: valineLocalConfig}
       } = this
 
       const vc = valineLocalConfig || valineConfig
@@ -116,10 +116,10 @@ export default {
       }
       return false
     },
-    lastUpdated () {
+    lastUpdated() {
       return this.$page.lastUpdated
     },
-    lastUpdatedText () {
+    lastUpdatedText() {
       if (typeof this.$themeLocaleConfig.lastUpdated === 'string') {
         return this.$themeLocaleConfig.lastUpdated
       }
@@ -128,7 +128,7 @@ export default {
       }
       return 'Last Updated'
     },
-    prev () {
+    prev() {
       const prev = this.$frontmatter.prev
       if (prev === false) {
         return
@@ -138,7 +138,7 @@ export default {
         return resolvePrev(this.$page, this.sidebarItems)
       }
     },
-    next () {
+    next() {
       const next = this.$frontmatter.next
       if (next === false) {
         return
@@ -148,7 +148,7 @@ export default {
         return resolveNext(this.$page, this.sidebarItems)
       }
     },
-    editLink () {
+    editLink() {
       if (this.$frontmatter.editLink === false) {
         return false
       }
@@ -165,22 +165,22 @@ export default {
       }
       return ''
     },
-    editLinkText () {
+    editLinkText() {
       return (
         this.$themeLocaleConfig.editLinkText || this.$themeConfig.editLinkText || `Edit this page`
       )
     },
-    pageStyle () {
-      return this.$showSubSideBar ? {} : { paddingRight: '0' }
+    pageStyle() {
+      return this.$showSubSideBar ? {} : {paddingRight: '0'}
     }
   },
 
-  created () {
+  created() {
     console.log(this)
   },
 
   methods: {
-    createEditLink (repo, docsRepo, docsDir, docsBranch, path) {
+    createEditLink(repo, docsRepo, docsDir, docsBranch, path) {
       const bitbucket = /bitbucket.org/
       if (bitbucket.test(repo)) {
         const base = outboundRE.test(docsRepo)
@@ -188,11 +188,11 @@ export default {
           : repo
         return (
           base.replace(endingSlashRE, '') +
-           `/src` +
-           `/${docsBranch}/` +
-           (docsDir ? docsDir.replace(endingSlashRE, '') + '/' : '') +
-           path +
-           `?mode=edit&spa=0&at=${docsBranch}&fileviewer=file-view-default`
+          `/src` +
+          `/${docsBranch}/` +
+          (docsDir ? docsDir.replace(endingSlashRE, '') + '/' : '') +
+          path +
+          `?mode=edit&spa=0&at=${docsBranch}&fileviewer=file-view-default`
         )
       }
 
@@ -210,15 +210,15 @@ export default {
   }
 }
 
-function resolvePrev (page, items) {
+function resolvePrev(page, items) {
   return find(page, items, -1)
 }
 
-function resolveNext (page, items) {
+function resolveNext(page, items) {
   return find(page, items, 1)
 }
 
-function find (page, items, offset) {
+function find(page, items, offset) {
   const res = []
   flatten(items, res)
   for (let i = 0; i < res.length; i++) {
@@ -229,7 +229,7 @@ function find (page, items, offset) {
   }
 }
 
-function flatten (items, res) {
+function flatten(items, res) {
   for (let i = 0, l = items.length; i < l; i++) {
     if (items[i].type === 'group') {
       flatten(items[i].children || [], res)
@@ -250,39 +250,49 @@ function flatten (items, res) {
   padding-bottom 2rem
   padding-right 14rem
   display block
+
   .side-bar
     position fixed
     top 10rem
     bottom 10rem
     right 2rem
     overflow-y scroll
+
     &::-webkit-scrollbar
       width: 0
       height: 0
+
   .page-title
     max-width: $contentWidth;
     margin: 0 auto;
     padding: 1rem 2.5rem;
     color var(--text-color)
+
   .page-edit
     @extend $wrapper
     padding-top 1rem
     padding-bottom 1rem
     overflow auto
+
     .edit-link
       display inline-block
+
       a
         color $accentColor
         margin-right 0.25rem
+
     .last-updated
       float right
       font-size 0.9em
+
       .prefix
         font-weight 500
         color $accentColor
+
       .time
         font-weight 400
         color #aaa
+
   .comments-wrapper
     @extend $wrapper
 
@@ -290,25 +300,33 @@ function flatten (items, res) {
   @extend $wrapper
   padding-top 1rem
   padding-bottom 0
+
   .inner
     min-height 2rem
     margin-top 0
     border-top 1px solid var(--border-color)
     padding-top 1rem
-    overflow auto // clear float
+    overflow auto
+
+  // clear float
+
   .next
     float right
 
 @media (max-width: $MQMobile)
   .page
     padding-right 0
+
     .side-bar
       display none
+
     .page-title
       padding: 0 1rem;
+
     .page-edit
       .edit-link
         margin-bottom .5rem
+
       .last-updated
         font-size .8em
         float none

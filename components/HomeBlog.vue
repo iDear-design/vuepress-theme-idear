@@ -38,11 +38,11 @@
             class="pagation"
             :total="$recoPosts.length"
             :currentPage="currentPage"
-            @getCurrentPage="getCurrentPage" />
+            @getCurrentPage="getCurrentPage"/>
         </div>
         <div class="info-wrapper">
           <PersonalInfo/>
-          <h4><i class="iconfont idear-category"></i> {{homeBlogCfg.category}}</h4>
+          <h4><i class="iconfont idear-category"></i> {{ homeBlogCfg.category }}</h4>
           <ul class="category-wrapper">
             <li class="category-item" v-for="(item, index) in this.$categories.list" :key="index">
               <router-link :to="item.path">
@@ -52,10 +52,11 @@
             </li>
           </ul>
           <hr>
-          <h4 v-if="$tags.list.length !== 0"><i class="iconfont idear-tag"></i> {{homeBlogCfg.tag}}</h4>
-          <TagList @getCurrentTag="getPagesByTags" />
-          <h4 v-if="$themeConfig.friendLink && $themeConfig.friendLink.length !== 0"><i class="iconfont idear-friend"></i> {{homeBlogCfg.friendLink}}</h4>
-          <FriendLink />
+          <h4 v-if="$tags.list.length !== 0"><i class="iconfont idear-tag"></i> {{ homeBlogCfg.tag }}</h4>
+          <TagList @getCurrentTag="getPagesByTags"/>
+          <h4 v-if="$themeConfig.friendLink && $themeConfig.friendLink.length !== 0"><i
+            class="iconfont idear-friend"></i> {{ homeBlogCfg.friendLink }}</h4>
+          <FriendLink/>
         </div>
       </div>
     </ModuleTransition>
@@ -72,14 +73,14 @@ import FriendLink from '@theme/components/FriendLink'
 import NoteAbstract from '@theme/components/NoteAbstract'
 import ModuleTransition from '@theme/components/ModuleTransition'
 import PersonalInfo from '@theme/components/PersonalInfo'
-import { getOneColor } from '@theme/helpers/other'
+import {getOneColor} from '@theme/helpers/other'
 import pagination from '@theme/mixins/pagination'
 import moduleTransitonMixin from '@theme/mixins/moduleTransiton'
 
 export default {
   mixins: [pagination, moduleTransitonMixin],
-  components: { NoteAbstract, TagList, FriendLink, ModuleTransition, PersonalInfo },
-  data () {
+  components: {NoteAbstract, TagList, FriendLink, ModuleTransition, PersonalInfo},
+  data() {
     return {
       recoShow: false,
       currentPage: 1,
@@ -87,10 +88,10 @@ export default {
     }
   },
   computed: {
-    homeBlogCfg () {
+    homeBlogCfg() {
       return this.$recoLocales.homeBlog
     },
-    actionLink () {
+    actionLink() {
       const {
         actionLink: link,
         actionText: text
@@ -101,55 +102,55 @@ export default {
         text
       }
     },
-    heroImageStyle () {
+    heroImageStyle() {
       return this.$frontmatter.heroImageStyle || {}
     },
-    bgImageStyle () {
+    bgImageStyle() {
       const initBgImageStyle = {
         textAlign: 'center',
         overflow: 'hidden',
         background: `
           url(${this.$frontmatter.bgImage
-    ? this.$withBase(this.$frontmatter.bgImage)
-    : require('../images/bg.svg')}) center/cover no-repeat
+          ? this.$withBase(this.$frontmatter.bgImage)
+          : require('../images/bg.svg')}) center/cover no-repeat
         `
       }
       const {
         bgImageStyle
       } = this.$frontmatter
 
-      return bgImageStyle ? { ...initBgImageStyle, ...bgImageStyle } : initBgImageStyle
+      return bgImageStyle ? {...initBgImageStyle, ...bgImageStyle} : initBgImageStyle
     },
-    heroHeight () {
+    heroHeight() {
       return document.querySelector('.hero').clientHeight
     }
   },
-  mounted () {
+  mounted() {
     this.recoShow = true
     this._setPage(this._getStoragePage())
   },
   methods: {
     // 获取当前页码
-    getCurrentPage (page) {
+    getCurrentPage(page) {
       this._setPage(page)
       setTimeout(() => {
         window.scrollTo(0, this.heroHeight)
       }, 100)
     },
     // 根据分类获取页面数据
-    getPages () {
+    getPages() {
       let pages = this.$site.pages
       pages = pages.filter(item => {
-        const { home, date } = item.frontmatter
+        const {home, date} = item.frontmatter
         return !(home == true || date === undefined)
       })
       // reverse()是为了按时间最近排序排序
       this.pages = pages.length == 0 ? [] : pages
     },
-    getPagesByTags (tagInfo) {
-      this.$router.push({ path: tagInfo.path })
+    getPagesByTags(tagInfo) {
+      this.$router.push({path: tagInfo.path})
     },
-    _setPage (page) {
+    _setPage(page) {
       this.currentPage = page
       this.$page.currentPage = page
       this._setStoragePage(page)
@@ -163,6 +164,7 @@ export default {
 .home-blog {
   padding: 0;
   margin: 0px auto;
+
   .hero {
     margin $navbarHeight auto 0
     position relative
@@ -172,13 +174,14 @@ export default {
     display flex
     align-items center
     justify-content center
+
     .hero-img {
       max-width: 300px;
       margin: 0 auto 1.5rem
     }
 
     h1 {
-      margin:0 auto 1.8rem;
+      margin: 0 auto 1.8rem;
       font-size: 2.5rem;
     }
 
@@ -188,21 +191,25 @@ export default {
       line-height: 1.3;
     }
   }
+
   .home-blog-wrapper {
     display flex
     align-items: flex-start;
     margin 20px auto 0
     padding 0 20px
     max-width $homePageWidth
+
     .blog-list {
       flex auto
       width 0
+
       .abstract-wrapper {
         .abstract-item:last-child {
           margin-bottom: 0px;
         }
       }
     }
+
     .info-wrapper {
       position -webkit-sticky;
       position sticky;
@@ -217,15 +224,19 @@ export default {
       box-sizing border-box
       padding 0 15px
       background var(--background-color)
+
       &:hover {
         box-shadow var(--box-shadow-hover)
       }
+
       h4 {
         color var(--text-color)
       }
+
       .category-wrapper {
         list-style none
         padding-left 0
+
         .category-item {
           margin-bottom .4rem
           padding: .4rem .8rem;
@@ -233,16 +244,20 @@ export default {
           border-radius $borderRadius
           box-shadow var(--box-shadow)
           background-color var(--background-color)
+
           &:hover {
             transform scale(1.04)
+
             a {
               color $accentColor
             }
           }
+
           a {
             display flex
             justify-content: space-between
             color var(--text-color)
+
             .post-num {
               width 1.6rem;
               height 1.6rem
@@ -264,13 +279,14 @@ export default {
   .home-blog {
     .hero {
       height 450px
+
       img {
         max-height: 210px;
         margin: 2rem auto 1.2rem;
       }
 
       h1 {
-        margin: 0 auto 1.8rem ;
+        margin: 0 auto 1.8rem;
         font-size: 2rem;
       }
 
@@ -283,14 +299,18 @@ export default {
         padding: 0.6rem 1.2rem;
       }
     }
+
     .home-blog-wrapper {
-      display block!important
+      display block !important
+
       .blog-list {
         width auto
       }
+
       .info-wrapper {
         // display none!important
         margin-left 0
+
         .personal-info-wrapper {
           display none
         }
@@ -303,13 +323,14 @@ export default {
   .home-blog {
     .hero {
       height 450px
+
       img {
         max-height: 210px;
         margin: 2rem auto 1.2rem;
       }
 
       h1 {
-        margin: 0 auto 1.8rem ;
+        margin: 0 auto 1.8rem;
         font-size: 2rem;
       }
 
@@ -328,13 +349,16 @@ export default {
     }
 
     .home-blog-wrapper {
-      display block!important
+      display block !important
+
       .blog-list {
         width auto
       }
+
       .info-wrapper {
         // display none!important
         margin-left 0
+
         .personal-info-wrapper {
           display none
         }

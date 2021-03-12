@@ -15,7 +15,7 @@
       class="iconfont idear-eye">
       <AccessNumber
         :idVal="pageInfo.path"
-        :numStyle="numStyle" />
+        :numStyle="numStyle"/>
     </i>
     <i
       v-if="pageInfo.frontmatter.tags"
@@ -25,20 +25,20 @@
         :key="subIndex"
         class="tag-item"
         :class="{ 'active': currentTag == subItem }"
-        @click.stop="goTags(subItem)">{{subItem}}</span>
+        @click.stop="goTags(subItem)">{{ subItem }}</span>
     </i>
   </div>
 </template>
 
 <script>
 // 引入时间格式化js文件
-import { formatDate } from '@theme/helpers/utils'
+import {formatDate} from '@theme/helpers/utils'
 
 export default {
   props: {
     pageInfo: {
       type: Object,
-      default () {
+      default() {
         return {}
       }
     },
@@ -51,7 +51,7 @@ export default {
       default: false
     }
   },
-  data () {
+  data() {
     return {
       numStyle: {
         fontSize: '.9rem',
@@ -61,7 +61,7 @@ export default {
     }
   },
   filters: {
-    formatDateValue (value) {
+    formatDateValue(value) {
       if (!value) return ''
       // 返回的value的值都是这个样子2019-09-20T18:22:30.000Z
       // 对value进行处理
@@ -82,9 +82,9 @@ export default {
     }
   },
   methods: {
-    goTags (tag) {
+    goTags(tag) {
       if (this.$route.path !== `/tag/${tag}/`) {
-        this.$router.push({ path: `/tag/${tag}/` })
+        this.$router.push({path: `/tag/${tag}/`})
       }
     }
   }
@@ -95,18 +95,24 @@ export default {
 .iconfont
   display inline-block
   line-height 1.5rem
+
   &:not(:last-child)
     margin-right 1rem
+
   span
     margin-left 0.5rem
+
 .tags
   .tag-item
     font-family Ubuntu, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
     cursor pointer
+
     &.active
       color $accentColor
+
     &:hover
       color $accentColor
+
 @media (max-width: $MQMobile)
   .tags
     display block
