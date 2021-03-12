@@ -1,5 +1,5 @@
 <template>
-  <Common  class="tags-wrapper" :sidebar="false">
+  <Common class="tags-wrapper" :sidebar="false">
     <!-- 标签集合 -->
     <ModuleTransition>
       <TagList
@@ -40,8 +40,8 @@ import moduleTransitonMixin from '@theme/mixins/moduleTransiton'
 
 export default {
   mixins: [pagination, moduleTransitonMixin],
-  components: { Common, NoteAbstract, TagList, ModuleTransition },
-  data () {
+  components: {Common, NoteAbstract, TagList, ModuleTransition},
+  data() {
     return {
       tags: [],
       currentTag: '',
@@ -50,7 +50,7 @@ export default {
     }
   },
 
-  created () {
+  created() {
     this.currentTag = this.$recoLocales.tag.all
     this.allTagName = this.$recoLocales.tag.all
     if (this.$tags.list.length > 0) {
@@ -58,29 +58,29 @@ export default {
     }
   },
 
-  mounted () {
+  mounted() {
     this._setPage(this._getStoragePage())
   },
 
   methods: {
 
-    tagClick (tagInfo) {
+    tagClick(tagInfo) {
       if (this.$route.path !== tagInfo.path) {
-        this.$router.push({ path: tagInfo.path })
+        this.$router.push({path: tagInfo.path})
       }
     },
 
-    getCurrentTag (tag) {
+    getCurrentTag(tag) {
       this.$emit('currentTag', tag)
     },
 
-    getCurrentPage (page) {
+    getCurrentPage(page) {
       this._setPage(page)
       setTimeout(() => {
         window.scrollTo(0, 0)
       }, 100)
     },
-    _setPage (page) {
+    _setPage(page) {
       this.currentPage = page
       this.$page.currentPage = page
       this._setStoragePage(page)

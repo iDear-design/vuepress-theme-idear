@@ -42,15 +42,15 @@ import Common from '@theme/components/Common'
 import NoteAbstract from '@theme/components/NoteAbstract'
 import ModuleTransition from '@theme/components/ModuleTransition'
 import pagination from '@theme/mixins/pagination'
-import { sortPostsByStickyAndDate, filterPosts } from '@theme/helpers/postData'
-import { getOneColor } from '@theme/helpers/other'
+import {sortPostsByStickyAndDate, filterPosts} from '@theme/helpers/postData'
+import {getOneColor} from '@theme/helpers/other'
 import moduleTransitonMixin from '@theme/mixins/moduleTransiton'
 
 export default {
   mixins: [pagination, moduleTransitonMixin],
-  components: { Common, NoteAbstract, ModuleTransition },
+  components: {Common, NoteAbstract, ModuleTransition},
 
-  data () {
+  data() {
     return {
       currentPage: 1
     }
@@ -58,35 +58,35 @@ export default {
 
   computed: {
     // 时间降序后的博客列表
-    posts () {
+    posts() {
       let posts = this.$currentCategories.pages
       posts = filterPosts(posts)
       sortPostsByStickyAndDate(posts)
       return posts
     },
     // 标题只显示分类名称
-    title () {
+    title() {
       return this.$currentCategories.key
     }
   },
 
-  mounted () {
+  mounted() {
     this._setPage(this._getStoragePage())
   },
 
   methods: {
     // 获取当前tag
-    getCurrentTag (tag) {
+    getCurrentTag(tag) {
       this.$emit('currentTag', tag)
     },
     // 获取当前页码
-    getCurrentPage (page) {
+    getCurrentPage(page) {
       this._setPage(page)
       setTimeout(() => {
         window.scrollTo(0, 0)
       }, 100)
     },
-    _setPage (page) {
+    _setPage(page) {
       this.currentPage = page
       this.$page.currentPage = page
       this._setStoragePage(page)
@@ -95,7 +95,7 @@ export default {
   },
 
   watch: {
-    $route () {
+    $route() {
       this._setPage(this._getStoragePage())
     }
   }
@@ -110,9 +110,11 @@ export default {
   max-width: $contentWidth;
   margin: 0 auto;
   padding: 4.6rem 2.5rem 0;
+
   .category-wrapper {
     list-style none
     padding-left 0
+
     .category-item {
       vertical-align: middle;
       margin: 4px 8px 10px;
@@ -123,15 +125,19 @@ export default {
       box-shadow var(--box-shadow)
       transition: all .5s
       background-color var(--background-color)
+
       &:hover, &.active {
         background $accentColor
+
         a span.category-name {
           color #fff
+
           .post-num {
             color $accentColor
           }
         }
       }
+
       a {
         display flex
         box-sizing border-box
@@ -141,6 +147,7 @@ export default {
         justify-content: space-between
         align-items center
         color: #666
+
         .post-num {
           margin-left 4px
           width 1.2rem;
@@ -158,9 +165,11 @@ export default {
 @media (max-width: $MQMobile)
   .categories-wrapper
     padding: 4.6rem 1rem 0;
+
   .page-edit
     .edit-link
       margin-bottom .5rem
+
     .last-updated
       font-size .8em
       float none

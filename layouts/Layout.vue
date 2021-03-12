@@ -2,7 +2,7 @@
   <Common :sidebarItems="sidebarItems">
     <component v-if="$frontmatter.home" :is="homeCom"/>
     <Page v-else :sidebar-items="sidebarItems"/>
-    <Footer v-if="$frontmatter.home" class="footer" />
+    <Footer v-if="$frontmatter.home" class="footer"/>
   </Common>
 </template>
 
@@ -12,12 +12,12 @@ import HomeBlog from '@theme/components/HomeBlog'
 import Page from '@theme/components/Page'
 import Footer from '@theme/components/Footer'
 import Common from '@theme/components/Common'
-import { resolveSidebarItems } from '@theme/helpers/utils'
+import {resolveSidebarItems} from '@theme/helpers/utils'
 
 export default {
-  components: { HomeBlog, Home, Page, Common, Footer },
+  components: {HomeBlog, Home, Page, Common, Footer},
   computed: {
-    sidebarItems () {
+    sidebarItems() {
       return resolveSidebarItems(
         this.$page,
         this.$page.regularPath,
@@ -25,8 +25,8 @@ export default {
         this.$localePath
       )
     },
-    homeCom () {
-      const { type } = this.$themeConfig
+    homeCom() {
+      const {type} = this.$themeConfig
       if (type !== undefined) {
         return type == 'blog' ? 'HomeBlog' : type
       }
