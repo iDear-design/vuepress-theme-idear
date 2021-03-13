@@ -1,13 +1,21 @@
 export default {
-  data() {
+  data () {
     return {
-      recoShowModule: false
+      idearShowModule: false
     }
   },
-  mounted() {
-    this.recoShowModule = true
+  mounted () {
+    this.idearShowModule = true
   },
-  destroyed() {
-    this.recoShowModule = false
+  watch: {
+    '$route' (newV, oldV) {
+      if (newV.path === oldV.path) return
+
+      this.idearShowModule = false
+
+      setTimeout(() => {
+        this.idearShowModule = true
+      }, 200)
+    }
   }
 }

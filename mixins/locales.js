@@ -1,17 +1,26 @@
-import {zhHans, zhHant, en} from '../locales/index'
+import { zhHans, zhHant, en, ja, ko, es } from '../locales/index'
 
 export default {
   computed: {
-    $recoLocales() {
-      const recoLocales = this.$themeLocaleConfig.recoLocales || {}
+    $idearLocales () {
+      const idearLocales = this.$themeLocaleConfig.idearLocales || {}
 
       if (/^zh\-(CN|SG)$/.test(this.$lang)) {
-        return {...zhHans, ...recoLocales}
+        return { ...zhHans, ...idearLocales }
       }
       if (/^zh\-(HK|MO|TW)$/.test(this.$lang)) {
-        return {...zhHant, ...recoLocales}
+        return { ...zhHant, ...idearLocales }
       }
-      return {...en, ...recoLocales}
+      if (/^ja\-JP$/.test(this.$lang)) {
+        return { ...ja, ...idearLocales }
+      }
+      if (/^ko\-KR$/.test(this.$lang)) {
+        return { ...ko, ...idearLocales }
+      }
+      if (/^es(\-[A-Z]+)?$/.test(this.$lang)) {
+        return { ...es, ...idearLocales }
+      }
+      return { ...en, ...idearLocales }
     }
   }
 }
