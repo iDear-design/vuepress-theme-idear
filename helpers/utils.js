@@ -3,32 +3,32 @@ export const extRE = /\.(md|html)$/
 export const endingSlashRE = /\/$/
 export const outboundRE = /^(https?:|mailto:|tel:)/
 
-export function normalize(path) {
+export function normalize (path) {
   return decodeURI(path)
     .replace(hashRE, '')
     .replace(extRE, '')
 }
 
-export function getHash(path) {
+export function getHash (path) {
   const match = path.match(hashRE)
   if (match) {
     return match[0]
   }
 }
 
-export function isExternal(path) {
+export function isExternal (path) {
   return outboundRE.test(path)
 }
 
-export function isMailto(path) {
+export function isMailto (path) {
   return /^mailto:/.test(path)
 }
 
-export function isTel(path) {
+export function isTel (path) {
   return /^tel:/.test(path)
 }
 
-export function ensureExt(path) {
+export function ensureExt (path) {
   if (isExternal(path)) {
     return path
   }
@@ -42,7 +42,7 @@ export function ensureExt(path) {
   return normalized + '.html' + hash
 }
 
-export function isActive(route, path) {
+export function isActive (route, path) {
   const routeHash = route.hash
   const linkHash = getHash(path)
   if (linkHash && routeHash !== linkHash) {
@@ -53,7 +53,7 @@ export function isActive(route, path) {
   return routePath === pagePath
 }
 
-export function resolvePage(pages, rawPath, base) {
+export function resolvePage (pages, rawPath, base) {
   if (base) {
     rawPath = resolvePath(rawPath, base)
   }
@@ -70,7 +70,7 @@ export function resolvePage(pages, rawPath, base) {
   return {}
 }
 
-function resolvePath(relative, base, append) {
+function resolvePath (relative, base, append) {
   const firstChar = relative.charAt(0)
   if (firstChar === '/') {
     return relative
@@ -115,58 +115,22 @@ function resolvePath(relative, base, append) {
  * @param { string } localePath
  * @returns { SidebarGroup }
  */
-export function resolveSidebarItems(page, regularPath, site, localePath) {
-  const {pages, themeConfig} = site
+export function resolveSidebarItems (page, regularPath, site, localePath) {
+  const { pages, themeConfig } = site
 
   const localeConfig = localePath && themeConfig.locales
     ? themeConfig.locales[localePath] || themeConfig
     : themeConfig
 
-  // 计算页面的菜单层级
-  // const pageSidebarConfig = page.frontmatter.sidebar || localeConfig.sidebar || themeConfig.sidebar
-  // if (pageSidebarConfig === 'auto') {
-  //   return resolveHeaders(page)
-  // }
-
-  // const sidebarConfig = localeConfig.sidebar || themeConfig.sidebar
-  // if (!sidebarConfig) {
-  //   return []
-  // } else {
-  //   const { base, config } = resolveMatchingConfig(regularPath, sidebarConfig)
-  //   return config
-  //     ? config.map(item => resolveItem(item, pages, base))
-  //     : []
-  // }
   const sidebarConfig = localeConfig.sidebar || themeConfig.sidebar
 
-  const {base, config} = resolveMatchingConfig(regularPath, sidebarConfig)
+  const { base, config } = resolveMatchingConfig(regularPath, sidebarConfig)
   return config
     ? config.map(item => resolveItem(item, pages, base))
     : []
 }
 
-/**
- * @param { Page } page
- * @returns { SidebarGroup }
- */
-// function resolveHeaders (page) {
-//   const headers = groupHeaders(page.headers || [])
-//   return [{
-//     type: 'group',
-//     collapsable: false,
-//     title: page.title,
-//     path: null,
-//     children: headers.map(h => ({
-//       type: 'auto',
-//       title: h.title,
-//       basePath: page.path,
-//       path: page.path + '#' + h.slug,
-//       children: h.children || []
-//     }))
-//   }]
-// }
-
-export function groupHeaders(headers) {
+export function groupHeaders (headers) {
   // group h3s under h2
   headers = headers.map(h => Object.assign({}, h))
   let lastH2
@@ -180,7 +144,7 @@ export function groupHeaders(headers) {
   return headers.filter(h => h.level === 2)
 }
 
-export function resolveNavLinkItem(linkItem) {
+export function resolveNavLinkItem (linkItem) {
   return Object.assign(linkItem, {
     type: linkItem.items && linkItem.items.length ? 'links' : 'link'
   })
@@ -191,7 +155,7 @@ export function resolveNavLinkItem(linkItem) {
  * @param { Array<string|string[]> | Array<SidebarGroup> | [link: string]: SidebarConfig } config
  * @returns { base: string, config: SidebarConfig }
  */
-export function resolveMatchingConfig(regularPath, config) {
+export function resolveMatchingConfig (regularPath, config) {
   if (Array.isArray(config)) {
     return {
       base: '/',
@@ -209,7 +173,7 @@ export function resolveMatchingConfig(regularPath, config) {
   return {}
 }
 
-export function formatDate(time, fmt = 'yyyy-MM-dd hh:mm:ss') {
+export function formatDate (time, fmt = 'yyyy-MM-dd hh:mm:ss') {
   time = time.replace(/-/g, '/')
   const date = new Date(time)
   if (/(y+)/.test(fmt)) {
@@ -234,17 +198,21 @@ export function formatDate(time, fmt = 'yyyy-MM-dd hh:mm:ss') {
 }
 
 // 获取时间的数字类型
-export function getTimeNum(date) {
-  return new Date(date.frontmatter.date).getTime()
+export function getTimeNum (date) {
+  const dateNum = !date ? 0 : new Date(date).getTime()
+  return dateNum
 }
 
 // 比对时间
-export function compareDate(a, b) {
-  return getTimeNum(b) - getTimeNum(a)
+export function compareDate (a, b) {
+  const aDateNum = getTimeNum(a.frontmatter.date)
+  const bDateNum = getTimeNum(b.frontmatter.date)
+  if (aDateNum === 0 || bDateNum === 0) return 0
+  return bDateNum - aDateNum
 }
 
 // 向 head 中添加 style
-export function addLinkToHead(href) {
+export function addLinkToHead (href) {
   const iconLink = document.createElement('link')
   iconLink.rel = 'stylesheet'
   iconLink.href = href
@@ -252,13 +220,21 @@ export function addLinkToHead(href) {
   document.head.append(iconLink)
 }
 
-function ensureEndingSlash(path) {
+// 向 head 中添加 script
+export function addScriptToHead (href) {
+  const iconLink = document.createElement('script')
+  iconLink.src = href
+
+  document.head.append(iconLink)
+}
+
+function ensureEndingSlash (path) {
   return /(\.html|\/)$/.test(path)
     ? path
     : path + '/'
 }
 
-function resolveItem(item, pages, base, groupDepth = 1) {
+function resolveItem (item, pages, base, groupDepth = 1) {
   if (typeof item === 'string') {
     return resolvePage(pages, item, base)
   } else if (Array.isArray(item)) {
