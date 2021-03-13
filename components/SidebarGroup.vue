@@ -54,54 +54,49 @@
 </template>
 
 <script>
-import {isActive} from '@theme/helpers/utils'
+import { defineComponent, getCurrentInstance } from 'vue-demi'
+import { isActive } from '@theme/helpers/utils'
 import DropdownTransition from '@theme/components/DropdownTransition'
 
-export default {
+export default defineComponent({
   name: 'SidebarGroup',
   props: ['item', 'open', 'collapsable', 'depth'],
-  components: {DropdownTransition},
-  // ref: https://vuejs.org/v2/guide/components-edge-cases.html#Circular-References-Between-Components
-  beforeCreate() {
-    this.$options.components.SidebarLinks = require('./SidebarLinks.vue').default
-  },
-  methods: {isActive}
-}
+  components: { DropdownTransition },
+
+  setup (props, ctx) {
+    const instance = getCurrentInstance().proxy
+
+    instance.$options.components.SidebarLinks = require('./SidebarLinks.vue').default
+
+    return { isActive }
+  }
+})
 </script>
 
 <style lang="stylus">
 .sidebar-group
   background var(--background-color)
-
   .sidebar-group
     padding-left 0.5em
-
   &:not(.collapsable)
     .sidebar-heading:not(.clickable)
       cursor auto
       color var(--text-color)
-
   // refine styles of nested sidebar groups
-
   &.is-sub-group
     padding-left 0
-
     & > .sidebar-heading
       font-size 0.95em
       line-height 1.4
       font-weight normal
       padding-left 2rem
-
       &:not(.clickable)
         opacity 0.5
-
     & > .sidebar-group-items
       padding-left 1rem
-
       & > li > .sidebar-link
         font-size: 0.95em;
         border-left none
-
   &.depth-2
     & > .sidebar-heading
       border-left none
@@ -117,23 +112,19 @@ export default {
   width 100%
   box-sizing border-box
   margin 0
-
   &.open, &:hover
     color $accentColor
-
   .arrow
     position absolute
     top 0
     bottom 0
     right 1em
     margin auto
-
   &.clickable
     &.active
       font-weight 600
       color $accentColor
       border-left-color $accentColor
-
     &:hover
       color $accentColor
 

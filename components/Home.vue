@@ -3,29 +3,33 @@
     <div class="hero">
       <ModuleTransition>
         <img
-          v-if="recoShowModule && $frontmatter.heroImage"
+          v-if="idearShowModule && $frontmatter.heroImage"
           :style="heroImageStyle || {}"
           :src="$withBase($frontmatter.heroImage)"
           alt="hero">
       </ModuleTransition>
       <ModuleTransition delay="0.04">
-        <h1 v-if="recoShowModule && $frontmatter.heroText !== null">
-          {{ $frontmatter.heroText || $title || 'vuepress-theme-idear' }}</h1>
+        <h1
+          v-if="idearShowModule && $frontmatter.heroText !== null"
+          :style="{ marginTop: $frontmatter.heroImage ? '0px' : '140px'}"
+        >
+          {{ $frontmatter.heroText || $title || 'vuePress-theme-idear' }}
+        </h1>
       </ModuleTransition>
       <ModuleTransition delay="0.08">
-        <p v-if="recoShowModule && $frontmatter.tagline !== null" class="description">
-          {{ $frontmatter.tagline || $description || 'Welcome to your vuepress-theme-idear site' }}
+        <p v-if="idearShowModule && $frontmatter.tagline !== null" class="description">
+          {{ $frontmatter.tagline || $description || 'Welcome to your vuePress-theme-idear site' }}
         </p>
       </ModuleTransition>
       <ModuleTransition delay="0.16">
-        <p class="action" v-if="recoShowModule && $frontmatter.actionText && $frontmatter.actionLink">
+        <p class="action" v-if="idearShowModule && $frontmatter.actionText && $frontmatter.actionLink">
           <NavLink class="action-button" :item="actionLink"/>
         </p>
       </ModuleTransition>
     </div>
 
     <ModuleTransition delay="0.24">
-      <div class="features" v-if="recoShowModule && $frontmatter.features && $frontmatter.features.length">
+      <div class="features" v-if="idearShowModule && $frontmatter.features && $frontmatter.features.length">
         <div v-for="(feature, index) in $frontmatter.features" :key="index" class="feature">
           <h2>{{ feature.title }}</h2>
           <p>{{ feature.details }}</p>
@@ -33,40 +37,37 @@
       </div>
     </ModuleTransition>
     <ModuleTransition delay="0.32">
-      <Content class="home-center" v-show="recoShowModule" custom/>
+      <Content class="home-center" v-show="idearShowModule" custom/>
     </ModuleTransition>
   </div>
 </template>
 
 <script>
+import { defineComponent, computed, getCurrentInstance } from 'vue-demi'
 import NavLink from '@theme/components/NavLink'
-import ModuleTransition from '@theme/components/ModuleTransition'
-import moduleTransitonMixin from '@theme/mixins/moduleTransiton'
+import { ModuleTransition } from '@theme/components/IdearCore'
 
-export default {
-  mixins: [moduleTransitonMixin],
-  components: {NavLink, ModuleTransition},
-  computed: {
+export default defineComponent({
+  components: { NavLink, ModuleTransition },
 
-    actionLink() {
-      return {
-        link: this.$frontmatter.actionLink,
-        text: this.$frontmatter.actionText
-      }
-    },
+  setup (props, ctx) {
+    const instance = getCurrentInstance().proxy
+    const idearShowModule = computed(() => instance && instance.$parent.idearShowModule)
+    const actionLink = computed(() => instance && {
+      link: instance.$frontmatter.actionLink,
+      text: instance.$frontmatter.actionText
+    })
+    const heroImageStyle = computed(() => instance.$frontmatter.heroImageStyle || {
+      maxHeight: '200px',
+      margin: '6rem auto 1.5rem'
+    })
 
-    heroImageStyle() {
-      return this.$frontmatter.heroImageStyle || {
-        maxHeight: '200px',
-        margin: '6rem auto 1.5rem'
-      }
-    }
+    return { idearShowModule, actionLink, heroImageStyle }
   }
-}
+})
 </script>
 
 <style lang="stylus">
-
 .home {
   padding: $navbarHeight 2rem 0;
   max-width: 960px;
@@ -74,8 +75,8 @@ export default {
 
   .hero {
     text-align: center;
-
     h1 {
+      display: block;
       font-size: 2.5rem;
       color: var(--text-color);
     }
@@ -95,7 +96,7 @@ export default {
       font-size: 1.2rem;
       color: #fff;
       background-color: $accentColor;
-      padding: 0.6rem 1.2rem;
+      padding: 0.2rem 1.2rem;
       border-radius: $borderRadius
       transition: background-color 0.1s ease;
       box-sizing: border-box;
@@ -109,48 +110,32 @@ export default {
 
   .features {
     border-top: 1px solid var(--border-color);;
-padding
-:
-1.2rem 0;
-margin-top
-:
-2.5rem;
-display
-:
-flex;
-flex-wrap
-:
-wrap;
-align-items
-:
-flex-start;
-align-content
-:
-stretch;
-justify-content
-:
-space-between;
-}
-
-.feature {
-  flex-grow: 1;
-  flex-basis: 30%;
-  max-width: 30%;
-  transition: all .5s
-  color: var(--text-color);
-
-  h2 {
-    font-size: 1.6rem;
-    font-weight: 500;
-    border-bottom: none;
-    padding-bottom: 0;
+    padding: 1.2rem 0;
+    margin-top: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: stretch;
+    justify-content: space-between;
   }
 
-  &:hover {
-    transform scale(1.05)
-  }
-}
+  .feature {
+    flex-grow: 1;
+    flex-basis: 30%;
+    max-width: 30%;
+    transition: all .5s
+    color: var(--text-color);
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
 
+    &:hover {
+      transform scale(1.05)
+    }
+  }
 }
 
 @media (max-width: $MQMobile) {

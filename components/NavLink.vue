@@ -4,7 +4,7 @@
     :to="link"
     v-if="!isExternal(link)"
     :exact="exact">
-    <i :class="`iconfont ${item.icon}`"></i>
+    <idear-icon :icon="`${item.icon}`" />
     {{ item.text }}
   </router-link>
   <a
@@ -14,39 +14,41 @@
     :target="isMailto(link) || isTel(link) ? null : '_blank'"
     :rel="isMailto(link) || isTel(link) ? null : 'noopener noreferrer'"
   >
-    <i :class="`iconfont ${item.icon}`"></i>
+    <idear-icon :icon="`${item.icon}`" />
     {{ item.text }}
     <OutboundLink/>
   </a>
 </template>
 
 <script>
-import {isExternal, isMailto, isTel, ensureExt} from '@theme/helpers/utils'
+import { defineComponent, computed, toRefs, getCurrentInstance } from 'vue-demi'
+import { isExternal, isMailto, isTel, ensureExt } from '@theme/helpers/utils'
+import { IdearIcon } from '@theme/components/IdearCore'
 
-export default {
+export default defineComponent({
+  components: { IdearIcon },
+
   props: {
     item: {
       required: true
     }
   },
 
-  computed: {
-    link() {
-      return ensureExt(this.item.link)
-    },
+  setup (props, ctx) {
+    const instance = getCurrentInstance().proxy
 
-    exact() {
-      if (this.$site.locales) {
-        return Object.keys(this.$site.locales).some(rootLink => rootLink === this.link)
+    const { item } = toRefs(props)
+
+    const link = computed(() => ensureExt(item.value.link))
+
+    const exact = computed(() => {
+      if (instance.$site.locales) {
+        return Object.keys(instance.$site.locales).some(rootLink => rootLink === link.value)
       }
-      return this.link === '/'
-    }
-  },
+      return link.value === '/'
+    })
 
-  methods: {
-    isExternal,
-    isMailto,
-    isTel
+    return { link, exact, isExternal, isMailto, isTel }
   }
-}
+})
 </script>

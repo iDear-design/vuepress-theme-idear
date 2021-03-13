@@ -1,22 +1,19 @@
 <template>
   <main class="page" :style="pageStyle">
-    <ModuleTransition>
-      <div v-show="recoShowModule && $page.title" class="page-title">
-        <h1 class="title">{{ $page.title }}</h1>
-        <PageInfo :pageInfo="$page" :showAccessNumber="showAccessNumber"></PageInfo>
-      </div>
-    </ModuleTransition>
-
     <ModuleTransition delay="0.08">
-      <Content v-show="recoShowModule" class="theme-idear-content"/>
+      <section v-show="idearShowModule">
+        <div class="page-title">
+          <h1 class="title">{{$page.title}}</h1>
+          <PageInfo :pageInfo="$page" :showAccessNumber="showAccessNumber"></PageInfo>
+        </div>
+        <!-- 这里使用 v-show，否则影响 SSR -->
+        <Content class="theme-idear-content" />
+      </section>
     </ModuleTransition>
 
     <ModuleTransition delay="0.16">
-      <footer v-show="recoShowModule" class="page-edit">
-        <div
-          class="edit-link"
-          v-if="editLink"
-        >
+      <footer v-if="idearShowModule" class="page-edit">
+        <div class="edit-link" v-if="editLink">
           <a
             :href="editLink"
             target="_blank"
@@ -36,120 +33,108 @@
     </ModuleTransition>
 
     <ModuleTransition delay="0.24">
-      <div class="page-nav" v-if="recoShowModule && (prev || next)">
+      <div class="page-nav" v-if="idearShowModule && (prev || next)">
         <p class="inner">
-          <span
-            v-if="prev"
-            class="prev"
-          >
-            ←
-            <router-link
-              v-if="prev"
-              class="prev"
-              :to="prev.path"
-            >
+          <span v-if="prev" class="prev">
+            <router-link v-if="prev" class="prev" :to="prev.path">
               {{ prev.title || prev.path }}
             </router-link>
           </span>
-
-          <span
-            v-if="next"
-            class="next"
-          >
-            <router-link
-              v-if="next"
-              :to="next.path"
-            >
+          <span v-if="next" class="next">
+            <router-link v-if="next" :to="next.path">
               {{ next.title || next.path }}
             </router-link>
-            →
           </span>
         </p>
       </div>
     </ModuleTransition>
 
     <ModuleTransition delay="0.32">
-      <Comments v-if="recoShowModule" :isShowComments="shouldShowComments"/>
+      <Comments v-if="idearShowModule" :isShowComments="shouldShowComments"/>
     </ModuleTransition>
 
-    <ModuleTransition delay="0.08">
-      <SubSidebar v-if="recoShowModule" class="side-bar"/>
+    <ModuleTransition>
+      <SubSidebar v-if="idearShowModule" class="side-bar" />
     </ModuleTransition>
   </main>
 </template>
 
 <script>
+import { defineComponent, computed, getCurrentInstance, toRefs } from 'vue-demi'
 import PageInfo from '@theme/components/PageInfo'
+import { resolvePage, outboundRE, endingSlashRE } from '@theme/helpers/utils'
+import { ModuleTransition } from '@theme/components/IdearCore'
 import SubSidebar from '@theme/components/SubSidebar'
-import ModuleTransition from '@theme/components/ModuleTransition'
-import {resolvePage, outboundRE, endingSlashRE} from '@theme/helpers/utils'
-import moduleTransitonMixin from '@theme/mixins/moduleTransiton'
 
-export default {
-  mixins: [moduleTransitonMixin],
-  components: {PageInfo, ModuleTransition, SubSidebar},
+export default defineComponent({
+  components: { PageInfo, ModuleTransition, SubSidebar },
 
   props: ['sidebarItems'],
 
-  data() {
-    return {
-      isHasKey: true
-    }
-  },
+  setup (props, ctx) {
+    const instance = getCurrentInstance().proxy
 
-  computed: {
+    const { sidebarItems } = toRefs(props)
+
+    const idearShowModule = computed(() => instance.$parent.idearShowModule)
+
     // 是否显示评论
-    shouldShowComments() {
-      const {isShowComments} = this.$frontmatter
-      const {showComment} = this.$themeConfig.valineConfig || {showComment: true}
+    const shouldShowComments = computed(() => {
+      const { isShowComments } = instance.$frontmatter
+      const { showComment } = instance.$themeConfig.valineConfig || { showComment: true }
       return (showComment !== false && isShowComments !== false) || (showComment === false && isShowComments === true)
-    },
-    showAccessNumber() {
+    })
+
+    const showAccessNumber = computed(() => {
       const {
-        $themeConfig: {valineConfig},
-        $themeLocaleConfig: {valineConfig: valineLocalConfig}
-      } = this
+        $themeConfig: { valineConfig },
+        $themeLocaleConfig: { valineConfig: valineLocalConfig }
+      } = instance || {}
 
       const vc = valineLocalConfig || valineConfig
-      if (vc && vc.visitor != false) {
-        return true
+
+      return vc && vc.visitor != false
+    })
+
+    const lastUpdated = computed(() => {
+      if (instance.$themeConfig.lastUpdated === false) return false
+      return instance.$page.lastUpdated
+    })
+
+    const lastUpdatedText = computed(() => {
+      if (typeof instance.$themeLocaleConfig.lastUpdated === 'string') {
+        return instance.$themeLocaleConfig.lastUpdated
       }
-      return false
-    },
-    lastUpdated() {
-      return this.$page.lastUpdated
-    },
-    lastUpdatedText() {
-      if (typeof this.$themeLocaleConfig.lastUpdated === 'string') {
-        return this.$themeLocaleConfig.lastUpdated
-      }
-      if (typeof this.$themeConfig.lastUpdated === 'string') {
-        return this.$themeConfig.lastUpdated
+      if (typeof instance.$themeConfig.lastUpdated === 'string') {
+        return instance.$themeConfig.lastUpdated
       }
       return 'Last Updated'
-    },
-    prev() {
-      const prev = this.$frontmatter.prev
-      if (prev === false) {
+    })
+
+    const prev = computed(() => {
+      const frontmatterPrev = instance.$frontmatter.prev
+      if (frontmatterPrev === false) {
         return
-      } else if (prev) {
-        return resolvePage(this.$site.pages, prev, this.$route.path)
+      } else if (frontmatterPrev) {
+        return resolvePage(instance.$site.pages, frontmatterPrev, instance.$route.path)
       } else {
-        return resolvePrev(this.$page, this.sidebarItems)
+        return resolvePrev(instance.$page, sidebarItems.value)
       }
-    },
-    next() {
-      const next = this.$frontmatter.next
+    })
+
+    const next = computed(() => {
+      const frontmatterNext = instance.$frontmatter.next
       if (next === false) {
         return
-      } else if (next) {
-        return resolvePage(this.$site.pages, next, this.$route.path)
+      } else if (frontmatterNext) {
+        return resolvePage(instance.$site.pages, frontmatterNext, instance.$route.path)
       } else {
-        return resolveNext(this.$page, this.sidebarItems)
+        return resolveNext(instance.$page, sidebarItems.value)
       }
-    },
-    editLink() {
-      if (this.$frontmatter.editLink === false) {
+    })
+
+    const editLink = computed(() => {
+      if (instance.$frontmatter.editLink === false) {
         return false
       }
       const {
@@ -158,67 +143,77 @@ export default {
         docsDir = '',
         docsBranch = 'master',
         docsRepo = repo
-      } = this.$themeConfig
+      } = instance.$themeConfig
 
-      if (docsRepo && editLinks && this.$page.relativePath) {
-        return this.createEditLink(repo, docsRepo, docsDir, docsBranch, this.$page.relativePath)
+      if (docsRepo && editLinks && instance.$page.relativePath) {
+        return createEditLink(repo, docsRepo, docsDir, docsBranch, instance.$page.relativePath)
       }
       return ''
-    },
-    editLinkText() {
+    })
+
+    const editLinkText = computed(() => {
       return (
-        this.$themeLocaleConfig.editLinkText || this.$themeConfig.editLinkText || `Edit this page`
+        instance.$themeLocaleConfig.editLinkText || instance.$themeConfig.editLinkText || `Edit this page`
       )
-    },
-    pageStyle() {
-      return this.$showSubSideBar ? {} : {paddingRight: '0'}
-    }
-  },
+    })
 
-  created() {
-    console.log(this)
-  },
+    const pageStyle = computed(() => {
+      return instance.$showSubSideBar ? {} : { paddingRight: '0' }
+    })
 
-  methods: {
-    createEditLink(repo, docsRepo, docsDir, docsBranch, path) {
-      const bitbucket = /bitbucket.org/
-      if (bitbucket.test(repo)) {
-        const base = outboundRE.test(docsRepo)
-          ? docsRepo
-          : repo
-        return (
-          base.replace(endingSlashRE, '') +
-          `/src` +
-          `/${docsBranch}/` +
-          (docsDir ? docsDir.replace(endingSlashRE, '') + '/' : '') +
-          path +
-          `?mode=edit&spa=0&at=${docsBranch}&fileviewer=file-view-default`
-        )
-      }
-
-      const base = outboundRE.test(docsRepo)
-        ? docsRepo
-        : `https://github.com/${docsRepo}`
-      return (
-        base.replace(endingSlashRE, '') +
-        `/edit` +
-        `/${docsBranch}/` +
-        (docsDir ? docsDir.replace(endingSlashRE, '') + '/' : '') +
-        path
-      )
+    return {
+      idearShowModule,
+      shouldShowComments,
+      showAccessNumber,
+      lastUpdated,
+      lastUpdatedText,
+      prev,
+      next,
+      editLink,
+      editLinkText,
+      pageStyle
     }
   }
+})
+
+function createEditLink (repo, docsRepo, docsDir, docsBranch, path) {
+  const bitbucket = /bitbucket.org/
+  if (bitbucket.test(repo)) {
+    const base = outboundRE.test(docsRepo)
+      ? docsRepo
+      : repo
+    return (
+      base.replace(endingSlashRE, '') +
+        `/src` +
+        `/${docsBranch}/` +
+        (docsDir ? docsDir.replace(endingSlashRE, '') + '/' : '') +
+        path +
+        `?mode=edit&spa=0&at=${docsBranch}&fileviewer=file-view-default`
+    )
+  }
+
+  const base = outboundRE.test(docsRepo)
+    ? docsRepo
+    : `https://github.com/${docsRepo}`
+
+  return (
+    base.replace(endingSlashRE, '') +
+    `/edit` +
+    `/${docsBranch}/` +
+    (docsDir ? docsDir.replace(endingSlashRE, '') + '/' : '') +
+    path
+  )
 }
 
-function resolvePrev(page, items) {
+function resolvePrev (page, items) {
   return find(page, items, -1)
 }
 
-function resolveNext(page, items) {
+function resolveNext (page, items) {
   return find(page, items, 1)
 }
 
-function find(page, items, offset) {
+function find (page, items, offset) {
   const res = []
   flatten(items, res)
   for (let i = 0; i < res.length; i++) {
@@ -229,7 +224,7 @@ function find(page, items, offset) {
   }
 }
 
-function flatten(items, res) {
+function flatten (items, res) {
   for (let i = 0, l = items.length; i < l; i++) {
     if (items[i].type === 'group') {
       flatten(items[i].children || [], res)
@@ -250,49 +245,50 @@ function flatten(items, res) {
   padding-bottom 2rem
   padding-right 14rem
   display block
-
   .side-bar
     position fixed
     top 10rem
     bottom 10rem
     right 2rem
     overflow-y scroll
-
     &::-webkit-scrollbar
       width: 0
       height: 0
-
   .page-title
     max-width: $contentWidth;
     margin: 0 auto;
     padding: 1rem 2.5rem;
     color var(--text-color)
-
+  .theme-idear-content h2
+    position relative
+    padding-left 0.8rem
+    &::before
+      position absolute
+      left 0
+      top 3.5rem
+      display block
+      height 1.8rem
+      content ''
+      border-left 5px solid $accentColor
   .page-edit
     @extend $wrapper
     padding-top 1rem
     padding-bottom 1rem
     overflow auto
-
     .edit-link
       display inline-block
-
       a
         color $accentColor
         margin-right 0.25rem
-
     .last-updated
       float right
       font-size 0.9em
-
       .prefix
         font-weight 500
         color $accentColor
-
       .time
         font-weight 400
         color #aaa
-
   .comments-wrapper
     @extend $wrapper
 
@@ -300,33 +296,25 @@ function flatten(items, res) {
   @extend $wrapper
   padding-top 1rem
   padding-bottom 0
-
   .inner
     min-height 2rem
     margin-top 0
     border-top 1px solid var(--border-color)
     padding-top 1rem
-    overflow auto
-
-  // clear float
-
+    overflow auto // clear float
   .next
     float right
 
 @media (max-width: $MQMobile)
   .page
     padding-right 0
-
     .side-bar
       display none
-
     .page-title
       padding: 0 1rem;
-
     .page-edit
       .edit-link
         margin-bottom .5rem
-
       .last-updated
         font-size .8em
         float none

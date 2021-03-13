@@ -1,25 +1,26 @@
 <script>
-import {isActive} from '@theme/helpers/utils'
+import { defineComponent } from 'vue-demi'
+import { isActive } from '@theme/helpers/utils'
 
-export default {
+export default defineComponent({
   functional: true,
 
   props: ['item', 'sidebarDepth'],
 
-  render(h,
-         {
-           parent: {
-             $page,
-             $site,
-             $route,
-             $themeConfig,
-             $themeLocaleConfig
-           },
-           props: {
-             item,
-             sidebarDepth
-           }
-         }) {
+  render (h,
+    {
+      parent: {
+        $page,
+        $site,
+        $route,
+        $themeConfig,
+        $themeLocaleConfig
+      },
+      props: {
+        item,
+        sidebarDepth
+      }
+    }) {
     // use custom active class matching logic
     // due to edge case of paths ending with / + hash
     const selfActive = isActive($route, item.path)
@@ -30,29 +31,10 @@ export default {
       : selfActive
     const link = renderLink(h, item.path, item.title || item.path, active)
     return link
-
-    // const configDepth = $page.frontmatter.sidebarDepth ||
-    //   sidebarDepth ||
-    //   $themeLocaleConfig.sidebarDepth ||
-    //   $themeConfig.sidebarDepth
-
-    // const maxDepth = configDepth == null ? 1 : configDepth
-
-    // const displayAllHeaders = $themeLocaleConfig.displayAllHeaders ||
-    //   $themeConfig.displayAllHeaders
-
-    // if (item.type === 'auto') {
-    //   return [link, renderChildren(h, item.children, item.basePath, $route, maxDepth)]
-    // } else if ((active || displayAllHeaders) && item.headers && !hashRE.test(item.path)) {
-    //   const children = groupHeaders(item.headers)
-    //   return [link, renderChildren(h, children, item.path, $route, maxDepth)]
-    // } else {
-    //   return link
-    // }
   }
-}
+})
 
-function renderLink(h, to, text, active) {
+function renderLink (h, to, text, active) {
   return h('router-link', {
     props: {
       to,
@@ -89,30 +71,26 @@ function renderLink(h, to, text, active) {
 a.sidebar-link
   font-size 1em
   font-weight 400
-  display block !important
+  display block!important
   color var(--text-color)
   padding 0.35rem 1rem 0.35rem 2.25rem
   line-height 1.7
   background var(--background-color)
   // margin 0 0 0 1.5rem
   box-sizing: border-box
-
   &:hover
     color $accentColor
-
   &.active
     font-weight 600
     color $accentColor
     background var(--default-color-8)
     border-right 3px solid $accentColor
-
   .sidebar-group &
     // padding-left 2rem
   .sidebar-sub-headers &
     padding-top 0.25rem
     padding-bottom 0.25rem
     border-left none
-
     &.active
       font-weight 500
       background transparent

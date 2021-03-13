@@ -22,7 +22,7 @@
         'max-width': linksWrapMaxWidth + 'px'
       } : {}">
 
-      <Mode/>
+      <Mode />
       <AlgoliaSearchBox
         v-if="isAlgoliaSearch"
         :options="algolia"/>
@@ -33,80 +33,62 @@
 </template>
 
 <script>
-import AlgoliaSearchBox from '@theme/components/AlgoliaSearchBox'
-import SearchBox from '@theme/components/SearchBox'
+import { defineComponent, ref, onMounted, getCurrentInstance, computed } from 'vue-demi'
+import AlgoliaSearchBox from '@AlgoliaSearchBox'
+import SearchBox from '@SearchBox'
 import SidebarButton from '@theme/components/SidebarButton'
 import NavLinks from '@theme/components/NavLinks'
 import Mode from '@theme/components/Mode'
 
-export default {
-  components: {SidebarButton, NavLinks, SearchBox, AlgoliaSearchBox, Mode},
+export default defineComponent({
+  components: { SidebarButton, NavLinks, SearchBox, AlgoliaSearchBox, Mode },
 
-  data() {
-    return {
-      linksWrapMaxWidth: null
+  setup (props, ctx) {
+    const instance = getCurrentInstance().proxy
+    const linksWrapMaxWidth = ref(null)
+
+    const algolia = computed(() => {
+      return instance.$themeLocaleConfig.algolia || instance.$themeConfig.algolia || {}
+    })
+
+    const isAlgoliaSearch = computed(() => {
+      algolia.value && algolia.value.apiKey && algolia.value.indexName
+    })
+
+    function css (el, property) {
+      // NOTE: Known bug, will return 'auto' if style value is 'auto'
+      const win = el.ownerDocument.defaultView
+      // null means not to return pseudo styles
+      return win.getComputedStyle(el, null)[property]
     }
-  },
 
-  mounted() {
-    const MOBILE_DESKTOP_BREAKPOINT = 719 // refer to config.styl
-    const NAVBAR_VERTICAL_PADDING = parseInt(css(this.$el, 'paddingLeft')) + parseInt(css(this.$el, 'paddingRight'))
-    const handleLinksWrapWidth = () => {
-      if (document.documentElement.clientWidth < MOBILE_DESKTOP_BREAKPOINT) {
-        this.linksWrapMaxWidth = null
-      } else {
-        this.linksWrapMaxWidth = this.$el.offsetWidth - NAVBAR_VERTICAL_PADDING -
-          (this.$refs.siteName && this.$refs.siteName.offsetWidth || 0)
-      }
-    }
-    handleLinksWrapWidth()
-    window.addEventListener('resize', handleLinksWrapWidth, false)
-  },
+    onMounted(() => {
+      const MOBILE_DESKTOP_BREAKPOINT = 719 // refer to config.styl
+      const NAVBAR_VERTICAL_PADDING =
+        parseInt(css(instance.$el, 'paddingLeft')) +
+        parseInt(css(instance.$el, 'paddingRight'))
 
-  computed: {
-    algolia() {
-      return this.$themeLocaleConfig.algolia || this.$themeConfig.algolia || {}
-    },
-
-    isAlgoliaSearch() {
-      return this.algolia && this.algolia.apiKey && this.algolia.indexName
-    }
-  },
-
-  methods: {
-    throttle(func, delay) {
-      let timer = null
-      let startTime = Date.now()
-
-      return function () {
-        const curTime = Date.now()
-        const remaining = delay - (curTime - startTime)
-        const context = this
-        const args = arguments
-
-        clearTimeout(timer)
-        if (remaining <= 0) {
-          func.apply(context, args)
-          startTime = Date.now()
+      const handleLinksWrapWidth = () => {
+        if (document.documentElement.clientWidth < MOBILE_DESKTOP_BREAKPOINT) {
+          linksWrapMaxWidth.value = null
         } else {
-          timer = setTimeout(func, remaining)
+          linksWrapMaxWidth.value =
+            instance.$el.offsetWidth -
+            NAVBAR_VERTICAL_PADDING -
+            (instance.$refs.siteName && instance.$refs.siteName.offsetWidth || 0)
         }
       }
-    }
-  }
-}
 
-function css(el, property) {
-  // NOTE: Known bug, will return 'auto' if style value is 'auto'
-  const win = el.ownerDocument.defaultView
-  // null means not to return pseudo styles
-  return win.getComputedStyle(el, null)[property]
-}
+      handleLinksWrapWidth()
+      window.addEventListener('resize', handleLinksWrapWidth, false)
+    })
+
+    return { linksWrapMaxWidth, algolia, isAlgoliaSearch, css }
+  }
+})
 </script>
 
 <style lang="stylus">
-@require '../styles/mode.styl'
-
 $navbar-vertical-padding = 0.7rem
 $navbar-horizontal-padding = 1.5rem
 
@@ -115,23 +97,19 @@ $navbar-horizontal-padding = 1.5rem
   line-height $navbarHeight - 1.4rem
   box-shadow var(--box-shadow)
   background var(--background-color)
-
   a, span, img
     display inline-block
-
   .logo
     height $navbarHeight - 1.4rem
     min-width $navbarHeight - 1.4rem
     margin-right 0.8rem
     vertical-align top
     border-radius 50%
-
   .site-name
     font-size 1.2rem
     font-weight 600
     color var(--text-color)
     position relative
-
   .links
     padding-left 1.5rem
     box-sizing border-box
@@ -142,7 +120,6 @@ $navbar-horizontal-padding = 1.5rem
     top $navbar-vertical-padding
     display flex
     background-color var(--background-color)
-
     .search-box
       flex: 0 0 auto
       vertical-align top
@@ -150,10 +127,8 @@ $navbar-horizontal-padding = 1.5rem
 @media (max-width: $MQMobile)
   .navbar
     padding-left 4rem
-
     .can-hide
       display none
-
     .links
       padding-left .2rem
 </style>
