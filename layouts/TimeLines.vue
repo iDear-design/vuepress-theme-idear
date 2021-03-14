@@ -1,19 +1,19 @@
 <template>
   <Common class="timeline-wrapper" :sidebar="false">
     <ul class="timeline-content">
-      <ModuleTransition>
-        <li v-show="recoShowModule" class="desc">Yesterday Once More!</li>
+      <ModuleTransition >
+        <li v-show="idearShowModule" class="desc">{{$idearLocales.timeLineMsg}}</li>
       </ModuleTransition>
       <ModuleTransition
         :delay="String(0.08 * (index + 1))"
-        v-for="(item, index) in $recoPostsForTimeline"
+        v-for="(item, index) in $idearPostsForTimeline"
         :key="index">
-        <li v-show="recoShowModule">
-          <h3 class="year">{{ item.year }}</h3>
+        <li v-show="idearShowModule">
+          <h3 class="year">{{item.year}}</h3>
           <ul class="year-wrapper">
             <li v-for="(subItem, subIndex) in item.data" :key="subIndex">
-              <span class="date">{{ subItem.frontmatter.date | dateFormat }}</span>
-              <span class="title" @click="go(subItem.path)">{{ subItem.title }}</span>
+              <span class="date">{{dateFormat(subItem.frontmatter.date)}}</span>
+              <span class="title" @click="go(subItem.path)">{{subItem.title}}</span>
             </li>
           </ul>
         </li>
@@ -23,34 +23,37 @@
 </template>
 
 <script>
+import { defineComponent, getCurrentInstance } from 'vue-demi'
 import Common from '@theme/components/Common'
-import ModuleTransition from '@theme/components/ModuleTransition'
+import { ModuleTransition } from '@theme/components/IdearCore'
 import moduleTransitonMixin from '@theme/mixins/moduleTransiton'
 
-export default {
-  mixins: [moduleTransitonMixin],
+export default defineComponent({
   name: 'TimeLine',
-  components: {Common, ModuleTransition},
-  filters: {
-    dateFormat(date, type) {
-      function renderTime(date) {
+  mixins: [moduleTransitonMixin],
+  components: { Common, ModuleTransition },
+  setup (props, ctx) {
+    const instance = getCurrentInstance().proxy
+
+    const go = (url) => {
+      instance.$router.push({ path: url })
+    }
+
+    const dateFormat = (date, type) => {
+      function renderTime (date) {
         const dateee = new Date(date).toJSON()
         return new Date(+new Date(dateee) + 8 * 3600 * 1000).toISOString().replace(/T/g, ' ').replace(/\.[\d]{3}Z/, '').replace(/-/g, '/')
       }
-
       date = renderTime(date)
       const dateObj = new Date(date)
       const mon = dateObj.getMonth() + 1
       const day = dateObj.getDate()
       return `${mon}-${day}`
     }
-  },
-  methods: {
-    go(url) {
-      this.$router.push({path: url})
-    }
+
+    return { go, dateFormat }
   }
-}
+})
 </script>
 
 <style src="../styles/theme.styl" lang="stylus"></style>
@@ -62,12 +65,10 @@ export default {
   max-width: $contentWidth;
   margin: 0 auto;
   padding: 4.6rem 2.5rem 0;
-
   .timeline-content
     box-sizing border-box
     position relative
     list-style none
-
     &::after {
       content: " ";
       position: absolute;
@@ -79,12 +80,10 @@ export default {
       height: 100%;
       background: var(--border-color);
     }
-
     .desc, .year {
       position: relative;
       color var(--text-color);
       font-size 16px
-
       &:before {
         content: " ";
         position: absolute;
@@ -100,44 +99,36 @@ export default {
         border-radius: 50%;
       }
     }
-
     .year {
       margin: 80px 0 0px;
       color var(--text-color);
       font-weight: 700;
       font-size 26px
     }
-
     .year-wrapper {
-      padding-left 0 !important
-
+      padding-left 0!important
       li {
         display flex
         padding 30px 0 10px
         list-style none
         border-bottom: 1px dashed var(--border-color);
         position relative
-
         &:hover {
           .date {
             color $accentColor
-
             &::before {
               background $accentColor
             }
           }
-
           .title {
             color $accentColor
           }
         }
-
         .date {
           width 40px
           line-height 30px
           color var(--text-color-sub)
           font-size 12px
-
           &::before {
             content: " ";
             position: absolute;
@@ -152,7 +143,6 @@ export default {
             z-index 2
           }
         }
-
         .title {
           line-height 30px
           color var(--text-color-sub)
@@ -161,7 +151,6 @@ export default {
         }
       }
     }
-
 @media (max-width: $MQMobile)
   .timeline-wrapper
     margin: 0 1.2rem;
