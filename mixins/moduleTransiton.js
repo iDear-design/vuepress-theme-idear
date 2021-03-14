@@ -1,14 +1,14 @@
 export default {
-  data () {
+  data() {
     return {
       idearShowModule: false
     }
   },
-  mounted () {
+  mounted() {
     this.idearShowModule = true
   },
   watch: {
-    '$route' (newV, oldV) {
+    '$route'(newV, oldV) {
       if (newV.path === oldV.path) return
 
       this.idearShowModule = false
