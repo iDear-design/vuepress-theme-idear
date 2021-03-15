@@ -30,11 +30,14 @@
       <div v-show="idearShowModule" class="home-blog-wrapper">
         <div class="blog-list">
           <!-- 博客列表 -->
-          <note-abstract :data="$idearPosts" @paginationChange="paginationChange" />
+          <note-abstract :data="$idearPosts" @paginationChange="paginationChange"/>
         </div>
         <div class="info-wrapper">
           <PersonalInfo/>
-          <h4><idear-icon icon="idear-category" /> {{$idearLocales.category}}</h4>
+          <h4>
+            <idear-icon icon="idear-category"/>
+            {{ $idearLocales.category }}
+          </h4>
           <ul class="category-wrapper">
             <li class="category-item" v-for="(item, index) in this.$categories.list" :key="index">
               <router-link :to="item.path">
@@ -44,10 +47,16 @@
             </li>
           </ul>
           <hr>
-          <h4 v-if="$tags.list.length !== 0"><idear-icon icon="idear-tag" /> {{$idearLocales.tag}}</h4>
-          <TagList @getCurrentTag="getPagesByTags" />
-          <h4 v-if="$themeConfig.friendLink && $themeConfig.friendLink.length !== 0"><idear-icon icon="idear-friend" /> {{$idearLocales.friendLink}}</h4>
-          <FriendLink />
+          <h4 v-if="$tags.list.length !== 0">
+            <idear-icon icon="idear-tag"/>
+            {{ $idearLocales.tag }}
+          </h4>
+          <TagList @getCurrentTag="getPagesByTags"/>
+          <h4 v-if="$themeConfig.friendLink && $themeConfig.friendLink.length !== 0">
+            <idear-icon icon="idear-friend"/>
+            {{ $idearLocales.friendLink }}
+          </h4>
+          <FriendLink/>
         </div>
       </div>
     </ModuleTransition>
@@ -59,17 +68,17 @@
 </template>
 
 <script>
-import { defineComponent, toRefs, reactive, computed, getCurrentInstance, onMounted } from 'vue-demi'
+import {defineComponent, toRefs, reactive, computed, getCurrentInstance, onMounted} from 'vue-demi'
 import TagList from '@theme/components/TagList'
 import FriendLink from '@theme/components/FriendLink'
 import NoteAbstract from '@theme/components/NoteAbstract'
-import { ModuleTransition, IdearIcon } from '@theme/components/IdearCore'
+import {ModuleTransition, IdearIcon} from '@theme/components/IdearCore'
 import PersonalInfo from '@theme/components/PersonalInfo'
-import { getOneColor } from '@theme/helpers/other'
+import {getOneColor} from '@theme/helpers/other'
 
 export default defineComponent({
-  components: { NoteAbstract, TagList, FriendLink, ModuleTransition, PersonalInfo, IdearIcon },
-  setup (props, ctx) {
+  components: {NoteAbstract, TagList, FriendLink, ModuleTransition, PersonalInfo, IdearIcon},
+  setup(props, ctx) {
     const instance = getCurrentInstance().proxy
 
     const state = reactive({
@@ -92,9 +101,9 @@ export default defineComponent({
         background: `url(${url}) center/cover no-repeat`
       }
 
-      const { bgImageStyle } = instance.$frontmatter
+      const {bgImageStyle} = instance.$frontmatter
 
-      return bgImageStyle ? { ...initBgImageStyle, ...bgImageStyle } : initBgImageStyle
+      return bgImageStyle ? {...initBgImageStyle, ...bgImageStyle} : initBgImageStyle
     })
 
     onMounted(() => {
@@ -102,16 +111,16 @@ export default defineComponent({
       state.idearShow = true
     })
 
-    return { idearShowModule, heroImageStyle, bgImageStyle, ...toRefs(state), getOneColor }
+    return {idearShowModule, heroImageStyle, bgImageStyle, ...toRefs(state), getOneColor}
   },
   methods: {
-    paginationChange (page) {
+    paginationChange(page) {
       setTimeout(() => {
         window.scrollTo(0, this.heroHeight)
       }, 100)
     },
-    getPagesByTags (tagInfo) {
-      this.$router.push({ path: tagInfo.path })
+    getPagesByTags(tagInfo) {
+      this.$router.push({path: tagInfo.path})
     }
   }
 })
@@ -121,6 +130,7 @@ export default defineComponent({
 .home-blog {
   padding: 0;
   margin: 0px auto;
+
   .hero {
     margin $navbarHeight auto 0
     position relative
@@ -130,6 +140,7 @@ export default defineComponent({
     display flex
     align-items center
     justify-content center
+
     .hero-img {
       max-width: 300px;
       margin: 0 auto 1.5rem
@@ -137,7 +148,7 @@ export default defineComponent({
 
     h1 {
       display: block;
-      margin:0 auto 1.8rem;
+      margin: 0 auto 1.8rem;
       font-size: 2.5rem;
     }
 
@@ -147,21 +158,25 @@ export default defineComponent({
       line-height: 1.3;
     }
   }
+
   .home-blog-wrapper {
     display flex
     align-items: flex-start;
     margin 20px auto 0
     padding 0 20px
     max-width $homePageWidth
+
     .blog-list {
       flex auto
       width 0
+
       .abstract-wrapper {
         .abstract-item:last-child {
           margin-bottom: 0px;
         }
       }
     }
+
     .info-wrapper {
       position -webkit-sticky;
       position sticky;
@@ -176,15 +191,19 @@ export default defineComponent({
       box-sizing border-box
       padding 0 15px
       background var(--background-color)
+
       &:hover {
         box-shadow var(--box-shadow-hover)
       }
+
       h4 {
         color var(--text-color)
       }
+
       .category-wrapper {
         list-style none
         padding-left 0
+
         .category-item {
           margin-bottom .4rem
           padding: .4rem .8rem;
@@ -192,17 +211,21 @@ export default defineComponent({
           border-radius $borderRadius
           box-shadow var(--box-shadow)
           background-color var(--background-color)
+
           &:hover {
             transform scale(1.04)
+
             a {
               color $accentColor
             }
           }
+
           a {
             display flex
             justify-content: space-between
             align-items: center
             color var(--text-color)
+
             .post-num {
               width 1.6rem;
               height 1.6rem
@@ -224,13 +247,14 @@ export default defineComponent({
   .home-blog {
     .hero {
       height 450px
+
       img {
         max-height: 210px;
         margin: 2rem auto 1.2rem;
       }
 
       h1 {
-        margin: 0 auto 1.8rem ;
+        margin: 0 auto 1.8rem;
         font-size: 2rem;
       }
 
@@ -243,14 +267,18 @@ export default defineComponent({
         padding: 0.6rem 1.2rem;
       }
     }
+
     .home-blog-wrapper {
-      display block!important
+      display block !important
+
       .blog-list {
         width auto
       }
+
       .info-wrapper {
         // display none!important
         margin-left 0
+
         .personal-info-wrapper {
           display none
         }
@@ -263,13 +291,14 @@ export default defineComponent({
   .home-blog {
     .hero {
       height 450px
+
       img {
         max-height: 210px;
         margin: 2rem auto 1.2rem;
       }
 
       h1 {
-        margin: 0 auto 1.8rem ;
+        margin: 0 auto 1.8rem;
         font-size: 2rem;
       }
 
@@ -288,13 +317,16 @@ export default defineComponent({
     }
 
     .home-blog-wrapper {
-      display block!important
+      display block !important
+
       .blog-list {
         width auto
       }
+
       .info-wrapper {
         // display none!important
         margin-left 0
+
         .personal-info-wrapper {
           display none
         }
