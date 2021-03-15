@@ -1,19 +1,19 @@
 <template>
   <Common class="timeline-wrapper" :sidebar="false">
     <ul class="timeline-content">
-      <ModuleTransition >
-        <li v-show="idearShowModule" class="desc">{{$idearLocales.timeLineMsg}}</li>
+      <ModuleTransition>
+        <li v-show="idearShowModule" class="desc">{{ $idearLocales.timeLineMsg }}</li>
       </ModuleTransition>
       <ModuleTransition
         :delay="String(0.08 * (index + 1))"
         v-for="(item, index) in $idearPostsForTimeline"
         :key="index">
         <li v-show="idearShowModule">
-          <h3 class="year">{{item.year}}</h3>
+          <h3 class="year">{{ item.year }}</h3>
           <ul class="year-wrapper">
             <li v-for="(subItem, subIndex) in item.data" :key="subIndex">
-              <span class="date">{{dateFormat(subItem.frontmatter.date)}}</span>
-              <span class="title" @click="go(subItem.path)">{{subItem.title}}</span>
+              <span class="date">{{ dateFormat(subItem.frontmatter.date) }}</span>
+              <span class="title" @click="go(subItem.path)">{{ subItem.title }}</span>
             </li>
           </ul>
         </li>
@@ -23,27 +23,28 @@
 </template>
 
 <script>
-import { defineComponent, getCurrentInstance } from 'vue-demi'
+import {defineComponent, getCurrentInstance} from 'vue-demi'
 import Common from '@theme/components/Common'
-import { ModuleTransition } from '@theme/components/IdearCore'
+import {ModuleTransition} from '@theme/components/IdearCore'
 import moduleTransitonMixin from '@theme/mixins/moduleTransiton'
 
 export default defineComponent({
   name: 'TimeLine',
   mixins: [moduleTransitonMixin],
-  components: { Common, ModuleTransition },
-  setup (props, ctx) {
+  components: {Common, ModuleTransition},
+  setup(props, ctx) {
     const instance = getCurrentInstance().proxy
 
     const go = (url) => {
-      instance.$router.push({ path: url })
+      instance.$router.push({path: url})
     }
 
     const dateFormat = (date, type) => {
-      function renderTime (date) {
+      function renderTime(date) {
         const dateee = new Date(date).toJSON()
         return new Date(+new Date(dateee) + 8 * 3600 * 1000).toISOString().replace(/T/g, ' ').replace(/\.[\d]{3}Z/, '').replace(/-/g, '/')
       }
+
       date = renderTime(date)
       const dateObj = new Date(date)
       const mon = dateObj.getMonth() + 1
@@ -51,7 +52,7 @@ export default defineComponent({
       return `${mon}-${day}`
     }
 
-    return { go, dateFormat }
+    return {go, dateFormat}
   }
 })
 </script>
@@ -65,10 +66,12 @@ export default defineComponent({
   max-width: $contentWidth;
   margin: 0 auto;
   padding: 4.6rem 2.5rem 0;
+
   .timeline-content
     box-sizing border-box
     position relative
     list-style none
+
     &::after {
       content: " ";
       position: absolute;
@@ -80,10 +83,12 @@ export default defineComponent({
       height: 100%;
       background: var(--border-color);
     }
+
     .desc, .year {
       position: relative;
       color var(--text-color);
       font-size 16px
+
       &:before {
         content: " ";
         position: absolute;
@@ -99,36 +104,44 @@ export default defineComponent({
         border-radius: 50%;
       }
     }
+
     .year {
       margin: 80px 0 0px;
       color var(--text-color);
       font-weight: 700;
       font-size 26px
     }
+
     .year-wrapper {
-      padding-left 0!important
+      padding-left 0 !important
+
       li {
         display flex
         padding 30px 0 10px
         list-style none
         border-bottom: 1px dashed var(--border-color);
         position relative
+
         &:hover {
           .date {
             color $accentColor
+
             &::before {
               background $accentColor
             }
           }
+
           .title {
             color $accentColor
           }
         }
+
         .date {
           width 40px
           line-height 30px
           color var(--text-color-sub)
           font-size 12px
+
           &::before {
             content: " ";
             position: absolute;
@@ -143,6 +156,7 @@ export default defineComponent({
             z-index 2
           }
         }
+
         .title {
           line-height 30px
           color var(--text-color-sub)
@@ -151,6 +165,7 @@ export default defineComponent({
         }
       }
     }
+
 @media (max-width: $MQMobile)
   .timeline-wrapper
     margin: 0 1.2rem;

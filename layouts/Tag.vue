@@ -23,19 +23,19 @@
 </template>
 
 <script>
-import { defineComponent, computed, getCurrentInstance } from 'vue-demi'
+import {defineComponent, computed, getCurrentInstance} from 'vue-demi'
 import Common from '@theme/components/Common'
 import NoteAbstract from '@theme/components/NoteAbstract'
 import TagList from '@theme/components/TagList'
-import { ModuleTransition } from '@theme/components/IdearCore'
-import { sortPostsByStickyAndDate, filterPosts } from '@theme/helpers/postData'
+import {ModuleTransition} from '@theme/components/IdearCore'
+import {sortPostsByStickyAndDate, filterPosts} from '@theme/helpers/postData'
 import moduleTransitonMixin from '@theme/mixins/moduleTransiton'
 
 export default defineComponent({
   mixins: [moduleTransitonMixin],
-  components: { Common, NoteAbstract, TagList, ModuleTransition },
+  components: {Common, NoteAbstract, TagList, ModuleTransition},
 
-  setup (props, ctx) {
+  setup(props, ctx) {
     const instance = getCurrentInstance().proxy
 
     // 时间降序后的博客列表
@@ -52,7 +52,7 @@ export default defineComponent({
 
     const tagClick = (tagInfo) => {
       if (instance.$route.path !== tagInfo.path) {
-        instance.$router.push({ path: tagInfo.path })
+        instance.$router.push({path: tagInfo.path})
       }
     }
 
@@ -62,7 +62,7 @@ export default defineComponent({
       }, 100)
     }
 
-    return { posts, getCurrentTag, tagClick, paginationChange }
+    return {posts, getCurrentTag, tagClick, paginationChange}
   }
 })
 </script>

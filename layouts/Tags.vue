@@ -1,5 +1,5 @@
 <template>
-  <Common  class="tags-wrapper" :sidebar="false">
+  <Common class="tags-wrapper" :sidebar="false">
     <!-- 标签集合 -->
     <ModuleTransition>
       <TagList
@@ -21,23 +21,23 @@
 </template>
 
 <script>
-import { defineComponent, getCurrentInstance } from 'vue-demi'
+import {defineComponent, getCurrentInstance} from 'vue-demi'
 import Common from '@theme/components/Common'
 import TagList from '@theme/components/TagList'
 import NoteAbstract from '@theme/components/NoteAbstract'
-import { ModuleTransition } from '@theme/components/IdearCore'
+import {ModuleTransition} from '@theme/components/IdearCore'
 import moduleTransitonMixin from '@theme/mixins/moduleTransiton'
 
 export default defineComponent({
   mixins: [moduleTransitonMixin],
-  components: { Common, NoteAbstract, TagList, ModuleTransition },
+  components: {Common, NoteAbstract, TagList, ModuleTransition},
 
-  setup (props, ctx) {
+  setup(props, ctx) {
     const instance = getCurrentInstance().proxy
 
     const tagClick = (tagInfo) => {
       if (instance.$route.path !== tagInfo.path) {
-        instance.$router.push({ path: tagInfo.path })
+        instance.$router.push({path: tagInfo.path})
       }
     }
 
@@ -47,7 +47,7 @@ export default defineComponent({
       }, 100)
     }
 
-    return { tagClick, paginationChange }
+    return {tagClick, paginationChange}
   }
 })
 </script>

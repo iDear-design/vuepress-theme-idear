@@ -9,7 +9,8 @@
 </template>
 
 <script>
-import { defineComponent, computed, getCurrentInstance, onMounted } from 'vue-demi'
+import {defineComponent, computed, getCurrentInstance, onMounted} from 'vue-demi'
+
 const msgs = [
   `There's nothing here.`,
   `How did we get here?`,
@@ -18,7 +19,7 @@ const msgs = [
 ]
 
 export default defineComponent({
-  setup (props, ctx) {
+  setup(props, ctx) {
     const instance = getCurrentInstance().proxy
 
     const noFoundPageByTencent = computed(() => {
@@ -40,7 +41,7 @@ export default defineComponent({
       }
     })
 
-    return { noFoundPageByTencent, getMsg }
+    return {noFoundPageByTencent, getMsg}
   }
 })
 </script>
@@ -52,23 +53,25 @@ export default defineComponent({
   margin 4rem auto 0
   max-width 800px
   padding 0 2rem
+
 .mod_404
   .desc
     .desc_link
       display: inline-block
       // margin: 20px 0
-      background: #424242!important
+      background: #424242 !important
       color: #ffffff
-      padding: 6px 20px!important
-      text-decoration: none!important
+      padding: 6px 20px !important
+      text-decoration: none !important
       border-radius: 4px
 
 @media screen and (max-width: 720px)
   .mod_404
     .desc
       margin: 50px 0
+
     .wrapper
-      margin 0!important
+      margin 0 !important
       padding-top 20px
 </style>
 
