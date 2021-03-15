@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import '@idear-toolkit/vuepress/icon/iconfont.css'
+import '@idear-toolkit/icon/vuepress/iconfont.css'
 import {defineComponent, computed, getCurrentInstance} from 'vue-demi'
 import Home from '@theme/components/Home'
 import HomeBlog from '@theme/components/HomeBlog'
