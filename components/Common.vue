@@ -2,20 +2,20 @@
   <div class="theme-container" :class="pageClasses">
     <div v-if="!absoluteEncryption">
       <transition name="fade">
-        <LoadingPage v-show="firstLoad" class="loading-wrapper" />
+        <LoadingPage v-show="firstLoad" class="loading-wrapper"/>
       </transition>
 
       <transition name="fade">
-        <Password v-show="!firstLoad && !isHasKey" class="password-wrapper-out" key="out" />
+        <Password v-show="!firstLoad && !isHasKey" class="password-wrapper-out" key="out"/>
       </transition>
 
       <div :class="{ 'hide': firstLoad || !isHasKey }">
-        <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar" />
+        <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar"/>
 
         <div class="sidebar-mask" @click="toggleSidebar(false)"></div>
 
         <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
-          <PersonalInfo slot="top" />
+          <PersonalInfo slot="top"/>
           <slot name="sidebar-bottom" slot="bottom"/>
         </Sidebar>
 
@@ -27,15 +27,15 @@
     </div>
     <div v-else>
       <transition name="fade">
-        <LoadingPage v-if="firstLoad" />
-        <Password v-else-if="!isHasKey" />
+        <LoadingPage v-if="firstLoad"/>
+        <Password v-else-if="!isHasKey"/>
         <div v-else>
           <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar"/>
 
           <div class="sidebar-mask" @click="toggleSidebar(false)"></div>
 
           <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
-            <PersonalInfo slot="top" />
+            <PersonalInfo slot="top"/>
             <slot name="sidebar-bottom" slot="bottom"/>
           </Sidebar>
 
@@ -48,15 +48,15 @@
 </template>
 
 <script>
-import { defineComponent, computed, ref, onMounted, toRefs, getCurrentInstance } from 'vue-demi'
+import {defineComponent, computed, ref, onMounted, toRefs, getCurrentInstance} from 'vue-demi'
 import Navbar from '@theme/components/Navbar'
 import Sidebar from '@theme/components/Sidebar'
 import PersonalInfo from '@theme/components/PersonalInfo'
 import Password from '@theme/components/Password'
-import { setTimeout } from 'timers'
+import {setTimeout} from 'timers'
 
 export default defineComponent({
-  components: { Sidebar, Navbar, Password, PersonalInfo },
+  components: {Sidebar, Navbar, Password, PersonalInfo},
 
   props: {
     sidebar: {
@@ -73,7 +73,7 @@ export default defineComponent({
     }
   },
 
-  setup (props, ctx) {
+  setup(props, ctx) {
     const instance = getCurrentInstance().proxy
 
     const isSidebarOpen = ref(false)
@@ -86,8 +86,8 @@ export default defineComponent({
       return instance.$themeConfig.keyPage && instance.$themeConfig.keyPage.absoluteEncryption === true
     })
     const shouldShowNavbar = computed(() => {
-      const { themeConfig } = instance.$site
-      const { frontmatter } = instance.$page
+      const {themeConfig} = instance.$site
+      const {frontmatter} = instance.$page
 
       if (
         frontmatter.navbar === false ||
@@ -110,20 +110,20 @@ export default defineComponent({
         'no-sidebar': !shouldShowSidebar.value
       }
 
-      const { pageClass: userPageClass } = instance.$frontmatter || {}
+      const {pageClass: userPageClass} = instance.$frontmatter || {}
       if (userPageClass) classValue[userPageClass] = true
 
       return classValue
     })
 
     const hasKey = () => {
-      const { keyPage } = instance.$themeConfig
+      const {keyPage} = instance.$themeConfig
       if (!keyPage || !keyPage.keys || keyPage.keys.length === 0) {
         isHasKey.value = true
         return
       }
 
-      let { keys } = keyPage
+      let {keys} = keyPage
       keys = keys.map(item => item.toLowerCase())
       isHasKey.value = keys && keys.indexOf(sessionStorage.getItem('key')) > -1
     }
@@ -155,7 +155,7 @@ export default defineComponent({
     }
 
     // 首次渲染时，idearShowModule 直接为 true，否则锚点失效
-    const { showModule } = toRefs(props)
+    const {showModule} = toRefs(props)
     const idearShowModule = computed(() => {
       if (firstLoad.value) {
         return true
@@ -171,11 +171,24 @@ export default defineComponent({
       handleLoading()
     })
 
-    return { isSidebarOpen, absoluteEncryption, shouldShowNavbar, shouldShowSidebar, pageClasses, hasKey, hasPageKey, isHasKey, isHasPageKey, toggleSidebar, firstLoad, idearShowModule }
+    return {
+      isSidebarOpen,
+      absoluteEncryption,
+      shouldShowNavbar,
+      shouldShowSidebar,
+      pageClasses,
+      hasKey,
+      hasPageKey,
+      isHasKey,
+      isHasPageKey,
+      toggleSidebar,
+      firstLoad,
+      idearShowModule
+    }
   },
 
   watch: {
-    $frontmatter (newVal, oldVal) {
+    $frontmatter(newVal, oldVal) {
       this.hasKey()
       this.hasPageKey()
     }
@@ -193,6 +206,7 @@ export default defineComponent({
     left 0
     right 0
     margin auto
+
   .password-wrapper-out
     position absolute
     z-index 21
@@ -201,6 +215,7 @@ export default defineComponent({
     left 0
     right 0
     margin auto
+
   .password-wrapper-in
     position absolute
     z-index 8
@@ -208,6 +223,7 @@ export default defineComponent({
     bottom 0
     left 0
     right 0
+
   .hide
     height 100vh
     overflow hidden
@@ -216,7 +232,9 @@ export default defineComponent({
 .fade-enter-active, .fade-leave-active {
   transition: opacity .5s ease-in-out .5s;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
+{
   opacity: 0;
 }
 </style>

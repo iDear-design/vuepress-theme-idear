@@ -1,55 +1,55 @@
 <template>
-<div class="personal-info-wrapper">
-  <img
-    class="personal-img"
-    v-if="$themeConfig.authorAvatar"
-    :src="$withBase($themeConfig.authorAvatar)"
-    alt="author-avatar"
-  >
-  <h3
-    class="name"
-    v-if="$themeConfig.author"
-  >
-    {{ $themeConfig.author }}
-  </h3>
-  <div class="num">
-    <div>
-      <h3>{{$idearPosts.length}}</h3>
-      <h6>{{$idearLocales.article}}</h6>
-    </div>
-    <div>
-      <h3>{{$tags.list.length}}</h3>
-      <h6>{{$idearLocales.tag}}</h6>
-    </div>
-  </div>
-  <ul class="social-links">
-    <li
-      class="social-item"
-      v-for="(item, index) in socialLinks"
-      :key="index"
+  <div class="personal-info-wrapper">
+    <img
+      class="personal-img"
+      v-if="$themeConfig.authorAvatar"
+      :src="$withBase($themeConfig.authorAvatar)"
+      alt="author-avatar"
     >
-      <idear-icon :icon="item.icon" :link="item.link" :style="{ color: item.color }" />
-    </li>
-  </ul>
-  <hr>
-</div>
+    <h3
+      class="name"
+      v-if="$themeConfig.author"
+    >
+      {{ $themeConfig.author }}
+    </h3>
+    <div class="num">
+      <div>
+        <h3>{{ $idearPosts.length }}</h3>
+        <h6>{{ $idearLocales.article }}</h6>
+      </div>
+      <div>
+        <h3>{{ $tags.list.length }}</h3>
+        <h6>{{ $idearLocales.tag }}</h6>
+      </div>
+    </div>
+    <ul class="social-links">
+      <li
+        class="social-item"
+        v-for="(item, index) in socialLinks"
+        :key="index"
+      >
+        <idear-icon :icon="item.icon" :link="item.link" :style="{ color: item.color }"/>
+      </li>
+    </ul>
+    <hr>
+  </div>
 </template>
 
 <script>
-import { defineComponent, computed, getCurrentInstance } from 'vue-demi'
-import { IdearIcon } from '@theme/components/IdearCore'
-import { getOneColor } from '@theme/helpers/other'
+import {defineComponent, computed, getCurrentInstance} from 'vue-demi'
+import {IdearIcon} from '@theme/components/IdearCore'
+import {getOneColor} from '@theme/helpers/other'
 
 export default defineComponent({
-  components: { IdearIcon },
-  setup (props, ctx) {
+  components: {IdearIcon},
+  setup(props, ctx) {
     const instance = getCurrentInstance().proxy
     const socialLinks = computed(() => (instance.$themeConfig.blogConfig && instance.$themeConfig.blogConfig.socialLinks || []).map(item => {
       if (!item.color) item.color = getOneColor()
       return item
     }))
 
-    return { socialLinks }
+    return {socialLinks}
   }
 })
 </script>
@@ -63,26 +63,32 @@ export default defineComponent({
     height 6rem
     border-radius 50%
   }
+
   .name {
     font-size 1rem
     text-align center
     color var(--text-color)
   }
+
   .num {
     display flex
     margin 0 auto 1rem
     width 80%
+
     > div {
       text-align center
       flex 0 0 50%
+
       &:first-child {
         border-right 1px solid #333
       }
+
       h3 {
         line-height auto
         margin 0 0 .6rem
         color var(--text-color)
       }
+
       h6 {
         line-height auto
         color var(--text-color)
@@ -90,11 +96,13 @@ export default defineComponent({
       }
     }
   }
+
   .social-links {
     box-sizing border-box
     display flex
     flex-wrap wrap
     padding 10px
+
     .social-item {
       width 39px
       height 36px
@@ -102,9 +110,11 @@ export default defineComponent({
       text-align center
       list-style none
       transition transform .3s
+
       &:hover {
         transform scale(1.08)
       }
+
       i {
         cursor pointer
         font-size 22px

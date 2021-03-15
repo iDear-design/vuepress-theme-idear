@@ -17,19 +17,19 @@
 </template>
 
 <script>
-import { defineComponent, ref, toRefs, computed, getCurrentInstance, onMounted } from 'vue-demi'
+import {defineComponent, ref, toRefs, computed, getCurrentInstance, onMounted} from 'vue-demi'
 import pagination from '@theme/mixins/pagination'
 import NoteAbstractItem from './NoteAbstractItem'
 
 export default defineComponent({
   mixins: [pagination],
-  components: { NoteAbstractItem },
+  components: {NoteAbstractItem},
   props: ['data', 'currentTag'],
 
-  setup (props, ctx) {
+  setup(props, ctx) {
     const instance = getCurrentInstance().proxy
 
-    const { data } = toRefs(props)
+    const {data} = toRefs(props)
 
     const currentPage = ref(1)
 
@@ -50,10 +50,10 @@ export default defineComponent({
       currentPage.value = instance._getStoragePage() || 1
     })
 
-    return { currentPage, currentPageData, getCurrentPage }
+    return {currentPage, currentPageData, getCurrentPage}
   },
   watch: {
-    $route () {
+    $route() {
       this.currentPage = this._getStoragePage() || 1
     }
   }

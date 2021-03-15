@@ -4,7 +4,7 @@
     :to="link"
     v-if="!isExternal(link)"
     :exact="exact">
-    <idear-icon :icon="`${item.icon}`" />
+    <idear-icon :icon="`${item.icon}`"/>
     {{ item.text }}
   </router-link>
   <a
@@ -14,19 +14,19 @@
     :target="isMailto(link) || isTel(link) ? null : '_blank'"
     :rel="isMailto(link) || isTel(link) ? null : 'noopener noreferrer'"
   >
-    <idear-icon :icon="`${item.icon}`" />
+    <idear-icon :icon="`${item.icon}`"/>
     {{ item.text }}
     <OutboundLink/>
   </a>
 </template>
 
 <script>
-import { defineComponent, computed, toRefs, getCurrentInstance } from 'vue-demi'
-import { isExternal, isMailto, isTel, ensureExt } from '@theme/helpers/utils'
-import { IdearIcon } from '@theme/components/IdearCore'
+import {defineComponent, computed, toRefs, getCurrentInstance} from 'vue-demi'
+import {isExternal, isMailto, isTel, ensureExt} from '@theme/helpers/utils'
+import {IdearIcon} from '@theme/components/IdearCore'
 
 export default defineComponent({
-  components: { IdearIcon },
+  components: {IdearIcon},
 
   props: {
     item: {
@@ -34,10 +34,10 @@ export default defineComponent({
     }
   },
 
-  setup (props, ctx) {
+  setup(props, ctx) {
     const instance = getCurrentInstance().proxy
 
-    const { item } = toRefs(props)
+    const {item} = toRefs(props)
 
     const link = computed(() => ensureExt(item.value.link))
 
@@ -48,7 +48,7 @@ export default defineComponent({
       return link.value === '/'
     })
 
-    return { link, exact, isExternal, isMailto, isTel }
+    return {link, exact, isExternal, isMailto, isTel}
   }
 })
 </script>

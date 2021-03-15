@@ -2,10 +2,10 @@
   <div
     class="abstract-item"
     @click="$router.push(item.path)">
-    <idear-icon v-if="item.frontmatter.sticky" icon="idear-sticky" />
+    <idear-icon v-if="item.frontmatter.sticky" icon="idear-sticky"/>
     <div class="title">
-      <idear-icon v-if="item.frontmatter.keys" icon="idear-lock" />
-      <router-link :to="item.path">{{item.title}}</router-link>
+      <idear-icon v-if="item.frontmatter.keys" icon="idear-lock"/>
+      <router-link :to="item.path">{{ item.title }}</router-link>
     </div>
     <div class="abstract" v-html="item.excerpt"></div>
     <PageInfo
@@ -16,11 +16,12 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue-demi'
-import { IdearIcon } from '@theme/components/IdearCore'
+import {defineComponent} from 'vue-demi'
+import {IdearIcon} from '@theme/components/IdearCore'
 import PageInfo from './PageInfo'
+
 export default defineComponent({
-  components: { PageInfo, IdearIcon },
+  components: {PageInfo, IdearIcon},
   props: ['item', 'currentPage', 'currentTag']
 })
 </script>
@@ -38,9 +39,11 @@ export default defineComponent({
   transition all .3s
   background-color var(--background-color)
   cursor: pointer;
+
   > * {
     pointer-events: auto;
   }
+
   .idear-sticky
     position absolute
     top 0
@@ -48,18 +51,23 @@ export default defineComponent({
     display inline-block
     color $accentColor
     font-size 2.4rem
+
   &:hover
     box-shadow: var(--box-shadow-hover)
+
   .title
     position: relative;
     font-size: 1.28rem;
     line-height: 46px;
     display: inline-block;
+
     a
       color: var(--text-color);
+
     .idear-lock
       font-size 1.28rem
       color $accentColor
+
     &:after
       content: "";
       position: absolute;
@@ -72,21 +80,26 @@ export default defineComponent({
       -webkit-transform: scaleX(0);
       transform: scaleX(0);
       transition: .3s ease-in-out;
+
     &:hover a
       color $accentColor
+
     &:hover:after
       visibility visible
       -webkit-transform: scaleX(1);
       transform: scaleX(1);
+
   .tags
     .tag-item
       &.active
         color $accentColor
+
       &:hover
         color $accentColor
+
 @media (max-width: $MQMobile)
   .tags
     display block
     margin-top 1rem;
-    margin-left: 0!important;
+    margin-left: 0 !important;
 </style>

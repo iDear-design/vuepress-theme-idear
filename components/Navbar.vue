@@ -22,7 +22,7 @@
         'max-width': linksWrapMaxWidth + 'px'
       } : {}">
 
-      <Mode />
+      <Mode/>
       <AlgoliaSearchBox
         v-if="isAlgoliaSearch"
         :options="algolia"/>
@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import { defineComponent, ref, onMounted, getCurrentInstance, computed } from 'vue-demi'
+import {defineComponent, ref, onMounted, getCurrentInstance, computed} from 'vue-demi'
 import AlgoliaSearchBox from '@AlgoliaSearchBox'
 import SearchBox from '@SearchBox'
 import SidebarButton from '@theme/components/SidebarButton'
@@ -41,9 +41,9 @@ import NavLinks from '@theme/components/NavLinks'
 import Mode from '@theme/components/Mode'
 
 export default defineComponent({
-  components: { SidebarButton, NavLinks, SearchBox, AlgoliaSearchBox, Mode },
+  components: {SidebarButton, NavLinks, SearchBox, AlgoliaSearchBox, Mode},
 
-  setup (props, ctx) {
+  setup(props, ctx) {
     const instance = getCurrentInstance().proxy
     const linksWrapMaxWidth = ref(null)
 
@@ -55,7 +55,7 @@ export default defineComponent({
       algolia.value && algolia.value.apiKey && algolia.value.indexName
     })
 
-    function css (el, property) {
+    function css(el, property) {
       // NOTE: Known bug, will return 'auto' if style value is 'auto'
       const win = el.ownerDocument.defaultView
       // null means not to return pseudo styles
@@ -83,7 +83,7 @@ export default defineComponent({
       window.addEventListener('resize', handleLinksWrapWidth, false)
     })
 
-    return { linksWrapMaxWidth, algolia, isAlgoliaSearch, css }
+    return {linksWrapMaxWidth, algolia, isAlgoliaSearch, css}
   }
 })
 </script>
@@ -97,19 +97,23 @@ $navbar-horizontal-padding = 1.5rem
   line-height $navbarHeight - 1.4rem
   box-shadow var(--box-shadow)
   background var(--background-color)
+
   a, span, img
     display inline-block
+
   .logo
     height $navbarHeight - 1.4rem
     min-width $navbarHeight - 1.4rem
     margin-right 0.8rem
     vertical-align top
     border-radius 50%
+
   .site-name
     font-size 1.2rem
     font-weight 600
     color var(--text-color)
     position relative
+
   .links
     padding-left 1.5rem
     box-sizing border-box
@@ -120,6 +124,7 @@ $navbar-horizontal-padding = 1.5rem
     top $navbar-vertical-padding
     display flex
     background-color var(--background-color)
+
     .search-box
       flex: 0 0 auto
       vertical-align top
@@ -127,8 +132,10 @@ $navbar-horizontal-padding = 1.5rem
 @media (max-width: $MQMobile)
   .navbar
     padding-left 4rem
+
     .can-hide
       display none
+
     .links
       padding-left .2rem
 </style>

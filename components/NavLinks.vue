@@ -6,8 +6,8 @@
       v-for="item in userLinks"
       :key="item.link"
     >
-      <DropdownLink v-if="item.type === 'links'" :item="item" />
-      <NavLink v-else :item="item" />
+      <DropdownLink v-if="item.type === 'links'" :item="item"/>
+      <NavLink v-else :item="item"/>
     </div>
 
     <!-- repo link -->
@@ -18,7 +18,7 @@
       target="_blank"
       rel="noopener noreferrer"
     >
-      <idear-icon :icon="`idear-${repoLabel.toLowerCase()}`" />
+      <idear-icon :icon="`idear-${repoLabel.toLowerCase()}`"/>
       {{ repoLabel }}
       <OutboundLink/>
     </a>
@@ -26,16 +26,16 @@
 </template>
 
 <script>
-import { defineComponent, computed, getCurrentInstance } from 'vue-demi'
-import { IdearIcon } from '@theme/components/IdearCore'
+import {defineComponent, computed, getCurrentInstance} from 'vue-demi'
+import {IdearIcon} from '@theme/components/IdearCore'
 import DropdownLink from '@theme/components/DropdownLink'
-import { resolveNavLinkItem } from '@theme/helpers/utils'
+import {resolveNavLinkItem} from '@theme/helpers/utils'
 import NavLink from '@theme/components/NavLink'
 
 export default defineComponent({
-  components: { NavLink, DropdownLink, IdearIcon },
+  components: {NavLink, DropdownLink, IdearIcon},
 
-  setup (props, ctx) {
+  setup(props, ctx) {
     const instance = getCurrentInstance().proxy
 
     const userNav = computed(() => {
@@ -66,7 +66,7 @@ export default defineComponent({
                 link = path
               }
             }
-            return { text, link }
+            return {text, link}
           })
         }
 
@@ -127,7 +127,7 @@ export default defineComponent({
     })
 
     const repoLink = computed(() => {
-      const { repo } = instance.$themeConfig
+      const {repo} = instance.$themeConfig
 
       if (repo) {
         return /^https?:/.test(repo)
@@ -156,7 +156,7 @@ export default defineComponent({
       return 'Source'
     })
 
-    return { userNav, nav, userLinks, repoLink, repoLabel }
+    return {userNav, nav, userLinks, repoLink, repoLabel}
   }
 })
 </script>
@@ -164,20 +164,26 @@ export default defineComponent({
 <style lang="stylus">
 .nav-links
   display inline-block
+
   a
     line-height 1.4rem
     color var(--text-color)
+
     &:hover, &.router-link-active
       color $accentColor
+
       .iconfont
         color $accentColor
+
   .nav-item
     position relative
     display inline-block
     margin-left 1.5rem
     line-height 2rem
+
     &:first-child
       margin-left 0
+
   .repo-link
     margin-left 1.5rem
 

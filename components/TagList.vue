@@ -6,13 +6,13 @@
       :key="index"
       :class="{'active': item.name == currentTag}"
       :style="{ 'backgroundColor': getOneColor() }"
-      @click="tagClick(item)">{{item.name}}</span>
+      @click="tagClick(item)">{{ item.name }}</span>
   </div>
 </template>
 
 <script>
-import { defineComponent, computed, getCurrentInstance } from 'vue-demi'
-import { getOneColor } from '@theme/helpers/other'
+import {defineComponent, computed, getCurrentInstance} from 'vue-demi'
+import {getOneColor} from '@theme/helpers/other'
 
 export default defineComponent({
   props: {
@@ -21,17 +21,17 @@ export default defineComponent({
       default: ''
     }
   },
-  setup (props, ctx) {
+  setup(props, ctx) {
     const instance = getCurrentInstance().proxy
     const tags = computed(() => {
-      return [{ name: instance.$idearLocales.all, path: '/tag/' }, ...instance.$tagesList]
+      return [{name: instance.$idearLocales.all, path: '/tag/'}, ...instance.$tagesList]
     })
 
     const tagClick = tag => {
       ctx.emit('getCurrentTag', tag)
     }
 
-    return { tags, tagClick, getOneColor }
+    return {tags, tagClick, getOneColor}
   }
 })
 </script>
@@ -39,6 +39,7 @@ export default defineComponent({
 <style lang="stylus" scoped>
 .tags
   margin 30px 0
+
   span
     vertical-align: middle;
     margin: 4px 4px 10px;
@@ -52,8 +53,10 @@ export default defineComponent({
     font-size: 13px;
     box-shadow var(--box-shadow)
     transition: all .5s
+
     &:hover
       transform scale(1.04)
+
     &.active
       transform scale(1.2)
 </style>

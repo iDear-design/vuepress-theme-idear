@@ -16,7 +16,7 @@
       v-if="showAccessNumber === true"
       icon="idear-eye"
     >
-      <AccessNumber :idVal="pageInfo.path" :numStyle="numStyle" />
+      <AccessNumber :idVal="pageInfo.path" :numStyle="numStyle"/>
     </idear-icon>
     <idear-icon
       v-if="pageInfo.frontmatter.tags"
@@ -29,21 +29,21 @@
         class="tag-item"
         :class="{ 'active': currentTag == subItem }"
         @click.stop="goTags(subItem)"
-      >{{subItem}}</span>
+      >{{ subItem }}</span>
     </idear-icon>
   </div>
 </template>
 
 <script>
-import { defineComponent, getCurrentInstance } from 'vue-demi'
-import { IdearIcon } from '@theme/components/IdearCore'
+import {defineComponent, getCurrentInstance} from 'vue-demi'
+import {IdearIcon} from '@theme/components/IdearCore'
 
 export default defineComponent({
-  components: { IdearIcon },
+  components: {IdearIcon},
   props: {
     pageInfo: {
       type: Object,
-      default () {
+      default() {
         return {}
       }
     },
@@ -57,7 +57,7 @@ export default defineComponent({
     }
   },
 
-  setup (props, ctx) {
+  setup(props, ctx) {
     const instance = getCurrentInstance().proxy
 
     const numStyle = {
@@ -68,7 +68,7 @@ export default defineComponent({
 
     const goTags = (tag) => {
       if (instance.$route.path !== `/tag/${tag}/`) {
-        instance.$router.push({ path: `/tag/${tag}/` })
+        instance.$router.push({path: `/tag/${tag}/`})
       }
     }
 
@@ -76,7 +76,7 @@ export default defineComponent({
       return new Intl.DateTimeFormat(instance.$lang).format(new Date(value))
     }
 
-    return { numStyle, goTags, formatDateValue }
+    return {numStyle, goTags, formatDateValue}
   }
 })
 </script>
@@ -85,18 +85,24 @@ export default defineComponent({
 .iconfont
   display inline-block
   line-height 1.5rem
+
   &:not(:last-child)
     margin-right 1rem
+
   span
     margin-left 0.5rem
+
 .tags
   .tag-item
     font-family Ubuntu, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
     cursor pointer
+
     &.active
       color $accentColor
+
     &:hover
       color $accentColor
+
 @media (max-width: $MQMobile)
   .tags
     display block

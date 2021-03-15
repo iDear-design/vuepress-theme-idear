@@ -22,15 +22,15 @@
 </template>
 
 <script>
-import { defineComponent, ref, getCurrentInstance, toRefs, onUpdated, onMounted } from 'vue-demi'
+import {defineComponent, ref, getCurrentInstance, toRefs, onUpdated, onMounted} from 'vue-demi'
 import SidebarGroup from '@theme/components/SidebarGroup'
 import SidebarLink from '@theme/components/SidebarLink'
-import { isActive } from '@theme/helpers/utils'
+import {isActive} from '@theme/helpers/utils'
 
 export default defineComponent({
   name: 'SidebarLinks',
 
-  components: { SidebarGroup, SidebarLink },
+  components: {SidebarGroup, SidebarLink},
 
   props: [
     'items',
@@ -38,10 +38,10 @@ export default defineComponent({
     'sidebarDepth' // depth of headers to be extracted
   ],
 
-  setup (props, ctx) {
+  setup(props, ctx) {
     const instance = getCurrentInstance().proxy
 
-    const { items } = toRefs(props)
+    const {items} = toRefs(props)
 
     const openGroupIndex = ref(0)
 
@@ -118,17 +118,17 @@ export default defineComponent({
 
     onUpdated(() => isInViewPortOfOne())
 
-    return { openGroupIndex, refreshIndex, toggleGroup, isActive }
+    return {openGroupIndex, refreshIndex, toggleGroup, isActive}
   },
 
   watch: {
-    '$route' () {
+    '$route'() {
       this.refreshIndex()
     }
   }
 })
 
-function resolveOpenGroupIndex (route, items) {
+function resolveOpenGroupIndex(route, items) {
   for (let i = 0; i < items.length; i++) {
     const item = items[i]
     if (item.type === 'group' && item.children.some(c => c.type === 'page' && isActive(route, c.path))) {

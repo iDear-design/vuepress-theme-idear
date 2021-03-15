@@ -1,9 +1,9 @@
 <script>
-import { defineComponent, computed, getCurrentInstance } from 'vue-demi'
-import { isActive } from '@theme/helpers/utils'
+import {defineComponent, computed, getCurrentInstance} from 'vue-demi'
+import {isActive} from '@theme/helpers/utils'
 
 export default defineComponent({
-  setup (props, ctx) {
+  setup(props, ctx) {
     const instance = getCurrentInstance().proxy
 
     const headers = computed(() => {
@@ -20,12 +20,12 @@ export default defineComponent({
       return active
     }
 
-    return { headers, isLinkActive }
+    return {headers, isLinkActive}
   },
-  render (h) {
+  render(h) {
     return h('ul', {
-      class: { 'sub-sidebar-wrapper': true },
-      style: { width: this.headers.length > 0 ? '12rem' : '0' }
+      class: {'sub-sidebar-wrapper': true},
+      style: {width: this.headers.length > 0 ? '12rem' : '0'}
     }, [
       ...this.headers.map(header => {
         return h('li', {
@@ -33,11 +33,11 @@ export default defineComponent({
             active: this.isLinkActive(header),
             [`level-${header.level}`]: true
           },
-          attr: { key: header.title }
+          attr: {key: header.title}
         }, [
           h('router-link', {
-            class: { 'sidebar-link': true, [`idear-side-${header.slug}`]: true },
-            props: { to: `${this.$page.path}#${header.slug}` }
+            class: {'sidebar-link': true, [`idear-side-${header.slug}`]: true},
+            props: {to: `${this.$page.path}#${header.slug}`}
           }, header.title)
         ])
       })
@@ -52,24 +52,32 @@ export default defineComponent({
   padding-left 0
   list-style none
   font-size 12px
+
   li
     padding .2rem 0
     cursor pointer
     border-left 1px solid var(--border-color)
+
     a
       padding 0.35rem 1rem 0.35rem 0rem
       color var(--text-color)
+
     &:hover
       a
-       color $accentColor
+        color $accentColor
+
     &.active
       border-left 1px solid $accentColor
+
       a
-       color $accentColor
+        color $accentColor
+
     &.level-1
       padding-left .4rem
+
     &.level-2
       padding-left .9rem
+
     &.level-3
       padding-left 1.5rem
 </style>
