@@ -69,7 +69,6 @@ export default defineComponent({
   .mod_404
     .desc
       margin: 50px 0
-
     .wrapper
       margin 0 !important
       padding-top 20px
