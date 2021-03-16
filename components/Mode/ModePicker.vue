@@ -70,17 +70,14 @@ export default {
   padding: 1em;
   box-shadow var(--box-shadow);
   border-radius: $borderRadius;
-
   .title
     margin-top 0
     margin-bottom .6rem
     font-weight bold
     color var(--text-color)
-
   .color-mode-options
     display: flex;
     flex-wrap wrap
-
     li
       flex: 1;
       text-align: center;
@@ -92,19 +89,15 @@ export default {
       border-bottom 1px solid #666
       background-color var(--background-color)
       cursor pointer
-
       &.dark
         border-radius: $borderRadius 0 0 $borderRadius
         border-left 1px solid #666
-
       &.light
         border-radius: 0 $borderRadius $borderRadius 0
         border-right 1px solid #666
-
       &.active
         background-color: $accentColor;
         color #fff
-
       &:not(.active)
         border-right 1px solid #666
 </style>

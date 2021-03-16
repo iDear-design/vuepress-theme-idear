@@ -163,7 +163,6 @@ export default defineComponent({
   display inline-block
   position relative
   margin-right 1rem
-
   .iconfont
     position absolute
     top 0
@@ -171,7 +170,6 @@ export default defineComponent({
     z-index 0
     left .6rem
     margin auto
-
   input
     cursor text
     width 10rem
@@ -187,11 +185,9 @@ export default defineComponent({
     transition all .2s ease
     background transparent
     background-size 1rem
-
     &:focus
       cursor auto
       border-color $accentColor
-
   .suggestions
     background var(--background-color)
     width 20rem
@@ -201,33 +197,25 @@ export default defineComponent({
     border-radius 6px
     padding 0.4rem
     list-style-type none
-
     &.align-right
       right 0
-
   .suggestion
     line-height 1.4
     padding 0.4rem 0.6rem
     border-radius 4px
     cursor pointer
-
     a
       white-space normal
       color var(--text-color)
-
       .page-title
         font-weight 600
-
       .header
         font-size 0.9em
         margin-left 0.25em
-
     &.focused
       background-color var(--border-color)
-
       a
         color $accentColor
-
 @media (max-width: $MQNarrow)
   .search-box
     input
@@ -235,36 +223,28 @@ export default defineComponent({
       width 0
       border-color transparent
       position relative
-
       &:focus
         cursor text
         left 0
         width 10rem
-
 // Match IE11
 @media all and (-ms-high-contrast: none)
   .search-box input
     height 2rem
-
 @media (max-width: $MQNarrow) and (min-width: $MQMobile)
   .search-box
     margin-right 0
-
     .suggestions
       left 0
-
 @media (max-width: $MQMobile)
   .search-box
     margin-right 0
-
     .suggestions
       right 0
-
 @media (max-width: $MQMobileNarrow)
   .search-box
     .suggestions
       width calc(100vw - 4rem)
-
     input:focus
       width 8rem
 </style>

@@ -206,7 +206,6 @@ export default defineComponent({
     left 0
     right 0
     margin auto
-
   .password-wrapper-out
     position absolute
     z-index 21
@@ -215,7 +214,6 @@ export default defineComponent({
     left 0
     right 0
     margin auto
-
   .password-wrapper-in
     position absolute
     z-index 8
@@ -223,7 +221,6 @@ export default defineComponent({
     bottom 0
     left 0
     right 0
-
   .hide
     height 100vh
     overflow hidden
@@ -232,9 +229,7 @@ export default defineComponent({
 .fade-enter-active, .fade-leave-active {
   transition: opacity .5s ease-in-out .5s;
 }
-
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
-{
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
 </style>

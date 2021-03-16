@@ -67,35 +67,27 @@ export default defineComponent({
 <style lang="stylus">
 .dropdown-wrapper
   cursor pointer
-
   .dropdown-title
     display block
-
     &:hover
       border-color transparent
-
     .arrow
       vertical-align middle
       margin-top -1px
       margin-left 0.4rem
-
   .nav-dropdown
     .dropdown-item
       color inherit
       line-height 1.7rem
-
       h4
         margin 0.45rem 0 0
         border-top 1px solid var(--border-color)
         padding 0.45rem 1.5rem 0 1.25rem
-
       .dropdown-subitem-wrapper
         padding 0
         list-style none
-
         .dropdown-subitem
           font-size 0.9em
-
       a
         display block
         line-height 1.7rem
@@ -104,13 +96,10 @@ export default defineComponent({
         font-weight 400
         margin-bottom 0
         padding 0 1.5rem 0 1.25rem
-
         &:hover
           color $accentColor
-
         &.router-link-active
           color $accentColor
-
           &::after
             content ""
             width 0
@@ -121,7 +110,6 @@ export default defineComponent({
             position absolute
             top calc(50% - 2px)
             left 9px
-
       &:first-child h4
         margin-top 0
         padding-top 0
@@ -131,21 +119,17 @@ export default defineComponent({
   .dropdown-wrapper
     &.open .dropdown-title
       margin-bottom 0.5rem
-
     .nav-dropdown
       transition height .1s ease-out
       overflow hidden
-
       .dropdown-item
         h4
           border-top 0
           margin-top 0
           padding-top 0
-
         h4, & > a
           font-size 15px
           line-height 2rem
-
         .dropdown-subitem
           font-size 14px
           padding-left 1rem
@@ -153,18 +137,15 @@ export default defineComponent({
 @media (min-width: $MQMobile)
   .dropdown-wrapper
     height 1.8rem
-
     &:hover .nav-dropdown
       // override the inline style.
       display block !important
-
     .dropdown-title .arrow
       // make the arrow always down at desktop
       border-left 4px solid transparent
       border-right 4px solid transparent
       border-top 6px solid var(--text-color-sub)
       border-bottom 0
-
     .nav-dropdown
       display none
       // Avoid height shaked by clicking

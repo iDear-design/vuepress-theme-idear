@@ -39,7 +39,6 @@ export default defineComponent({
 <style lang="stylus" scoped>
 .tags
   margin 30px 0
-
   span
     vertical-align: middle;
     margin: 4px 4px 10px;
@@ -53,10 +52,8 @@ export default defineComponent({
     font-size: 13px;
     box-shadow var(--box-shadow)
     transition: all .5s
-
     &:hover
       transform scale(1.04)
-
     &.active
       transform scale(1.2)
 </style>

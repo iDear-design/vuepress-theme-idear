@@ -4,8 +4,7 @@
     <div
       class="nav-item"
       v-for="item in userLinks"
-      :key="item.link"
-    >
+      :key="item.link">
       <DropdownLink v-if="item.type === 'links'" :item="item"/>
       <NavLink v-else :item="item"/>
     </div>
@@ -164,26 +163,20 @@ export default defineComponent({
 <style lang="stylus">
 .nav-links
   display inline-block
-
   a
     line-height 1.4rem
     color var(--text-color)
-
     &:hover, &.router-link-active
       color $accentColor
-
       .iconfont
         color $accentColor
-
   .nav-item
     position relative
     display inline-block
     margin-left 1.5rem
     line-height 2rem
-
     &:first-child
       margin-left 0
-
   .repo-link
     margin-left 1.5rem
 

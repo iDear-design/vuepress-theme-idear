@@ -63,32 +63,26 @@ export default defineComponent({
     height 6rem
     border-radius 50%
   }
-
   .name {
     font-size 1rem
     text-align center
     color var(--text-color)
   }
-
   .num {
     display flex
     margin 0 auto 1rem
     width 80%
-
     > div {
       text-align center
       flex 0 0 50%
-
       &:first-child {
         border-right 1px solid #333
       }
-
       h3 {
         line-height auto
         margin 0 0 .6rem
         color var(--text-color)
       }
-
       h6 {
         line-height auto
         color var(--text-color)
@@ -96,13 +90,11 @@ export default defineComponent({
       }
     }
   }
-
   .social-links {
     box-sizing border-box
     display flex
     flex-wrap wrap
     padding 10px
-
     .social-item {
       width 39px
       height 36px
@@ -110,11 +102,9 @@ export default defineComponent({
       text-align center
       list-style none
       transition transform .3s
-
       &:hover {
         transform scale(1.08)
       }
-
       i {
         cursor pointer
         font-size 22px

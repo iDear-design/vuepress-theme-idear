@@ -143,7 +143,6 @@ export default defineComponent({
 .friend-link-wrapper
   position relative
   margin 30px 0
-
   .friend-link-item
     position relative
     vertical-align: middle;
@@ -156,7 +155,6 @@ export default defineComponent({
     font-size: 13px;
     box-shadow var(--box-shadow)
     transition: all .5s
-
     .list-style
       position absolute
       left .4rem
@@ -169,10 +167,8 @@ export default defineComponent({
       border-radius .1rem
       background $accentColor
       content ''
-
     .popup-window-wrapper
       display none
-
       .popup-window
         position absolute
         display flex
@@ -182,7 +178,6 @@ export default defineComponent({
         box-sizing border-box
         padding .8rem 1rem
         width 280px
-
         .logo
           margin-right .4rem
           width 2rem
@@ -190,28 +185,23 @@ export default defineComponent({
           flex 0 0 2rem
           border-radius $borderRadius
           overflow hidden
-
           img
             width 2rem
             height 2rem
-
         .info
           flex 0 0 85%
           width 85%
-
           .title
             display flex
             align-items center
             justify-content space-between
             height 2rem
-
             h4
               margin .2rem 0
               flex 0 0 86%
               overflow: hidden;
               white-space: nowrap;
               text-overflow: ellipsis;
-
             .btn-go
               width 1.4rem
               height 1.2rem
@@ -222,13 +212,11 @@ export default defineComponent({
               line-height 1.2rem
               cursor pointer
               transition all .5s
-
               &:hover
                 transform scale(1.1)
 
 .fade-enter-active, .fade-leave-active
   transition opacity .5s
-
 .fade-enter, .fade-leave-to
   opacity 0
 </style>

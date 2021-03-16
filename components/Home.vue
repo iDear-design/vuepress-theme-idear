@@ -43,14 +43,14 @@
 </template>
 
 <script>
-import {defineComponent, computed, getCurrentInstance} from 'vue-demi'
+import { defineComponent, computed, getCurrentInstance } from 'vue-demi'
 import NavLink from '@theme/components/NavLink'
-import {ModuleTransition} from '@theme/components/IdearCore'
+import { ModuleTransition } from '@theme/components/IdearCore'
 
 export default defineComponent({
-  components: {NavLink, ModuleTransition},
+  components: { NavLink, ModuleTransition },
 
-  setup(props, ctx) {
+  setup (props, ctx) {
     const instance = getCurrentInstance().proxy
     const idearShowModule = computed(() => instance && instance.$parent.idearShowModule)
     const actionLink = computed(() => instance && {
@@ -62,7 +62,7 @@ export default defineComponent({
       margin: '6rem auto 1.5rem'
     })
 
-    return {idearShowModule, actionLink, heroImageStyle}
+    return { idearShowModule, actionLink, heroImageStyle }
   }
 })
 </script>
@@ -75,7 +75,6 @@ export default defineComponent({
 
   .hero {
     text-align: center;
-
     h1 {
       display: block;
       font-size: 2.5rem;
@@ -120,25 +119,23 @@ export default defineComponent({
     justify-content: space-between;
   }
 
-  .feature {
-    flex-grow: 1;
-    flex-basis: 30%;
-    max-width: 30%;
-    transition: all .5s
-    color: var(--text-color);
-
-    h2 {
-      font-size: 1.6rem;
-      font-weight: 500;
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    &:hover {
-      transform scale(1.05)
-    }
+.feature {
+  flex-grow: 1;
+  flex-basis: 30%;
+  max-width: 30%;
+  transition: all .5s
+  color: var(--text-color);
+  h2 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-bottom: none;
+    padding-bottom: 0;
   }
 
+  &:hover {
+    transform scale(1.05)
+  }
+}
 }
 
 @media (max-width: $MQMobile) {

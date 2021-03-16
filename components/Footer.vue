@@ -61,19 +61,15 @@ export default defineComponent({
   border-top: 1px solid var(--border-color);
   text-align: center;
   color: lighten($textColor, 25%);
-
   a {
     font-size 14px
   }
-
   > span {
     margin-left 1rem
-
     > i {
       margin-right .5rem
     }
   }
-
   .cyber-security {
     img {
       margin-right .5rem
@@ -81,7 +77,6 @@ export default defineComponent({
       height 20px
       vertical-align middle
     }
-
     a {
       vertical-align middle
     }
@@ -90,8 +85,7 @@ export default defineComponent({
 
 @media (max-width: $MQMobile) {
   .footer {
-    text-align: left !important;
-
+    text-align: left!important;
     > span {
       display block
       margin-left 0

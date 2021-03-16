@@ -39,11 +39,9 @@ export default defineComponent({
   transition all .3s
   background-color var(--background-color)
   cursor: pointer;
-
   > * {
     pointer-events: auto;
   }
-
   .idear-sticky
     position absolute
     top 0
@@ -51,23 +49,18 @@ export default defineComponent({
     display inline-block
     color $accentColor
     font-size 2.4rem
-
   &:hover
     box-shadow: var(--box-shadow-hover)
-
   .title
     position: relative;
     font-size: 1.28rem;
     line-height: 46px;
     display: inline-block;
-
     a
       color: var(--text-color);
-
     .idear-lock
       font-size 1.28rem
       color $accentColor
-
     &:after
       content: "";
       position: absolute;
@@ -80,26 +73,21 @@ export default defineComponent({
       -webkit-transform: scaleX(0);
       transform: scaleX(0);
       transition: .3s ease-in-out;
-
     &:hover a
       color $accentColor
-
     &:hover:after
       visibility visible
       -webkit-transform: scaleX(1);
       transform: scaleX(1);
-
   .tags
     .tag-item
       &.active
         color $accentColor
-
       &:hover
         color $accentColor
-
 @media (max-width: $MQMobile)
   .tags
     display block
     margin-top 1rem;
-    margin-left: 0 !important;
+    margin-left: 0!important;
 </style>
