@@ -21,6 +21,7 @@
   "author": "maxiaoqu",
   "main": "index.js",
   "dependencies": {
+    "@idear-toolkit/icon": "1.0.0",
     "@idear-vuepress/vuepress-plugin-backToTop": "1.0.0",
     "@idear-vuepress/vuepress-plugin-comments": "1.0.0",
     "@idear-vuepress/vuepress-plugin-loadingPage": "1.0.0",
