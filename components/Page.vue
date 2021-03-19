@@ -259,7 +259,7 @@ function flatten(items, res) {
     margin: 0 auto;
     padding: 1rem 2.5rem;
     color var(--text-color)
-  .theme-reco-content h2
+  .theme-idear-content h2
     position relative
     padding-left 0.8rem
     &::before
